@@ -40,11 +40,16 @@ export TARGET
 
 ARCHS ?= arm64
 
-INSTALL_TARGET_PROCESSES = SpringBoard
+INSTALL_TARGET_PROCESSES = SpringBoard backboardd
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = CardboardOS
+# Two dylibs, one package: the SpringBoard half draws the stereo view and knows
+# where the reticle is, the backboardd half turns that reticle into a touch.
+# They have to be separate binaries because they must not link the same
+# frameworks - the backboardd one is Foundation-only so it can live in a daemon
+# without dragging UIKit and Metal in with it.
+TWEAK_NAME = CardboardOS CBBHIDDriver CBBTouchRelay
 
 CardboardOS_FILES = Tweak.x \
 	CBBController.m \
@@ -67,6 +72,25 @@ CardboardOS_PRIVATE_FRAMEWORKS = IOKit
 # other than the one it was built against. This keeps the binary dependent on
 # system frameworks only.
 CardboardOS_LDFLAGS = -framework IOKit -Wl,-dead_strip_dylibs
+
+# Injection lives in backboardd, which is the process that owns the display and
+# the touch pipeline. Runs on its own thread there and talks to SpringBoard over
+# a CFMessagePort; see CBBHIDDriver.m for why SpringBoard cannot do it itself.
+CBBHIDDriver_FILES = CBBHIDDriver.m
+CBBHIDDriver_CFLAGS = -fobjc-arc -I.
+CBBHIDDriver_FRAMEWORKS = Foundation
+CBBHIDDriver_LDFLAGS = -Wl,-dead_strip_dylibs
+
+# Loaded into every app (filter on UIApplication). A touch delivered to an app
+# has to name that app's own window context, and only the app's process can: the
+# backboardd half proved that an event dispatched into the HID system reaches no
+# client at all on this build. UIKit + Foundation only, and it does nothing at
+# all in a process that is not an app.
+CBBTouchRelay_FILES = CBBTouchRelay.m
+CBBTouchRelay_CFLAGS = -fobjc-arc -I.
+CBBTouchRelay_FRAMEWORKS = UIKit Foundation
+CBBTouchRelay_PRIVATE_FRAMEWORKS = IOKit
+CBBTouchRelay_LDFLAGS = -Wl,-dead_strip_dylibs
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

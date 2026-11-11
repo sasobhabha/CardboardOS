@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+    Filter for the backboardd half.
+
+    Executables, not Bundles: backboardd is a bare daemon with no Info.plist, and
+    every tweak on this device that targets a daemon (AppSyncUnified-installd,
+    RocketBootstrap) filters that way. A Bundles filter would match nothing and
+    the dylib would be installed, never loaded.
+-->
+<plist version="1.0">
+<dict>
+	<key>Filter</key>
+	<dict>
+		<key>Executables</key>
+		<array>
+			<string>backboardd</string>
+		</array>
+	</dict>
+</dict>
+</plist>

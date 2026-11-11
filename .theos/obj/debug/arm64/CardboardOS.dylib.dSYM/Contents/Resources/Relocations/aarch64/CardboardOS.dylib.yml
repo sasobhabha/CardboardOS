@@ -9,453 +9,448 @@ relocations:
   - { offset: 0x181, size: 0x8, addend: 0x0, symName: ___CBBStartWhenReady_block_invoke, symObjAddr: 0x444, symBinAddr: 0x4444, symSize: 0x248 }
   - { offset: 0x3ED, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView hitTest:withEvent:]', symObjAddr: 0x0, symBinAddr: 0x468C, symSize: 0x19C }
   - { offset: 0x3FA, size: 0x8, addend: 0x0, symName: '+[CBBController sharedController]', symObjAddr: 0x9E4, symBinAddr: 0x5070, symSize: 0x7C }
-  - { offset: 0x423, size: 0x8, addend: 0x0, symName: _sharedController.shared, symObjAddr: 0x2EB40, symBinAddr: 0x37150, symSize: 0x0 }
-  - { offset: 0x438, size: 0x8, addend: 0x0, symName: _sharedController.onceToken, symObjAddr: 0x2EB48, symBinAddr: 0x37158, symSize: 0x0 }
-  - { offset: 0x352A, size: 0x8, addend: 0x0, symName: _CBBSetLayerCaptureHidden, symObjAddr: 0xFA9C, symBinAddr: 0x14128, symSize: 0x178 }
-  - { offset: 0x354D, size: 0x8, addend: 0x0, symName: _CBBSetLayerCaptureHidden.warned, symObjAddr: 0x2EB50, symBinAddr: 0x37160, symSize: 0x0 }
-  - { offset: 0x358A, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked, symObjAddr: 0x4400, symBinAddr: 0x8A8C, symSize: 0x190 }
-  - { offset: 0x35AB, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked.createFn, symObjAddr: 0x2EB58, symBinAddr: 0x37168, symSize: 0x0 }
-  - { offset: 0x35C0, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked.releaseFn, symObjAddr: 0x2EB60, symBinAddr: 0x37170, symSize: 0x0 }
-  - { offset: 0x35D5, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked.once, symObjAddr: 0x2EB68, symBinAddr: 0x37178, symSize: 0x0 }
-  - { offset: 0x36B8, size: 0x8, addend: 0x0, symName: _CBBDisplaySleepAssertion, symObjAddr: 0x2EB70, symBinAddr: 0x37180, symSize: 0x0 }
-  - { offset: 0x38D1, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView hitTest:withEvent:]', symObjAddr: 0x0, symBinAddr: 0x468C, symSize: 0x19C }
-  - { offset: 0x394F, size: 0x8, addend: 0x0, symName: _CBBDistance, symObjAddr: 0x19C, symBinAddr: 0x4828, symSize: 0x60 }
-  - { offset: 0x39C4, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView fixedPointForTouch:]', symObjAddr: 0x1FC, symBinAddr: 0x4888, symSize: 0xE4 }
-  - { offset: 0x3A16, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView touchesBegan:withEvent:]', symObjAddr: 0x2E0, symBinAddr: 0x496C, symSize: 0x130 }
-  - { offset: 0x3A72, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView touchesEnded:withEvent:]', symObjAddr: 0x410, symBinAddr: 0x4A9C, symSize: 0x130 }
-  - { offset: 0x3ACE, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView touchesCancelled:withEvent:]', symObjAddr: 0x540, symBinAddr: 0x4BCC, symSize: 0xC8 }
-  - { offset: 0x3B1C, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView buttonPoint]', symObjAddr: 0x608, symBinAddr: 0x4C94, symSize: 0x30 }
-  - { offset: 0x3B52, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setButtonPoint:]', symObjAddr: 0x638, symBinAddr: 0x4CC4, symSize: 0x30 }
-  - { offset: 0x3B90, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView learning]', symObjAddr: 0x668, symBinAddr: 0x4CF4, symSize: 0x2C }
-  - { offset: 0x3BC6, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setLearning:]', symObjAddr: 0x694, symBinAddr: 0x4D20, symSize: 0x30 }
-  - { offset: 0x3C04, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView claimsEverything]', symObjAddr: 0x6C4, symBinAddr: 0x4D50, symSize: 0x2C }
-  - { offset: 0x3C3A, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setClaimsEverything:]', symObjAddr: 0x6F0, symBinAddr: 0x4D7C, symSize: 0x30 }
-  - { offset: 0x3C78, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView injectionPassthrough]', symObjAddr: 0x720, symBinAddr: 0x4DAC, symSize: 0x2C }
-  - { offset: 0x3CAE, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setInjectionPassthrough:]', symObjAddr: 0x74C, symBinAddr: 0x4DD8, symSize: 0x30 }
-  - { offset: 0x3CEC, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView onTouchBegan]', symObjAddr: 0x77C, symBinAddr: 0x4E08, symSize: 0x24 }
-  - { offset: 0x3D22, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setOnTouchBegan:]', symObjAddr: 0x7A0, symBinAddr: 0x4E2C, symSize: 0x3C }
-  - { offset: 0x3D60, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView onTouchEnded]', symObjAddr: 0x7DC, symBinAddr: 0x4E68, symSize: 0x24 }
-  - { offset: 0x3D96, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setOnTouchEnded:]', symObjAddr: 0x800, symBinAddr: 0x4E8C, symSize: 0x3C }
-  - { offset: 0x3DD4, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView onTouchCancelled]', symObjAddr: 0x83C, symBinAddr: 0x4EC8, symSize: 0x24 }
-  - { offset: 0x3E0A, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setOnTouchCancelled:]', symObjAddr: 0x860, symBinAddr: 0x4EEC, symSize: 0x3C }
-  - { offset: 0x3E48, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView .cxx_destruct]', symObjAddr: 0x89C, symBinAddr: 0x4F28, symSize: 0x70 }
-  - { offset: 0x3E7A, size: 0x8, addend: 0x0, symName: '-[CBBOverlayWindow hitTest:withEvent:]', symObjAddr: 0x90C, symBinAddr: 0x4F98, symSize: 0xD8 }
-  - { offset: 0x3F09, size: 0x8, addend: 0x0, symName: '___33+[CBBController sharedController]_block_invoke', symObjAddr: 0xA60, symBinAddr: 0x50EC, symSize: 0x54 }
-  - { offset: 0x3F4E, size: 0x8, addend: 0x0, symName: '-[CBBController start]', symObjAddr: 0xAB4, symBinAddr: 0x5140, symSize: 0x1A58 }
-  - { offset: 0x3FD2, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x250C, symBinAddr: 0x6B98, symSize: 0x230 }
-  - { offset: 0x4034, size: 0x8, addend: 0x0, symName: _CBBNativeScreenSize, symObjAddr: 0x273C, symBinAddr: 0x6DC8, symSize: 0x1AC }
-  - { offset: 0x40DE, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x28E8, symBinAddr: 0x6F74, symSize: 0x2C }
-  - { offset: 0x4126, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke', symObjAddr: 0x2914, symBinAddr: 0x6FA0, symSize: 0x54 }
-  - { offset: 0x4171, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0x2968, symBinAddr: 0x6FF4, symSize: 0x34 }
-  - { offset: 0x4195, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0x299C, symBinAddr: 0x7028, symSize: 0x28 }
-  - { offset: 0x41B1, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke.78', symObjAddr: 0x29C4, symBinAddr: 0x7050, symSize: 0x54 }
-  - { offset: 0x41FC, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke_2', symObjAddr: 0x2A18, symBinAddr: 0x70A4, symSize: 0x68 }
-  - { offset: 0x4238, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke.80', symObjAddr: 0x2A80, symBinAddr: 0x710C, symSize: 0x54 }
-  - { offset: 0x4283, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke_2.96', symObjAddr: 0x2AD4, symBinAddr: 0x7160, symSize: 0x33C }
-  - { offset: 0x42EB, size: 0x8, addend: 0x0, symName: '-[CBBController dealloc]', symObjAddr: 0x2E10, symBinAddr: 0x749C, symSize: 0x7C }
-  - { offset: 0x431E, size: 0x8, addend: 0x0, symName: '-[CBBController orientationChanged:]', symObjAddr: 0x2E8C, symBinAddr: 0x7518, symSize: 0x250 }
-  - { offset: 0x438D, size: 0x8, addend: 0x0, symName: '-[CBBController layoutOverlay]', symObjAddr: 0x30DC, symBinAddr: 0x7768, symSize: 0x4CC }
-  - { offset: 0x43CF, size: 0x8, addend: 0x0, symName: '-[CBBController applyCaptureExclusion:]', symObjAddr: 0x35A8, symBinAddr: 0x7C34, symSize: 0xB0 }
-  - { offset: 0x4411, size: 0x8, addend: 0x0, symName: _CBBSetViewTreeCaptureHidden, symObjAddr: 0x3658, symBinAddr: 0x7CE4, symSize: 0x1FC }
-  - { offset: 0x445E, size: 0x8, addend: 0x0, symName: '-[CBBController setSpringBoardWindowsInteractive:]', symObjAddr: 0x3854, symBinAddr: 0x7EE0, symSize: 0x294 }
-  - { offset: 0x44C9, size: 0x8, addend: 0x0, symName: '-[CBBController beginInjectionWindow]', symObjAddr: 0x3AE8, symBinAddr: 0x8174, symSize: 0x12C }
-  - { offset: 0x4520, size: 0x8, addend: 0x0, symName: '___37-[CBBController beginInjectionWindow]_block_invoke', symObjAddr: 0x3C14, symBinAddr: 0x82A0, symSize: 0x1E0 }
-  - { offset: 0x4588, size: 0x8, addend: 0x0, symName: '-[CBBController applyEnabledState]', symObjAddr: 0x3DF4, symBinAddr: 0x8480, symSize: 0x60C }
-  - { offset: 0x45E0, size: 0x8, addend: 0x0, symName: '-[CBBController startOverlaySupervisor]', symObjAddr: 0x4590, symBinAddr: 0x8C1C, symSize: 0x224 }
-  - { offset: 0x4622, size: 0x8, addend: 0x0, symName: '___39-[CBBController startOverlaySupervisor]_block_invoke', symObjAddr: 0x47B4, symBinAddr: 0x8E40, symSize: 0x70 }
-  - { offset: 0x466D, size: 0x8, addend: 0x0, symName: '-[CBBController superviseOverlay]', symObjAddr: 0x4824, symBinAddr: 0x8EB0, symSize: 0x748 }
-  - { offset: 0x46CF, size: 0x8, addend: 0x0, symName: '-[CBBController armBootGuard]', symObjAddr: 0x4F6C, symBinAddr: 0x95F8, symSize: 0x200 }
-  - { offset: 0x4726, size: 0x8, addend: 0x0, symName: '___29-[CBBController armBootGuard]_block_invoke', symObjAddr: 0x516C, symBinAddr: 0x97F8, symSize: 0xB8 }
-  - { offset: 0x477F, size: 0x8, addend: 0x0, symName: '-[CBBController disarmBootGuard]', symObjAddr: 0x5224, symBinAddr: 0x98B0, symSize: 0x194 }
-  - { offset: 0x47D0, size: 0x8, addend: 0x0, symName: '-[CBBController checkBootGuard]', symObjAddr: 0x53B8, symBinAddr: 0x9A44, symSize: 0x3E0 }
-  - { offset: 0x483C, size: 0x8, addend: 0x0, symName: '___31-[CBBController checkBootGuard]_block_invoke', symObjAddr: 0x5798, symBinAddr: 0x9E24, symSize: 0x78 }
-  - { offset: 0x4895, size: 0x8, addend: 0x0, symName: '-[CBBController applyHomeLandscape]', symObjAddr: 0x5810, symBinAddr: 0x9E9C, symSize: 0x8E0 }
-  - { offset: 0x4994, size: 0x8, addend: 0x0, symName: '___35-[CBBController applyHomeLandscape]_block_invoke', symObjAddr: 0x60F0, symBinAddr: 0xA77C, symSize: 0xCC }
-  - { offset: 0x49E5, size: 0x8, addend: 0x0, symName: '___35-[CBBController applyHomeLandscape]_block_invoke_2', symObjAddr: 0x61BC, symBinAddr: 0xA848, symSize: 0xA4 }
-  - { offset: 0x4A4D, size: 0x8, addend: 0x0, symName: '-[CBBController landscapeHeartbeat]', symObjAddr: 0x6260, symBinAddr: 0xA8EC, symSize: 0xBC }
-  - { offset: 0x4A80, size: 0x8, addend: 0x0, symName: '-[CBBController checkLandscapeCrashGuard]', symObjAddr: 0x631C, symBinAddr: 0xA9A8, symSize: 0x170 }
-  - { offset: 0x4AB3, size: 0x8, addend: 0x0, symName: '-[CBBController setStereoEnabled:]', symObjAddr: 0x648C, symBinAddr: 0xAB18, symSize: 0x3E8 }
-  - { offset: 0x4B13, size: 0x8, addend: 0x0, symName: '-[CBBController buttonPointInFixedSpace]', symObjAddr: 0x6874, symBinAddr: 0xAF00, symSize: 0x2D4 }
-  - { offset: 0x4CAC, size: 0x8, addend: 0x0, symName: '-[CBBController touchBeganLearningAtPoint:]', symObjAddr: 0x6B48, symBinAddr: 0xB1D4, symSize: 0x320 }
-  - { offset: 0x4CFD, size: 0x8, addend: 0x0, symName: '-[CBBController handleTouchBeganAtFixedPoint:]', symObjAddr: 0x6E68, symBinAddr: 0xB4F4, symSize: 0x190 }
-  - { offset: 0x4D3F, size: 0x8, addend: 0x0, symName: '-[CBBController handleTouchEndedAtFixedPoint:]', symObjAddr: 0x6FF8, symBinAddr: 0xB684, symSize: 0x8C }
-  - { offset: 0x4D81, size: 0x8, addend: 0x0, symName: '-[CBBController clickRecognizer:didRecognizeClicks:held:]', symObjAddr: 0x7084, symBinAddr: 0xB710, symSize: 0x334 }
-  - { offset: 0x4DE1, size: 0x8, addend: 0x0, symName: '-[CBBController setCursorPosition:]', symObjAddr: 0x73B8, symBinAddr: 0xBA44, symSize: 0x2C8 }
-  - { offset: 0x4F66, size: 0x8, addend: 0x0, symName: '-[CBBController updateCursorPoint]', symObjAddr: 0x7680, symBinAddr: 0xBD0C, symSize: 0x74 }
-  - { offset: 0x4F99, size: 0x8, addend: 0x0, symName: '-[CBBController applyAim:]', symObjAddr: 0x76F4, symBinAddr: 0xBD80, symSize: 0x884 }
-  - { offset: 0x5388, size: 0x8, addend: 0x0, symName: _CBBCardboardRotate, symObjAddr: 0x7F78, symBinAddr: 0xC604, symSize: 0x90 }
-  - { offset: 0x5414, size: 0x8, addend: 0x0, symName: '-[CBBController resetCursor]', symObjAddr: 0x8008, symBinAddr: 0xC694, symSize: 0xA4 }
-  - { offset: 0x5456, size: 0x8, addend: 0x0, symName: '-[CBBController resetDwellAnchor]', symObjAddr: 0x80AC, symBinAddr: 0xC738, symSize: 0xA8 }
-  - { offset: 0x5489, size: 0x8, addend: 0x0, symName: '-[CBBController startDwellTimer]', symObjAddr: 0x8154, symBinAddr: 0xC7E0, symSize: 0x298 }
-  - { offset: 0x54CB, size: 0x8, addend: 0x0, symName: '___32-[CBBController startDwellTimer]_block_invoke', symObjAddr: 0x83EC, symBinAddr: 0xCA78, symSize: 0x70 }
-  - { offset: 0x5516, size: 0x8, addend: 0x0, symName: '-[CBBController stopDwellTimer]', symObjAddr: 0x845C, symBinAddr: 0xCAE8, symSize: 0x94 }
-  - { offset: 0x5549, size: 0x8, addend: 0x0, symName: '-[CBBController dwellTick]', symObjAddr: 0x84F0, symBinAddr: 0xCB7C, symSize: 0x6B8 }
-  - { offset: 0x5618, size: 0x8, addend: 0x0, symName: '-[CBBController dwellClickAtPoint:]', symObjAddr: 0x8BA8, symBinAddr: 0xD234, symSize: 0x238 }
-  - { offset: 0x567F, size: 0x8, addend: 0x0, symName: '-[CBBController injectionPointForPoint:]', symObjAddr: 0x8DE0, symBinAddr: 0xD46C, symSize: 0x34C }
-  - { offset: 0x57F9, size: 0x8, addend: 0x0, symName: _CBBApplyCalibratedTap, symObjAddr: 0x912C, symBinAddr: 0xD7B8, symSize: 0x144 }
-  - { offset: 0x588C, size: 0x8, addend: 0x0, symName: '-[CBBController currentInterfaceOrientation]', symObjAddr: 0x9270, symBinAddr: 0xD8FC, symSize: 0x60 }
-  - { offset: 0x58C3, size: 0x8, addend: 0x0, symName: '-[CBBController scheduleTapCalibration]', symObjAddr: 0x92D0, symBinAddr: 0xD95C, symSize: 0x214 }
-  - { offset: 0x591A, size: 0x8, addend: 0x0, symName: '___39-[CBBController scheduleTapCalibration]_block_invoke', symObjAddr: 0x94E4, symBinAddr: 0xDB70, symSize: 0x1E0 }
-  - { offset: 0x5982, size: 0x8, addend: 0x0, symName: '-[CBBController startTapCalibration]', symObjAddr: 0x96C4, symBinAddr: 0xDD50, symSize: 0x250 }
-  - { offset: 0x59C4, size: 0x8, addend: 0x0, symName: '-[CBBController sendTapProbe]', symObjAddr: 0x9914, symBinAddr: 0xDFA0, symSize: 0x2CC }
-  - { offset: 0x5A06, size: 0x8, addend: 0x0, symName: '___29-[CBBController sendTapProbe]_block_invoke', symObjAddr: 0x9BE0, symBinAddr: 0xE26C, symSize: 0x120 }
-  - { offset: 0x5A66, size: 0x8, addend: 0x0, symName: '-[CBBController recordTapProbeAtFixedPoint:]', symObjAddr: 0x9D00, symBinAddr: 0xE38C, symSize: 0x2D8 }
-  - { offset: 0x5ACC, size: 0x8, addend: 0x0, symName: '___44-[CBBController recordTapProbeAtFixedPoint:]_block_invoke', symObjAddr: 0x9FD8, symBinAddr: 0xE664, symSize: 0x44 }
-  - { offset: 0x5B08, size: 0x8, addend: 0x0, symName: '-[CBBController finishTapCalibration]', symObjAddr: 0xA01C, symBinAddr: 0xE6A8, symSize: 0x6F4 }
-  - { offset: 0x5E2F, size: 0x8, addend: 0x0, symName: '-[CBBController activateCursor]', symObjAddr: 0xA710, symBinAddr: 0xED9C, symSize: 0x13C }
-  - { offset: 0x5E81, size: 0x8, addend: 0x0, symName: '-[CBBController scroll:]', symObjAddr: 0xA84C, symBinAddr: 0xEED8, symSize: 0x14C }
-  - { offset: 0x5F2E, size: 0x8, addend: 0x0, symName: '-[CBBController setMenuOpen:]', symObjAddr: 0xA998, symBinAddr: 0xF024, symSize: 0x314 }
-  - { offset: 0x5F70, size: 0x8, addend: 0x0, symName: '-[CBBController selectedRow]', symObjAddr: 0xACAC, symBinAddr: 0xF338, symSize: 0x188 }
-  - { offset: 0x600E, size: 0x8, addend: 0x0, symName: '-[CBBController handleHudClicks:held:]', symObjAddr: 0xAE34, symBinAddr: 0xF4C0, symSize: 0x3C0 }
-  - { offset: 0x608B, size: 0x8, addend: 0x0, symName: '-[CBBController beginLearning]', symObjAddr: 0xB1F4, symBinAddr: 0xF880, symSize: 0x110 }
-  - { offset: 0x60BE, size: 0x8, addend: 0x0, symName: '-[CBBController adjustDouble:min:max:step:direction:]', symObjAddr: 0xB304, symBinAddr: 0xF990, symSize: 0x1F8 }
-  - { offset: 0x61A7, size: 0x8, addend: 0x0, symName: '-[CBBController rebuildRows]', symObjAddr: 0xB4FC, symBinAddr: 0xFB88, symSize: 0x22C4 }
-  - { offset: 0x6264, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke', symObjAddr: 0xD7C0, symBinAddr: 0x11E4C, symSize: 0x54 }
-  - { offset: 0x62A4, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0xD814, symBinAddr: 0x11EA0, symSize: 0x38 }
-  - { offset: 0x62C8, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0xD84C, symBinAddr: 0x11ED8, symSize: 0x2C }
-  - { offset: 0x62E4, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.199', symObjAddr: 0xD878, symBinAddr: 0x11F04, symSize: 0x80 }
-  - { offset: 0x6341, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40w, symObjAddr: 0xD8F8, symBinAddr: 0x11F84, symSize: 0x54 }
-  - { offset: 0x6365, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40w, symObjAddr: 0xD94C, symBinAddr: 0x11FD8, symSize: 0x3C }
-  - { offset: 0x6381, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.203', symObjAddr: 0xD988, symBinAddr: 0x12014, symSize: 0x54 }
-  - { offset: 0x63C1, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_2', symObjAddr: 0xD9DC, symBinAddr: 0x12068, symSize: 0xFC }
-  - { offset: 0x643B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_3', symObjAddr: 0xDAD8, symBinAddr: 0x12164, symSize: 0x64 }
-  - { offset: 0x647B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_4', symObjAddr: 0xDB3C, symBinAddr: 0x121C8, symSize: 0x70 }
-  - { offset: 0x64C6, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.214', symObjAddr: 0xDBAC, symBinAddr: 0x12238, symSize: 0x68 }
-  - { offset: 0x6506, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_2.217', symObjAddr: 0xDC14, symBinAddr: 0x122A0, symSize: 0x108 }
-  - { offset: 0x6580, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_3.220', symObjAddr: 0xDD1C, symBinAddr: 0x123A8, symSize: 0x64 }
-  - { offset: 0x65C0, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_4.223', symObjAddr: 0xDD80, symBinAddr: 0x1240C, symSize: 0x70 }
-  - { offset: 0x660B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_5', symObjAddr: 0xDDF0, symBinAddr: 0x1247C, symSize: 0x64 }
-  - { offset: 0x664B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_6', symObjAddr: 0xDE54, symBinAddr: 0x124E0, symSize: 0x6C }
-  - { offset: 0x6696, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_7', symObjAddr: 0xDEC0, symBinAddr: 0x1254C, symSize: 0x64 }
-  - { offset: 0x66D6, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_8', symObjAddr: 0xDF24, symBinAddr: 0x125B0, symSize: 0x68 }
-  - { offset: 0x6721, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_9', symObjAddr: 0xDF8C, symBinAddr: 0x12618, symSize: 0x64 }
-  - { offset: 0x6761, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_10', symObjAddr: 0xDFF0, symBinAddr: 0x1267C, symSize: 0x68 }
-  - { offset: 0x67AC, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_11', symObjAddr: 0xE058, symBinAddr: 0x126E4, symSize: 0x64 }
-  - { offset: 0x67EC, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_12', symObjAddr: 0xE0BC, symBinAddr: 0x12748, symSize: 0x70 }
-  - { offset: 0x6837, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_13', symObjAddr: 0xE12C, symBinAddr: 0x127B8, symSize: 0x64 }
-  - { offset: 0x6877, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_14', symObjAddr: 0xE190, symBinAddr: 0x1281C, symSize: 0x70 }
-  - { offset: 0x68C2, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_15', symObjAddr: 0xE200, symBinAddr: 0x1288C, symSize: 0x64 }
-  - { offset: 0x6902, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_16', symObjAddr: 0xE264, symBinAddr: 0x128F0, symSize: 0x6C }
-  - { offset: 0x694D, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_17', symObjAddr: 0xE2D0, symBinAddr: 0x1295C, symSize: 0x54 }
-  - { offset: 0x698D, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_18', symObjAddr: 0xE324, symBinAddr: 0x129B0, symSize: 0xA8 }
-  - { offset: 0x69EA, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_19', symObjAddr: 0xE3CC, symBinAddr: 0x12A58, symSize: 0x64 }
-  - { offset: 0x6A2A, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_20', symObjAddr: 0xE430, symBinAddr: 0x12ABC, symSize: 0x70 }
-  - { offset: 0x6A75, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_21', symObjAddr: 0xE4A0, symBinAddr: 0x12B2C, symSize: 0x54 }
-  - { offset: 0x6AB5, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_22', symObjAddr: 0xE4F4, symBinAddr: 0x12B80, symSize: 0xF4 }
-  - { offset: 0x6B12, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_23', symObjAddr: 0xE5E8, symBinAddr: 0x12C74, symSize: 0x54 }
-  - { offset: 0x6B52, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_24', symObjAddr: 0xE63C, symBinAddr: 0x12CC8, symSize: 0x44 }
-  - { offset: 0x6B8E, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_25', symObjAddr: 0xE680, symBinAddr: 0x12D0C, symSize: 0xE4 }
-  - { offset: 0x6BCE, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_26', symObjAddr: 0xE764, symBinAddr: 0x12DF0, symSize: 0xE4 }
-  - { offset: 0x6C48, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_27', symObjAddr: 0xE848, symBinAddr: 0x12ED4, symSize: 0xDC }
-  - { offset: 0x6C88, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_28', symObjAddr: 0xE924, symBinAddr: 0x12FB0, symSize: 0x120 }
-  - { offset: 0x6D02, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_29', symObjAddr: 0xEA44, symBinAddr: 0x130D0, symSize: 0x68 }
-  - { offset: 0x6D42, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_30', symObjAddr: 0xEAAC, symBinAddr: 0x13138, symSize: 0x1C4 }
-  - { offset: 0x6DF7, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_31', symObjAddr: 0xEC70, symBinAddr: 0x132FC, symSize: 0x20 }
-  - { offset: 0x6E25, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_32', symObjAddr: 0xEC90, symBinAddr: 0x1331C, symSize: 0x44 }
-  - { offset: 0x6E61, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_33', symObjAddr: 0xECD4, symBinAddr: 0x13360, symSize: 0x20 }
-  - { offset: 0x6E8F, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_34', symObjAddr: 0xECF4, symBinAddr: 0x13380, symSize: 0x44 }
-  - { offset: 0x6ECB, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_35', symObjAddr: 0xED38, symBinAddr: 0x133C4, symSize: 0x20 }
-  - { offset: 0x6EF9, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_36', symObjAddr: 0xED58, symBinAddr: 0x133E4, symSize: 0xAC }
-  - { offset: 0x6F47, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.281', symObjAddr: 0xEE04, symBinAddr: 0x13490, symSize: 0x20 }
-  - { offset: 0x6F75, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_2.283', symObjAddr: 0xEE24, symBinAddr: 0x134B0, symSize: 0x4C }
-  - { offset: 0x6FB1, size: 0x8, addend: 0x0, symName: '-[CBBController statusText]', symObjAddr: 0xEE70, symBinAddr: 0x134FC, symSize: 0x330 }
-  - { offset: 0x7015, size: 0x8, addend: 0x0, symName: '-[CBBController window]', symObjAddr: 0xF1A0, symBinAddr: 0x1382C, symSize: 0x1C }
-  - { offset: 0x704B, size: 0x8, addend: 0x0, symName: '-[CBBController setWindow:]', symObjAddr: 0xF1BC, symBinAddr: 0x13848, symSize: 0x34 }
-  - { offset: 0x7089, size: 0x8, addend: 0x0, symName: '-[CBBController rootView]', symObjAddr: 0xF1F0, symBinAddr: 0x1387C, symSize: 0x1C }
-  - { offset: 0x70BF, size: 0x8, addend: 0x0, symName: '-[CBBController setRootView:]', symObjAddr: 0xF20C, symBinAddr: 0x13898, symSize: 0x34 }
-  - { offset: 0x70FD, size: 0x8, addend: 0x0, symName: '-[CBBController renderer]', symObjAddr: 0xF240, symBinAddr: 0x138CC, symSize: 0x1C }
-  - { offset: 0x7133, size: 0x8, addend: 0x0, symName: '-[CBBController setRenderer:]', symObjAddr: 0xF25C, symBinAddr: 0x138E8, symSize: 0x34 }
-  - { offset: 0x7171, size: 0x8, addend: 0x0, symName: '-[CBBController hud]', symObjAddr: 0xF290, symBinAddr: 0x1391C, symSize: 0x1C }
-  - { offset: 0x71A7, size: 0x8, addend: 0x0, symName: '-[CBBController setHud:]', symObjAddr: 0xF2AC, symBinAddr: 0x13938, symSize: 0x34 }
-  - { offset: 0x71E5, size: 0x8, addend: 0x0, symName: '-[CBBController prefs]', symObjAddr: 0xF2E0, symBinAddr: 0x1396C, symSize: 0x1C }
-  - { offset: 0x721B, size: 0x8, addend: 0x0, symName: '-[CBBController setPrefs:]', symObjAddr: 0xF2FC, symBinAddr: 0x13988, symSize: 0x34 }
-  - { offset: 0x7259, size: 0x8, addend: 0x0, symName: '-[CBBController recognizer]', symObjAddr: 0xF330, symBinAddr: 0x139BC, symSize: 0x1C }
-  - { offset: 0x728F, size: 0x8, addend: 0x0, symName: '-[CBBController setRecognizer:]', symObjAddr: 0xF34C, symBinAddr: 0x139D8, symSize: 0x34 }
-  - { offset: 0x72CD, size: 0x8, addend: 0x0, symName: '-[CBBController injector]', symObjAddr: 0xF380, symBinAddr: 0x13A0C, symSize: 0x1C }
-  - { offset: 0x7303, size: 0x8, addend: 0x0, symName: '-[CBBController setInjector:]', symObjAddr: 0xF39C, symBinAddr: 0x13A28, symSize: 0x34 }
-  - { offset: 0x7341, size: 0x8, addend: 0x0, symName: '-[CBBController rows]', symObjAddr: 0xF3D0, symBinAddr: 0x13A5C, symSize: 0x1C }
-  - { offset: 0x7377, size: 0x8, addend: 0x0, symName: '-[CBBController setRows:]', symObjAddr: 0xF3EC, symBinAddr: 0x13A78, symSize: 0x38 }
-  - { offset: 0x73B5, size: 0x8, addend: 0x0, symName: '-[CBBController hudSelection]', symObjAddr: 0xF424, symBinAddr: 0x13AB0, symSize: 0x1C }
-  - { offset: 0x73EB, size: 0x8, addend: 0x0, symName: '-[CBBController setHudSelection:]', symObjAddr: 0xF440, symBinAddr: 0x13ACC, symSize: 0x24 }
-  - { offset: 0x7429, size: 0x8, addend: 0x0, symName: '-[CBBController cursorPosition]', symObjAddr: 0xF464, symBinAddr: 0x13AF0, symSize: 0x2C }
-  - { offset: 0x745F, size: 0x8, addend: 0x0, symName: '-[CBBController motionPointer]', symObjAddr: 0xF490, symBinAddr: 0x13B1C, symSize: 0x1C }
-  - { offset: 0x7495, size: 0x8, addend: 0x0, symName: '-[CBBController setMotionPointer:]', symObjAddr: 0xF4AC, symBinAddr: 0x13B38, symSize: 0x34 }
-  - { offset: 0x74D3, size: 0x8, addend: 0x0, symName: '-[CBBController hudOpen]', symObjAddr: 0xF4E0, symBinAddr: 0x13B6C, symSize: 0x20 }
-  - { offset: 0x7509, size: 0x8, addend: 0x0, symName: '-[CBBController setHudOpen:]', symObjAddr: 0xF500, symBinAddr: 0x13B8C, symSize: 0x28 }
-  - { offset: 0x7547, size: 0x8, addend: 0x0, symName: '-[CBBController learning]', symObjAddr: 0xF528, symBinAddr: 0x13BB4, symSize: 0x20 }
-  - { offset: 0x757D, size: 0x8, addend: 0x0, symName: '-[CBBController setLearning:]', symObjAddr: 0xF548, symBinAddr: 0x13BD4, symSize: 0x28 }
-  - { offset: 0x75BB, size: 0x8, addend: 0x0, symName: '-[CBBController started]', symObjAddr: 0xF570, symBinAddr: 0x13BFC, symSize: 0x20 }
-  - { offset: 0x75F1, size: 0x8, addend: 0x0, symName: '-[CBBController setStarted:]', symObjAddr: 0xF590, symBinAddr: 0x13C1C, symSize: 0x28 }
-  - { offset: 0x762F, size: 0x8, addend: 0x0, symName: '-[CBBController clickLatch]', symObjAddr: 0xF5B8, symBinAddr: 0x13C44, symSize: 0x2C }
-  - { offset: 0x7665, size: 0x8, addend: 0x0, symName: '-[CBBController setClickLatch:]', symObjAddr: 0xF5E4, symBinAddr: 0x13C70, symSize: 0x2C }
-  - { offset: 0x76A3, size: 0x8, addend: 0x0, symName: '-[CBBController tapCalibrating]', symObjAddr: 0xF610, symBinAddr: 0x13C9C, symSize: 0x20 }
-  - { offset: 0x76D9, size: 0x8, addend: 0x0, symName: '-[CBBController setTapCalibrating:]', symObjAddr: 0xF630, symBinAddr: 0x13CBC, symSize: 0x28 }
-  - { offset: 0x7717, size: 0x8, addend: 0x0, symName: '-[CBBController tapProbeIndex]', symObjAddr: 0xF658, symBinAddr: 0x13CE4, symSize: 0x1C }
-  - { offset: 0x774D, size: 0x8, addend: 0x0, symName: '-[CBBController setTapProbeIndex:]', symObjAddr: 0xF674, symBinAddr: 0x13D00, symSize: 0x24 }
-  - { offset: 0x778B, size: 0x8, addend: 0x0, symName: '-[CBBController tapCalibrationTimer]', symObjAddr: 0xF698, symBinAddr: 0x13D24, symSize: 0x1C }
-  - { offset: 0x77C1, size: 0x8, addend: 0x0, symName: '-[CBBController setTapCalibrationTimer:]', symObjAddr: 0xF6B4, symBinAddr: 0x13D40, symSize: 0x34 }
-  - { offset: 0x77FF, size: 0x8, addend: 0x0, symName: '-[CBBController tapProbeSentTime]', symObjAddr: 0xF6E8, symBinAddr: 0x13D74, symSize: 0x1C }
-  - { offset: 0x7835, size: 0x8, addend: 0x0, symName: '-[CBBController setTapProbeSentTime:]', symObjAddr: 0xF704, symBinAddr: 0x13D90, symSize: 0x24 }
-  - { offset: 0x7873, size: 0x8, addend: 0x0, symName: '-[CBBController aimOutOfRangeSince]', symObjAddr: 0xF728, symBinAddr: 0x13DB4, symSize: 0x1C }
-  - { offset: 0x78A9, size: 0x8, addend: 0x0, symName: '-[CBBController setAimOutOfRangeSince:]', symObjAddr: 0xF744, symBinAddr: 0x13DD0, symSize: 0x24 }
-  - { offset: 0x78E7, size: 0x8, addend: 0x0, symName: '-[CBBController landscapeTimer]', symObjAddr: 0xF768, symBinAddr: 0x13DF4, symSize: 0x1C }
-  - { offset: 0x791D, size: 0x8, addend: 0x0, symName: '-[CBBController setLandscapeTimer:]', symObjAddr: 0xF784, symBinAddr: 0x13E10, symSize: 0x34 }
-  - { offset: 0x795B, size: 0x8, addend: 0x0, symName: '-[CBBController lastDeviceOrientation]', symObjAddr: 0xF7B8, symBinAddr: 0x13E44, symSize: 0x1C }
-  - { offset: 0x7991, size: 0x8, addend: 0x0, symName: '-[CBBController setLastDeviceOrientation:]', symObjAddr: 0xF7D4, symBinAddr: 0x13E60, symSize: 0x24 }
-  - { offset: 0x79CF, size: 0x8, addend: 0x0, symName: '-[CBBController dwellAnchor]', symObjAddr: 0xF7F8, symBinAddr: 0x13E84, symSize: 0x2C }
-  - { offset: 0x7A05, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellAnchor:]', symObjAddr: 0xF824, symBinAddr: 0x13EB0, symSize: 0x2C }
-  - { offset: 0x7A43, size: 0x8, addend: 0x0, symName: '-[CBBController dwellAnchorTime]', symObjAddr: 0xF850, symBinAddr: 0x13EDC, symSize: 0x1C }
-  - { offset: 0x7A79, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellAnchorTime:]', symObjAddr: 0xF86C, symBinAddr: 0x13EF8, symSize: 0x24 }
-  - { offset: 0x7AB7, size: 0x8, addend: 0x0, symName: '-[CBBController dwellFired]', symObjAddr: 0xF890, symBinAddr: 0x13F1C, symSize: 0x20 }
-  - { offset: 0x7AED, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellFired:]', symObjAddr: 0xF8B0, symBinAddr: 0x13F3C, symSize: 0x28 }
-  - { offset: 0x7B2B, size: 0x8, addend: 0x0, symName: '-[CBBController dwellTimer]', symObjAddr: 0xF8D8, symBinAddr: 0x13F64, symSize: 0x1C }
-  - { offset: 0x7B61, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellTimer:]', symObjAddr: 0xF8F4, symBinAddr: 0x13F80, symSize: 0x34 }
-  - { offset: 0x7B9F, size: 0x8, addend: 0x0, symName: '-[CBBController supervisorTimer]', symObjAddr: 0xF928, symBinAddr: 0x13FB4, symSize: 0x1C }
-  - { offset: 0x7BD5, size: 0x8, addend: 0x0, symName: '-[CBBController setSupervisorTimer:]', symObjAddr: 0xF944, symBinAddr: 0x13FD0, symSize: 0x34 }
-  - { offset: 0x7C13, size: 0x8, addend: 0x0, symName: '-[CBBController .cxx_destruct]', symObjAddr: 0xF978, symBinAddr: 0x14004, symSize: 0xF8 }
-  - { offset: 0x7C45, size: 0x8, addend: 0x0, symName: _CGSizeMake, symObjAddr: 0xFA70, symBinAddr: 0x140FC, symSize: 0x2C }
-  - { offset: 0x7C8D, size: 0x8, addend: 0x0, symName: ___CBBSetDisplaySleepBlocked_block_invoke, symObjAddr: 0xFC14, symBinAddr: 0x142A0, symSize: 0x90 }
-  - { offset: 0x9A47, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture initWithDevice:]', symObjAddr: 0x0, symBinAddr: 0x14330, symSize: 0x424 }
-  - { offset: 0x9DF8, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture initWithDevice:]', symObjAddr: 0x0, symBinAddr: 0x14330, symSize: 0x424 }
-  - { offset: 0x9F09, size: 0x8, addend: 0x0, symName: _CGSizeMake, symObjAddr: 0x424, symBinAddr: 0x14754, symSize: 0x2C }
-  - { offset: 0x9F51, size: 0x8, addend: 0x0, symName: _CBBNativeScreenSize, symObjAddr: 0x450, symBinAddr: 0x14780, symSize: 0x1AC }
-  - { offset: 0x9FFB, size: 0x8, addend: 0x0, symName: _CBBCreateSurface, symObjAddr: 0x5FC, symBinAddr: 0x1492C, symSize: 0x2BC }
-  - { offset: 0xA060, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture valid]', symObjAddr: 0x8B8, symBinAddr: 0x14BE8, symSize: 0x20 }
-  - { offset: 0xA096, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture hasFrame]', symObjAddr: 0x8D8, symBinAddr: 0x14C08, symSize: 0x20 }
-  - { offset: 0xA0CC, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture frameCount]', symObjAddr: 0x8F8, symBinAddr: 0x14C28, symSize: 0x1C }
-  - { offset: 0xA102, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture texture]', symObjAddr: 0x914, symBinAddr: 0x14C44, symSize: 0x78 }
-  - { offset: 0xA138, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture captureFrame]', symObjAddr: 0x98C, symBinAddr: 0x14CBC, symSize: 0x2CC }
-  - { offset: 0xA1D0, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture latestFrameHasContent]', symObjAddr: 0xC58, symBinAddr: 0x14F88, symSize: 0x2F0 }
-  - { offset: 0xA34F, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture invalidate]', symObjAddr: 0xF48, symBinAddr: 0x15278, symSize: 0x134 }
-  - { offset: 0xA39D, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture dealloc]', symObjAddr: 0x107C, symBinAddr: 0x153AC, symSize: 0x50 }
-  - { offset: 0xA3CF, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture pixelSize]', symObjAddr: 0x10CC, symBinAddr: 0x153FC, symSize: 0x28 }
-  - { offset: 0xA405, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture .cxx_destruct]', symObjAddr: 0x10F4, symBinAddr: 0x15424, symSize: 0x74 }
-  - { offset: 0xAE36, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x15498, symSize: 0x6DC }
-  - { offset: 0xAE4F, size: 0x8, addend: 0x0, symName: _kCBBStereoShaderSource, symObjAddr: 0x4898, symBinAddr: 0x30540, symSize: 0x0 }
-  - { offset: 0xAEC7, size: 0x8, addend: 0x0, symName: _kCBBSimpleShaderSource, symObjAddr: 0x48A0, symBinAddr: 0x30548, symSize: 0x0 }
-  - { offset: 0xAED0, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer drawInMTKView:]', symObjAddr: 0x848, symBinAddr: 0x15CE0, symSize: 0x1364 }
-  - { offset: 0xAEF5, size: 0x8, addend: 0x0, symName: '_drawInMTKView:.geometryReported', symObjAddr: 0xDAE5, symBinAddr: 0x37184, symSize: 0x0 }
-  - { offset: 0xCA2F, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x15498, symSize: 0x6DC }
-  - { offset: 0xCAB6, size: 0x8, addend: 0x0, symName: _MTLClearColorMake, symObjAddr: 0x6DC, symBinAddr: 0x15B74, symSize: 0x4C }
-  - { offset: 0xCB1C, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer capture]', symObjAddr: 0x728, symBinAddr: 0x15BC0, symSize: 0x1C }
-  - { offset: 0xCB52, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer usingSimpleShader]', symObjAddr: 0x744, symBinAddr: 0x15BDC, symSize: 0x20 }
-  - { offset: 0xCB88, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer rendering]', symObjAddr: 0x764, symBinAddr: 0x15BFC, symSize: 0x20 }
-  - { offset: 0xCBBE, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setRendering:]', symObjAddr: 0x784, symBinAddr: 0x15C1C, symSize: 0x70 }
-  - { offset: 0xCBFE, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer mtkView:drawableSizeWillChange:]', symObjAddr: 0x7F4, symBinAddr: 0x15C8C, symSize: 0x54 }
-  - { offset: 0xCC4C, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x1BAC, symBinAddr: 0x17044, symSize: 0x230 }
-  - { offset: 0xCCAE, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x1DDC, symBinAddr: 0x17274, symSize: 0x2C }
-  - { offset: 0xCCF6, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer clearView:]', symObjAddr: 0x1E08, symBinAddr: 0x172A0, symSize: 0x240 }
-  - { offset: 0xCD74, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer view]', symObjAddr: 0x2048, symBinAddr: 0x174E0, symSize: 0x1C }
-  - { offset: 0xCDAA, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer prefs]', symObjAddr: 0x2064, symBinAddr: 0x174FC, symSize: 0x1C }
-  - { offset: 0xCDE0, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setPrefs:]', symObjAddr: 0x2080, symBinAddr: 0x17518, symSize: 0x34 }
-  - { offset: 0xCE1E, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer cursor]', symObjAddr: 0x20B4, symBinAddr: 0x1754C, symSize: 0x28 }
-  - { offset: 0xCE54, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setCursor:]', symObjAddr: 0x20DC, symBinAddr: 0x17574, symSize: 0x28 }
-  - { offset: 0xCE92, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer dwellProgress]', symObjAddr: 0x2104, symBinAddr: 0x1759C, symSize: 0x1C }
-  - { offset: 0xCEC8, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setDwellProgress:]', symObjAddr: 0x2120, symBinAddr: 0x175B8, symSize: 0x24 }
-  - { offset: 0xCF06, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer screenSize]', symObjAddr: 0x2144, symBinAddr: 0x175DC, symSize: 0x28 }
-  - { offset: 0xCF3C, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setScreenSize:]', symObjAddr: 0x216C, symBinAddr: 0x17604, symSize: 0x28 }
-  - { offset: 0xCF7A, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer reticleVisible]', symObjAddr: 0x2194, symBinAddr: 0x1762C, symSize: 0x20 }
-  - { offset: 0xCFB0, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setReticleVisible:]', symObjAddr: 0x21B4, symBinAddr: 0x1764C, symSize: 0x28 }
-  - { offset: 0xCFEE, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer .cxx_destruct]', symObjAddr: 0x21DC, symBinAddr: 0x17674, symSize: 0x98 }
-  - { offset: 0xD69D, size: 0x8, addend: 0x0, symName: '+[CBBHudRow rowWithTitle:valueText:step:]', symObjAddr: 0x0, symBinAddr: 0x1770C, symSize: 0x10C }
-  - { offset: 0xE446, size: 0x8, addend: 0x0, symName: '+[CBBHudRow rowWithTitle:valueText:step:]', symObjAddr: 0x0, symBinAddr: 0x1770C, symSize: 0x10C }
-  - { offset: 0xE4B4, size: 0x8, addend: 0x0, symName: '+[CBBHudRow rowWithTitle:valueText:activate:]', symObjAddr: 0x10C, symBinAddr: 0x17818, symSize: 0x10C }
-  - { offset: 0xE522, size: 0x8, addend: 0x0, symName: '-[CBBHudRow title]', symObjAddr: 0x218, symBinAddr: 0x17924, symSize: 0x1C }
-  - { offset: 0xE558, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setTitle:]', symObjAddr: 0x234, symBinAddr: 0x17940, symSize: 0x38 }
-  - { offset: 0xE596, size: 0x8, addend: 0x0, symName: '-[CBBHudRow valueText]', symObjAddr: 0x26C, symBinAddr: 0x17978, symSize: 0x1C }
-  - { offset: 0xE5CC, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setValueText:]', symObjAddr: 0x288, symBinAddr: 0x17994, symSize: 0x38 }
-  - { offset: 0xE60A, size: 0x8, addend: 0x0, symName: '-[CBBHudRow step]', symObjAddr: 0x2C0, symBinAddr: 0x179CC, symSize: 0x1C }
-  - { offset: 0xE640, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setStep:]', symObjAddr: 0x2DC, symBinAddr: 0x179E8, symSize: 0x38 }
-  - { offset: 0xE67E, size: 0x8, addend: 0x0, symName: '-[CBBHudRow activate]', symObjAddr: 0x314, symBinAddr: 0x17A20, symSize: 0x1C }
-  - { offset: 0xE6B4, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setActivate:]', symObjAddr: 0x330, symBinAddr: 0x17A3C, symSize: 0x38 }
-  - { offset: 0xE6F2, size: 0x8, addend: 0x0, symName: '-[CBBHudRow .cxx_destruct]', symObjAddr: 0x368, symBinAddr: 0x17A74, symSize: 0x68 }
-  - { offset: 0xE724, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD initWithFrame:]', symObjAddr: 0x3D0, symBinAddr: 0x17ADC, symSize: 0x164 }
-  - { offset: 0xE768, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setRows:]', symObjAddr: 0x534, symBinAddr: 0x17C40, symSize: 0x8C }
-  - { offset: 0xE7A8, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setSelectedIndex:]', symObjAddr: 0x5C0, symBinAddr: 0x17CCC, symSize: 0x44 }
-  - { offset: 0xE7E8, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setStatusText:]', symObjAddr: 0x604, symBinAddr: 0x17D10, symSize: 0x8C }
-  - { offset: 0xE828, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setPromptText:]', symObjAddr: 0x690, symBinAddr: 0x17D9C, symSize: 0x8C }
-  - { offset: 0xE868, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setButtonPoint:]', symObjAddr: 0x71C, symBinAddr: 0x17E28, symSize: 0x48 }
-  - { offset: 0xE8A8, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setShowButtonMarker:]', symObjAddr: 0x764, symBinAddr: 0x17E70, symSize: 0x48 }
-  - { offset: 0xE8E8, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setLandscape:]', symObjAddr: 0x7AC, symBinAddr: 0x17EB8, symSize: 0x7C }
-  - { offset: 0xE928, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setRotationDegrees:]', symObjAddr: 0x828, symBinAddr: 0x17F34, symSize: 0x6C }
-  - { offset: 0xE9A2, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD drawRect:]', symObjAddr: 0x894, symBinAddr: 0x17FA0, symSize: 0x53C }
-  - { offset: 0xEB62, size: 0x8, addend: 0x0, symName: _CGRectMake, symObjAddr: 0xDD0, symBinAddr: 0x184DC, symSize: 0x4C }
-  - { offset: 0xEBC8, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0xE1C, symBinAddr: 0x18528, symSize: 0x2C }
-  - { offset: 0xEC10, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD drawPanelInRect:marker:hasMarker:]', symObjAddr: 0xE48, symBinAddr: 0x18554, symSize: 0x15B4 }
-  - { offset: 0xF0B3, size: 0x8, addend: 0x0, symName: _CBBFont, symObjAddr: 0x23FC, symBinAddr: 0x19B08, symSize: 0x1B4 }
-  - { offset: 0xF105, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD rows]', symObjAddr: 0x25B0, symBinAddr: 0x19CBC, symSize: 0x24 }
-  - { offset: 0xF13B, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD selectedIndex]', symObjAddr: 0x25D4, symBinAddr: 0x19CE0, symSize: 0x24 }
-  - { offset: 0xF171, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD statusText]', symObjAddr: 0x25F8, symBinAddr: 0x19D04, symSize: 0x24 }
-  - { offset: 0xF1A7, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD promptText]', symObjAddr: 0x261C, symBinAddr: 0x19D28, symSize: 0x24 }
-  - { offset: 0xF1DD, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD buttonPoint]', symObjAddr: 0x2640, symBinAddr: 0x19D4C, symSize: 0x30 }
-  - { offset: 0xF213, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD showButtonMarker]', symObjAddr: 0x2670, symBinAddr: 0x19D7C, symSize: 0x2C }
-  - { offset: 0xF249, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD landscape]', symObjAddr: 0x269C, symBinAddr: 0x19DA8, symSize: 0x2C }
-  - { offset: 0xF27F, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD rotationDegrees]', symObjAddr: 0x26C8, symBinAddr: 0x19DD4, symSize: 0x24 }
-  - { offset: 0xF2B5, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD .cxx_destruct]', symObjAddr: 0x26EC, symBinAddr: 0x19DF8, symSize: 0x70 }
-  - { offset: 0xF7C7, size: 0x8, addend: 0x0, symName: '-[UIApplication(CBBTouchDeliveryProbe) cbb_deliveryProbeSendEvent:]', symObjAddr: 0x0, symBinAddr: 0x19E68, symSize: 0x118 }
-  - { offset: 0xF7D4, size: 0x8, addend: 0x0, symName: '+[CBBTouchInjector sharedInjector]', symObjAddr: 0x118, symBinAddr: 0x19F80, symSize: 0x7C }
-  - { offset: 0xF7FD, size: 0x8, addend: 0x0, symName: _sharedInjector.shared, symObjAddr: 0x10B60, symBinAddr: 0x37190, symSize: 0x0 }
-  - { offset: 0xF812, size: 0x8, addend: 0x0, symName: _sharedInjector.onceToken, symObjAddr: 0x10B68, symBinAddr: 0x37198, symSize: 0x0 }
-  - { offset: 0xFA0D, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector installDeliveryProbe]', symObjAddr: 0x730, symBinAddr: 0x1A598, symSize: 0x74 }
-  - { offset: 0xFA34, size: 0x8, addend: 0x0, symName: _installDeliveryProbe.once, symObjAddr: 0x10BA8, symBinAddr: 0x371D8, symSize: 0x0 }
-  - { offset: 0xFA7C, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector enqueueInProcess:atPoint:]', symObjAddr: 0x153C, symBinAddr: 0x1B3A4, symSize: 0x1C0 }
-  - { offset: 0xFAA3, size: 0x8, addend: 0x0, symName: '_enqueueInProcess:atPoint:.funnelNamed', symObjAddr: 0x10BB0, symBinAddr: 0x371E0, symSize: 0x0 }
-  - { offset: 0xFB33, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector swipeFromPoint:toPoint:duration:]', symObjAddr: 0x2A80, symBinAddr: 0x1C828, symSize: 0x194 }
-  - { offset: 0xFC4E, size: 0x8, addend: 0x0, symName: _CBBDeliveryCount, symObjAddr: 0x10B58, symBinAddr: 0x37188, symSize: 0x0 }
-  - { offset: 0xFC7A, size: 0x8, addend: 0x0, symName: _CBBSetIntegerWithOptions, symObjAddr: 0x10B70, symBinAddr: 0x371A0, symSize: 0x0 }
-  - { offset: 0xFCCA, size: 0x8, addend: 0x0, symName: _CBBSetDigitizerInfo, symObjAddr: 0x10B78, symBinAddr: 0x371A8, symSize: 0x0 }
-  - { offset: 0xFD53, size: 0x8, addend: 0x0, symName: _CBBCreateSimpleClient, symObjAddr: 0x10B80, symBinAddr: 0x371B0, symSize: 0x0 }
-  - { offset: 0xFD9E, size: 0x8, addend: 0x0, symName: _CBBRegisterEventCallback, symObjAddr: 0x10B88, symBinAddr: 0x371B8, symSize: 0x0 }
-  - { offset: 0xFE00, size: 0x8, addend: 0x0, symName: _CBBScheduleWithRunLoop, symObjAddr: 0x10B90, symBinAddr: 0x371C0, symSize: 0x0 }
-  - { offset: 0xFE4B, size: 0x8, addend: 0x0, symName: _CBBSetDispatchQueue, symObjAddr: 0x10B98, symBinAddr: 0x371C8, symSize: 0x0 }
-  - { offset: 0xFE7C, size: 0x8, addend: 0x0, symName: _CBBEventGetType, symObjAddr: 0x10BA0, symBinAddr: 0x371D0, symSize: 0x0 }
-  - { offset: 0xFEA0, size: 0x8, addend: 0x0, symName: _CBBDigitizerSenderID, symObjAddr: 0x1CDC, symBinAddr: 0x1BB44, symSize: 0x3F4 }
-  - { offset: 0xFEC5, size: 0x8, addend: 0x0, symName: _CBBDigitizerSenderID.senderID, symObjAddr: 0x10BB8, symBinAddr: 0x371E8, symSize: 0x0 }
-  - { offset: 0xFEDA, size: 0x8, addend: 0x0, symName: _CBBDigitizerSenderID.resolved, symObjAddr: 0x10BC0, symBinAddr: 0x371F0, symSize: 0x0 }
-  - { offset: 0x10006, size: 0x8, addend: 0x0, symName: _CBBLoopbackCount, symObjAddr: 0x10BB4, symBinAddr: 0x371E4, symSize: 0x0 }
-  - { offset: 0x107A4, size: 0x8, addend: 0x0, symName: '-[UIApplication(CBBTouchDeliveryProbe) cbb_deliveryProbeSendEvent:]', symObjAddr: 0x0, symBinAddr: 0x19E68, symSize: 0x118 }
-  - { offset: 0x10890, size: 0x8, addend: 0x0, symName: '___34+[CBBTouchInjector sharedInjector]_block_invoke', symObjAddr: 0x194, symBinAddr: 0x19FFC, symSize: 0x54 }
-  - { offset: 0x108B8, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector init]', symObjAddr: 0x1E8, symBinAddr: 0x1A050, symSize: 0x318 }
-  - { offset: 0x108EE, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x500, symBinAddr: 0x1A368, symSize: 0x230 }
-  - { offset: 0x10950, size: 0x8, addend: 0x0, symName: '___40-[CBBTouchInjector installDeliveryProbe]_block_invoke', symObjAddr: 0x7A4, symBinAddr: 0x1A60C, symSize: 0x1C8 }
-  - { offset: 0x109B3, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector startLoopbackMonitor]', symObjAddr: 0x96C, symBinAddr: 0x1A7D4, symSize: 0x230 }
-  - { offset: 0x109FB, size: 0x8, addend: 0x0, symName: _CBBLoopbackCallback, symObjAddr: 0xB9C, symBinAddr: 0x1AA04, symSize: 0xB0 }
-  - { offset: 0x10A61, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector dispatchClient]', symObjAddr: 0xC4C, symBinAddr: 0x1AAB4, symSize: 0x1A8 }
-  - { offset: 0x10AAD, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector discardDispatchClient]', symObjAddr: 0xDF4, symBinAddr: 0x1AC5C, symSize: 0x58 }
-  - { offset: 0x10AE0, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector screenSize]', symObjAddr: 0xE4C, symBinAddr: 0x1ACB4, symSize: 0x34 }
-  - { offset: 0x10B17, size: 0x8, addend: 0x0, symName: _CBBNativeScreenSize, symObjAddr: 0xE80, symBinAddr: 0x1ACE8, symSize: 0x1AC }
-  - { offset: 0x10BC1, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector available]', symObjAddr: 0x102C, symBinAddr: 0x1AE94, symSize: 0x20 }
-  - { offset: 0x10BF8, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector targetWindowForPoint:]', symObjAddr: 0x104C, symBinAddr: 0x1AEB4, symSize: 0x3B8 }
-  - { offset: 0x10C85, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector contextIdForPoint:]', symObjAddr: 0x1404, symBinAddr: 0x1B26C, symSize: 0x138 }
-  - { offset: 0x10D06, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector currentFunnel]', symObjAddr: 0x16FC, symBinAddr: 0x1B564, symSize: 0xDC }
-  - { offset: 0x10D4C, size: 0x8, addend: 0x0, symName: _CBBForegroundAppBundleIdentifier, symObjAddr: 0x17D8, symBinAddr: 0x1B640, symSize: 0x2B0 }
-  - { offset: 0x10DDE, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector deliverEvent:atPoint:funnel:]', symObjAddr: 0x1A88, symBinAddr: 0x1B8F0, symSize: 0x254 }
-  - { offset: 0x10E7F, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector evaluateAfterTapFrom:delivered:funnel:]', symObjAddr: 0x20D0, symBinAddr: 0x1BF38, symSize: 0xDC }
-  - { offset: 0x10EEE, size: 0x8, addend: 0x0, symName: '___58-[CBBTouchInjector evaluateAfterTapFrom:delivered:funnel:]_block_invoke', symObjAddr: 0x21AC, symBinAddr: 0x1C014, symSize: 0x220 }
-  - { offset: 0x10F9B, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector newTouchEventAtPoint:phase:]', symObjAddr: 0x2428, symBinAddr: 0x1C234, symSize: 0x1D4 }
-  - { offset: 0x1103B, size: 0x8, addend: 0x0, symName: _CBBSetDigitizerField, symObjAddr: 0x25FC, symBinAddr: 0x1C408, symSize: 0x64 }
-  - { offset: 0x11099, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector tapAtPoint:]', symObjAddr: 0x2660, symBinAddr: 0x1C46C, symSize: 0xF0 }
-  - { offset: 0x11136, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x2750, symBinAddr: 0x1C55C, symSize: 0x2C }
-  - { offset: 0x1117E, size: 0x8, addend: 0x0, symName: '___31-[CBBTouchInjector tapAtPoint:]_block_invoke', symObjAddr: 0x277C, symBinAddr: 0x1C588, symSize: 0x2A0 }
-  - { offset: 0x1121B, size: 0x8, addend: 0x0, symName: '___52-[CBBTouchInjector swipeFromPoint:toPoint:duration:]_block_invoke', symObjAddr: 0x2C14, symBinAddr: 0x1C9BC, symSize: 0x35C }
-  - { offset: 0x11313, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector pressMenuWithFunnel:]', symObjAddr: 0x2F70, symBinAddr: 0x1CD18, symSize: 0x3B8 }
-  - { offset: 0x113A0, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector pressHome]', symObjAddr: 0x3328, symBinAddr: 0x1D0D0, symSize: 0x9C }
-  - { offset: 0x113D3, size: 0x8, addend: 0x0, symName: '___29-[CBBTouchInjector pressHome]_block_invoke', symObjAddr: 0x33C4, symBinAddr: 0x1D16C, symSize: 0x34 }
-  - { offset: 0x11413, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector pressHomeTwice]', symObjAddr: 0x33F8, symBinAddr: 0x1D1A0, symSize: 0x9C }
-  - { offset: 0x11446, size: 0x8, addend: 0x0, symName: '___34-[CBBTouchInjector pressHomeTwice]_block_invoke', symObjAddr: 0x3494, symBinAddr: 0x1D23C, symSize: 0x5C }
-  - { offset: 0x11486, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector .cxx_destruct]', symObjAddr: 0x34F0, symBinAddr: 0x1D298, symSize: 0x30 }
-  - { offset: 0x114B8, size: 0x8, addend: 0x0, symName: _CGSizeMake, symObjAddr: 0x3520, symBinAddr: 0x1D2C8, symSize: 0x2C }
-  - { offset: 0x1340A, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer init]', symObjAddr: 0x0, symBinAddr: 0x1D2F4, symSize: 0xD8 }
-  - { offset: 0x135BD, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer init]', symObjAddr: 0x0, symBinAddr: 0x1D2F4, symSize: 0xD8 }
-  - { offset: 0x135F3, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer dealloc]', symObjAddr: 0xD8, symBinAddr: 0x1D3CC, symSize: 0x54 }
-  - { offset: 0x13625, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer touchDown]', symObjAddr: 0x12C, symBinAddr: 0x1D420, symSize: 0xC4 }
-  - { offset: 0x13665, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer touchUp]', symObjAddr: 0x1F0, symBinAddr: 0x1D4E4, symSize: 0x16C }
-  - { offset: 0x136B3, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer flushPending]', symObjAddr: 0x35C, symBinAddr: 0x1D650, symSize: 0x4C }
-  - { offset: 0x136E5, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer deliverClicks:held:]', symObjAddr: 0x3A8, symBinAddr: 0x1D69C, symSize: 0x108 }
-  - { offset: 0x13779, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer cancel]', symObjAddr: 0x4B0, symBinAddr: 0x1D7A4, symSize: 0x50 }
-  - { offset: 0x137AB, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer delegate]', symObjAddr: 0x500, symBinAddr: 0x1D7F4, symSize: 0x2C }
-  - { offset: 0x137E1, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer setDelegate:]', symObjAddr: 0x52C, symBinAddr: 0x1D820, symSize: 0x34 }
-  - { offset: 0x1381F, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer multiTapInterval]', symObjAddr: 0x560, symBinAddr: 0x1D854, symSize: 0x1C }
-  - { offset: 0x13855, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer setMultiTapInterval:]', symObjAddr: 0x57C, symBinAddr: 0x1D870, symSize: 0x24 }
-  - { offset: 0x13893, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer longPressInterval]', symObjAddr: 0x5A0, symBinAddr: 0x1D894, symSize: 0x1C }
-  - { offset: 0x138C9, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer setLongPressInterval:]', symObjAddr: 0x5BC, symBinAddr: 0x1D8B0, symSize: 0x24 }
-  - { offset: 0x13907, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer .cxx_destruct]', symObjAddr: 0x5E0, symBinAddr: 0x1D8D4, symSize: 0x40 }
-  - { offset: 0x13974, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer init]', symObjAddr: 0x0, symBinAddr: 0x1D914, symSize: 0xF0 }
-  - { offset: 0x140D2, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer init]', symObjAddr: 0x0, symBinAddr: 0x1D914, symSize: 0xF0 }
-  - { offset: 0x14108, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer available]', symObjAddr: 0xF0, symBinAddr: 0x1DA04, symSize: 0x30 }
-  - { offset: 0x1413E, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer running]', symObjAddr: 0x120, symBinAddr: 0x1DA34, symSize: 0x20 }
-  - { offset: 0x14174, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer start]', symObjAddr: 0x140, symBinAddr: 0x1DA54, symSize: 0x168 }
-  - { offset: 0x141B4, size: 0x8, addend: 0x0, symName: '___25-[CBBMotionPointer start]_block_invoke', symObjAddr: 0x2A8, symBinAddr: 0x1DBBC, symSize: 0xDC }
-  - { offset: 0x14225, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer stop]', symObjAddr: 0x3E0, symBinAddr: 0x1DC98, symSize: 0x58 }
-  - { offset: 0x14257, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer recenter]', symObjAddr: 0x438, symBinAddr: 0x1DCF0, symSize: 0xD4 }
-  - { offset: 0x14297, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer captureReference:]', symObjAddr: 0x50C, symBinAddr: 0x1DDC4, symSize: 0x142C }
-  - { offset: 0x14324, size: 0x8, addend: 0x0, symName: _CBBGazeFromAttitude, symObjAddr: 0x1938, symBinAddr: 0x1F1F0, symSize: 0x5B8 }
-  - { offset: 0x1435C, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer handleMotion:]', symObjAddr: 0x1EF0, symBinAddr: 0x1F7A8, symSize: 0x958 }
-  - { offset: 0x14450, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x2848, symBinAddr: 0x20100, symSize: 0x2C }
-  - { offset: 0x14498, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer onAim]', symObjAddr: 0x2874, symBinAddr: 0x2012C, symSize: 0x1C }
-  - { offset: 0x144CE, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer setOnAim:]', symObjAddr: 0x2890, symBinAddr: 0x20148, symSize: 0x38 }
-  - { offset: 0x1450C, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer .cxx_destruct]', symObjAddr: 0x28C8, symBinAddr: 0x20180, symSize: 0x48 }
-  - { offset: 0x1472F, size: 0x8, addend: 0x0, symName: '+[CBBHomeLandscape sharedHelper]', symObjAddr: 0x0, symBinAddr: 0x201C8, symSize: 0x7C }
-  - { offset: 0x1473C, size: 0x8, addend: 0x0, symName: '+[CBBHomeLandscape sharedHelper]', symObjAddr: 0x0, symBinAddr: 0x201C8, symSize: 0x7C }
-  - { offset: 0x14765, size: 0x8, addend: 0x0, symName: _sharedHelper.shared, symObjAddr: 0xAAC8, symBinAddr: 0x371F8, symSize: 0x0 }
-  - { offset: 0x1477A, size: 0x8, addend: 0x0, symName: _sharedHelper.onceToken, symObjAddr: 0xAAD0, symBinAddr: 0x37200, symSize: 0x0 }
-  - { offset: 0x14847, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape installHooksOnce]', symObjAddr: 0xD0, symBinAddr: 0x20298, symSize: 0xD0 }
-  - { offset: 0x1486C, size: 0x8, addend: 0x0, symName: _installHooksOnce.once, symObjAddr: 0xAAD8, symBinAddr: 0x37208, symSize: 0x0 }
-  - { offset: 0x148E9, size: 0x8, addend: 0x0, symName: _gOriginalAppOrientations, symObjAddr: 0xAAE0, symBinAddr: 0x37210, symSize: 0x0 }
-  - { offset: 0x1490F, size: 0x8, addend: 0x0, symName: _gOriginalHomeScreenOrientations, symObjAddr: 0xAAE8, symBinAddr: 0x37218, symSize: 0x0 }
-  - { offset: 0x14924, size: 0x8, addend: 0x0, symName: _gOriginalHomeScreenAutorotate, symObjAddr: 0xAAF0, symBinAddr: 0x37220, symSize: 0x0 }
-  - { offset: 0x14939, size: 0x8, addend: 0x0, symName: _gHookedDelegateClass, symObjAddr: 0xAAF8, symBinAddr: 0x37228, symSize: 0x0 }
-  - { offset: 0x1494E, size: 0x8, addend: 0x0, symName: _gOriginalDelegateOrientations, symObjAddr: 0xAB00, symBinAddr: 0x37230, symSize: 0x0 }
-  - { offset: 0x14963, size: 0x8, addend: 0x0, symName: _gTriedUnlockingRotationLock, symObjAddr: 0xAB08, symBinAddr: 0x37238, symSize: 0x0 }
-  - { offset: 0x1499F, size: 0x8, addend: 0x0, symName: _gNudgeAttempts, symObjAddr: 0xAB10, symBinAddr: 0x37240, symSize: 0x0 }
-  - { offset: 0x149B4, size: 0x8, addend: 0x0, symName: _gLandscapeActive, symObjAddr: 0xAB18, symBinAddr: 0x37248, symSize: 0x0 }
-  - { offset: 0x149C9, size: 0x8, addend: 0x0, symName: _gLandscapeOrientation, symObjAddr: 0x1F60, symBinAddr: 0x37070, symSize: 0x0 }
-  - { offset: 0x1692B, size: 0x8, addend: 0x0, symName: '___32+[CBBHomeLandscape sharedHelper]_block_invoke', symObjAddr: 0x7C, symBinAddr: 0x20244, symSize: 0x54 }
-  - { offset: 0x16953, size: 0x8, addend: 0x0, symName: '___36-[CBBHomeLandscape installHooksOnce]_block_invoke', symObjAddr: 0x1A0, symBinAddr: 0x20368, symSize: 0x288 }
-  - { offset: 0x169B8, size: 0x8, addend: 0x0, symName: _CBBHookMethod, symObjAddr: 0x428, symBinAddr: 0x205F0, symSize: 0x164 }
-  - { offset: 0x16A7A, size: 0x8, addend: 0x0, symName: _CBBAppSupportedOrientations, symObjAddr: 0x58C, symBinAddr: 0x20754, symSize: 0xE4 }
-  - { offset: 0x16ABE, size: 0x8, addend: 0x0, symName: _CBBHomeScreenSupportedOrientations, symObjAddr: 0x670, symBinAddr: 0x20838, symSize: 0xBC }
-  - { offset: 0x16AF4, size: 0x8, addend: 0x0, symName: _CBBHomeScreenShouldAutorotate, symObjAddr: 0x72C, symBinAddr: 0x208F4, symSize: 0xD0 }
-  - { offset: 0x16B2A, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape hookDelegateIfNeeded]', symObjAddr: 0x860, symBinAddr: 0x209C4, symSize: 0x1F0 }
-  - { offset: 0x16B92, size: 0x8, addend: 0x0, symName: _CBBDelegateSupportedOrientations, symObjAddr: 0xA50, symBinAddr: 0x20BB4, symSize: 0x108 }
-  - { offset: 0x16BE4, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape releaseRotationLockIfPossible]', symObjAddr: 0xB58, symBinAddr: 0x20CBC, symSize: 0x1C8 }
-  - { offset: 0x16C69, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape homeScreenWindow]', symObjAddr: 0xD20, symBinAddr: 0x20E84, symSize: 0x20C }
-  - { offset: 0x16CC5, size: 0x8, addend: 0x0, symName: _CBBLooksLikeHomeScreenObject, symObjAddr: 0xF2C, symBinAddr: 0x21090, symSize: 0x104 }
-  - { offset: 0x16CFB, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape nudgeOrientation:]', symObjAddr: 0x1030, symBinAddr: 0x21194, symSize: 0x268 }
-  - { offset: 0x16D7A, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape applyMode:]', symObjAddr: 0x1298, symBinAddr: 0x213FC, symSize: 0x14C }
-  - { offset: 0x16DCB, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x13E4, symBinAddr: 0x21548, symSize: 0x230 }
-  - { offset: 0x16E2D, size: 0x8, addend: 0x0, symName: _CBBDeviceLandscapeOrientation, symObjAddr: 0x1614, symBinAddr: 0x21778, symSize: 0x98 }
-  - { offset: 0x16E46, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape wantsMoreAttempts]', symObjAddr: 0x16AC, symBinAddr: 0x21810, symSize: 0x4C }
-  - { offset: 0x17210, size: 0x8, addend: 0x0, symName: '+[CBBPrefs sharedPrefs]', symObjAddr: 0x0, symBinAddr: 0x2185C, symSize: 0x7C }
-  - { offset: 0x17229, size: 0x8, addend: 0x0, symName: _CBBKeyEnabled, symObjAddr: 0x16B8, symBinAddr: 0x306A0, symSize: 0x0 }
-  - { offset: 0x172A1, size: 0x8, addend: 0x0, symName: _CBBKeyZoom, symObjAddr: 0x16C0, symBinAddr: 0x306A8, symSize: 0x0 }
-  - { offset: 0x172B6, size: 0x8, addend: 0x0, symName: _CBBKeyMode, symObjAddr: 0x16C8, symBinAddr: 0x306B0, symSize: 0x0 }
-  - { offset: 0x172CB, size: 0x8, addend: 0x0, symName: _CBBKeyRotation, symObjAddr: 0x16D0, symBinAddr: 0x306B8, symSize: 0x0 }
-  - { offset: 0x172E0, size: 0x8, addend: 0x0, symName: _CBBKeyK1, symObjAddr: 0x16D8, symBinAddr: 0x306C0, symSize: 0x0 }
-  - { offset: 0x172F5, size: 0x8, addend: 0x0, symName: _CBBKeyK2, symObjAddr: 0x16E0, symBinAddr: 0x306C8, symSize: 0x0 }
-  - { offset: 0x1730A, size: 0x8, addend: 0x0, symName: _CBBKeyChroma, symObjAddr: 0x16E8, symBinAddr: 0x306D0, symSize: 0x0 }
-  - { offset: 0x1731F, size: 0x8, addend: 0x0, symName: _CBBKeyCurvature, symObjAddr: 0x16F0, symBinAddr: 0x306D8, symSize: 0x0 }
-  - { offset: 0x17334, size: 0x8, addend: 0x0, symName: _CBBKeyParallax, symObjAddr: 0x16F8, symBinAddr: 0x306E0, symSize: 0x0 }
-  - { offset: 0x17349, size: 0x8, addend: 0x0, symName: _CBBKeyBrightness, symObjAddr: 0x1700, symBinAddr: 0x306E8, symSize: 0x0 }
-  - { offset: 0x1735E, size: 0x8, addend: 0x0, symName: _CBBKeyVignette, symObjAddr: 0x1708, symBinAddr: 0x306F0, symSize: 0x0 }
-  - { offset: 0x17373, size: 0x8, addend: 0x0, symName: _CBBKeyCursorStep, symObjAddr: 0x1710, symBinAddr: 0x306F8, symSize: 0x0 }
-  - { offset: 0x17388, size: 0x8, addend: 0x0, symName: _CBBKeyGridColumns, symObjAddr: 0x1718, symBinAddr: 0x30700, symSize: 0x0 }
-  - { offset: 0x1739D, size: 0x8, addend: 0x0, symName: _CBBKeyAimSensitivity, symObjAddr: 0x1720, symBinAddr: 0x30708, symSize: 0x0 }
-  - { offset: 0x173B2, size: 0x8, addend: 0x0, symName: _CBBKeyHomeLandscape, symObjAddr: 0x1728, symBinAddr: 0x30710, symSize: 0x0 }
-  - { offset: 0x173C7, size: 0x8, addend: 0x0, symName: _CBBKeyMirror, symObjAddr: 0x1730, symBinAddr: 0x30718, symSize: 0x0 }
-  - { offset: 0x173DC, size: 0x8, addend: 0x0, symName: _CBBKeyTapRotation, symObjAddr: 0x1738, symBinAddr: 0x30720, symSize: 0x0 }
-  - { offset: 0x173F1, size: 0x8, addend: 0x0, symName: _CBBKeyTapA, symObjAddr: 0x1740, symBinAddr: 0x30728, symSize: 0x0 }
-  - { offset: 0x17406, size: 0x8, addend: 0x0, symName: _CBBKeyTapB, symObjAddr: 0x1748, symBinAddr: 0x30730, symSize: 0x0 }
-  - { offset: 0x1741B, size: 0x8, addend: 0x0, symName: _CBBKeyTapC, symObjAddr: 0x1750, symBinAddr: 0x30738, symSize: 0x0 }
-  - { offset: 0x17430, size: 0x8, addend: 0x0, symName: _CBBKeyTapD, symObjAddr: 0x1758, symBinAddr: 0x30740, symSize: 0x0 }
-  - { offset: 0x17445, size: 0x8, addend: 0x0, symName: _CBBKeyTapTX, symObjAddr: 0x1760, symBinAddr: 0x30748, symSize: 0x0 }
-  - { offset: 0x1745A, size: 0x8, addend: 0x0, symName: _CBBKeyTapTY, symObjAddr: 0x1768, symBinAddr: 0x30750, symSize: 0x0 }
-  - { offset: 0x1746F, size: 0x8, addend: 0x0, symName: _CBBKeyTapCalibrated, symObjAddr: 0x1770, symBinAddr: 0x30758, symSize: 0x0 }
-  - { offset: 0x17484, size: 0x8, addend: 0x0, symName: _CBBKeyTapCalibrationOrientation, symObjAddr: 0x1778, symBinAddr: 0x30760, symSize: 0x0 }
-  - { offset: 0x17499, size: 0x8, addend: 0x0, symName: _CBBKeyLandscapeArmed, symObjAddr: 0x1780, symBinAddr: 0x30768, symSize: 0x0 }
-  - { offset: 0x174AE, size: 0x8, addend: 0x0, symName: _CBBKeyBootArmed, symObjAddr: 0x1788, symBinAddr: 0x30770, symSize: 0x0 }
-  - { offset: 0x174C3, size: 0x8, addend: 0x0, symName: _CBBKeyBootFailures, symObjAddr: 0x1790, symBinAddr: 0x30778, symSize: 0x0 }
-  - { offset: 0x174D8, size: 0x8, addend: 0x0, symName: _CBBKeyButtonX, symObjAddr: 0x1798, symBinAddr: 0x30780, symSize: 0x0 }
-  - { offset: 0x174ED, size: 0x8, addend: 0x0, symName: _CBBKeyButtonY, symObjAddr: 0x17A0, symBinAddr: 0x30788, symSize: 0x0 }
-  - { offset: 0x17502, size: 0x8, addend: 0x0, symName: _CBBKeyCaptureFPS, symObjAddr: 0x17A8, symBinAddr: 0x30790, symSize: 0x0 }
-  - { offset: 0x17517, size: 0x8, addend: 0x0, symName: _CBBKeyHideFromCapture, symObjAddr: 0x17B0, symBinAddr: 0x30798, symSize: 0x0 }
-  - { offset: 0x1752C, size: 0x8, addend: 0x0, symName: _CBBKeyDwellClick, symObjAddr: 0x17B8, symBinAddr: 0x307A0, symSize: 0x0 }
-  - { offset: 0x17541, size: 0x8, addend: 0x0, symName: _CBBModeFill, symObjAddr: 0x17C0, symBinAddr: 0x307A8, symSize: 0x0 }
-  - { offset: 0x17556, size: 0x8, addend: 0x0, symName: _CBBModeNative, symObjAddr: 0x17C8, symBinAddr: 0x307B0, symSize: 0x0 }
-  - { offset: 0x1756B, size: 0x8, addend: 0x0, symName: _kCBBDomain, symObjAddr: 0x17D0, symBinAddr: 0x307B8, symSize: 0x0 }
-  - { offset: 0x17574, size: 0x8, addend: 0x0, symName: '+[CBBPrefs sharedPrefs]', symObjAddr: 0x0, symBinAddr: 0x2185C, symSize: 0x7C }
-  - { offset: 0x1759D, size: 0x8, addend: 0x0, symName: _sharedPrefs.shared, symObjAddr: 0x3788, symBinAddr: 0x37250, symSize: 0x0 }
-  - { offset: 0x175B2, size: 0x8, addend: 0x0, symName: _sharedPrefs.onceToken, symObjAddr: 0x3790, symBinAddr: 0x37258, symSize: 0x0 }
-  - { offset: 0x177BD, size: 0x8, addend: 0x0, symName: '___23+[CBBPrefs sharedPrefs]_block_invoke', symObjAddr: 0x7C, symBinAddr: 0x218D8, symSize: 0x54 }
-  - { offset: 0x177E5, size: 0x8, addend: 0x0, symName: '-[CBBPrefs init]', symObjAddr: 0xD0, symBinAddr: 0x2192C, symSize: 0x9E8 }
-  - { offset: 0x1781D, size: 0x8, addend: 0x0, symName: '-[CBBPrefs rawValueForKey:]', symObjAddr: 0xAB8, symBinAddr: 0x22314, symSize: 0x110 }
-  - { offset: 0x1786F, size: 0x8, addend: 0x0, symName: '-[CBBPrefs doubleForKey:]', symObjAddr: 0xBC8, symBinAddr: 0x22424, symSize: 0x88 }
-  - { offset: 0x178B3, size: 0x8, addend: 0x0, symName: '-[CBBPrefs integerForKey:]', symObjAddr: 0xC50, symBinAddr: 0x224AC, symSize: 0x8C }
-  - { offset: 0x178F7, size: 0x8, addend: 0x0, symName: '-[CBBPrefs boolForKey:]', symObjAddr: 0xCDC, symBinAddr: 0x22538, symSize: 0x8C }
-  - { offset: 0x1793B, size: 0x8, addend: 0x0, symName: '-[CBBPrefs setDouble:forKey:]', symObjAddr: 0xD68, symBinAddr: 0x225C4, symSize: 0x68 }
-  - { offset: 0x17989, size: 0x8, addend: 0x0, symName: '-[CBBPrefs setInteger:forKey:]', symObjAddr: 0xDD0, symBinAddr: 0x2262C, symSize: 0x68 }
-  - { offset: 0x179D7, size: 0x8, addend: 0x0, symName: '-[CBBPrefs setBool:forKey:]', symObjAddr: 0xE38, symBinAddr: 0x22694, symSize: 0x6C }
-  - { offset: 0x17A25, size: 0x8, addend: 0x0, symName: '-[CBBPrefs resetAll]', symObjAddr: 0xEA4, symBinAddr: 0x22700, symSize: 0x194 }
-  - { offset: 0x17A6E, size: 0x8, addend: 0x0, symName: '-[CBBPrefs synchronize]', symObjAddr: 0x1038, symBinAddr: 0x22894, symSize: 0x30 }
-  - { offset: 0x17AA0, size: 0x8, addend: 0x0, symName: '-[CBBPrefs .cxx_destruct]', symObjAddr: 0x1068, symBinAddr: 0x228C4, symSize: 0x48 }
+  - { offset: 0x423, size: 0x8, addend: 0x0, symName: _sharedController.shared, symObjAddr: 0x2ED00, symBinAddr: 0x36FB8, symSize: 0x0 }
+  - { offset: 0x438, size: 0x8, addend: 0x0, symName: _sharedController.onceToken, symObjAddr: 0x2ED08, symBinAddr: 0x36FC0, symSize: 0x0 }
+  - { offset: 0x34F8, size: 0x8, addend: 0x0, symName: '-[CBBController handleTouchBeganAtFixedPoint:]', symObjAddr: 0x6E68, symBinAddr: 0xB4F4, symSize: 0x26C }
+  - { offset: 0x351F, size: 0x8, addend: 0x0, symName: '_handleTouchBeganAtFixedPoint:.touchLogs', symObjAddr: 0x2ED10, symBinAddr: 0x36FC8, symSize: 0x0 }
+  - { offset: 0x3582, size: 0x8, addend: 0x0, symName: _CBBSetLayerCaptureHidden, symObjAddr: 0xFB78, symBinAddr: 0x14204, symSize: 0x178 }
+  - { offset: 0x35A5, size: 0x8, addend: 0x0, symName: _CBBSetLayerCaptureHidden.warned, symObjAddr: 0x2ED18, symBinAddr: 0x36FD0, symSize: 0x0 }
+  - { offset: 0x35E2, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked, symObjAddr: 0x4400, symBinAddr: 0x8A8C, symSize: 0x190 }
+  - { offset: 0x3603, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked.createFn, symObjAddr: 0x2ED20, symBinAddr: 0x36FD8, symSize: 0x0 }
+  - { offset: 0x3618, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked.releaseFn, symObjAddr: 0x2ED28, symBinAddr: 0x36FE0, symSize: 0x0 }
+  - { offset: 0x362D, size: 0x8, addend: 0x0, symName: _CBBSetDisplaySleepBlocked.once, symObjAddr: 0x2ED30, symBinAddr: 0x36FE8, symSize: 0x0 }
+  - { offset: 0x3710, size: 0x8, addend: 0x0, symName: _CBBDisplaySleepAssertion, symObjAddr: 0x2ED38, symBinAddr: 0x36FF0, symSize: 0x0 }
+  - { offset: 0x3929, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView hitTest:withEvent:]', symObjAddr: 0x0, symBinAddr: 0x468C, symSize: 0x19C }
+  - { offset: 0x39A7, size: 0x8, addend: 0x0, symName: _CBBDistance, symObjAddr: 0x19C, symBinAddr: 0x4828, symSize: 0x60 }
+  - { offset: 0x3A1C, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView fixedPointForTouch:]', symObjAddr: 0x1FC, symBinAddr: 0x4888, symSize: 0xE4 }
+  - { offset: 0x3A6E, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView touchesBegan:withEvent:]', symObjAddr: 0x2E0, symBinAddr: 0x496C, symSize: 0x130 }
+  - { offset: 0x3ACA, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView touchesEnded:withEvent:]', symObjAddr: 0x410, symBinAddr: 0x4A9C, symSize: 0x130 }
+  - { offset: 0x3B26, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView touchesCancelled:withEvent:]', symObjAddr: 0x540, symBinAddr: 0x4BCC, symSize: 0xC8 }
+  - { offset: 0x3B74, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView buttonPoint]', symObjAddr: 0x608, symBinAddr: 0x4C94, symSize: 0x30 }
+  - { offset: 0x3BAA, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setButtonPoint:]', symObjAddr: 0x638, symBinAddr: 0x4CC4, symSize: 0x30 }
+  - { offset: 0x3BE8, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView learning]', symObjAddr: 0x668, symBinAddr: 0x4CF4, symSize: 0x2C }
+  - { offset: 0x3C1E, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setLearning:]', symObjAddr: 0x694, symBinAddr: 0x4D20, symSize: 0x30 }
+  - { offset: 0x3C5C, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView claimsEverything]', symObjAddr: 0x6C4, symBinAddr: 0x4D50, symSize: 0x2C }
+  - { offset: 0x3C92, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setClaimsEverything:]', symObjAddr: 0x6F0, symBinAddr: 0x4D7C, symSize: 0x30 }
+  - { offset: 0x3CD0, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView injectionPassthrough]', symObjAddr: 0x720, symBinAddr: 0x4DAC, symSize: 0x2C }
+  - { offset: 0x3D06, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setInjectionPassthrough:]', symObjAddr: 0x74C, symBinAddr: 0x4DD8, symSize: 0x30 }
+  - { offset: 0x3D44, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView onTouchBegan]', symObjAddr: 0x77C, symBinAddr: 0x4E08, symSize: 0x24 }
+  - { offset: 0x3D7A, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setOnTouchBegan:]', symObjAddr: 0x7A0, symBinAddr: 0x4E2C, symSize: 0x3C }
+  - { offset: 0x3DB8, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView onTouchEnded]', symObjAddr: 0x7DC, symBinAddr: 0x4E68, symSize: 0x24 }
+  - { offset: 0x3DEE, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setOnTouchEnded:]', symObjAddr: 0x800, symBinAddr: 0x4E8C, symSize: 0x3C }
+  - { offset: 0x3E2C, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView onTouchCancelled]', symObjAddr: 0x83C, symBinAddr: 0x4EC8, symSize: 0x24 }
+  - { offset: 0x3E62, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView setOnTouchCancelled:]', symObjAddr: 0x860, symBinAddr: 0x4EEC, symSize: 0x3C }
+  - { offset: 0x3EA0, size: 0x8, addend: 0x0, symName: '-[CBBOverlayRootView .cxx_destruct]', symObjAddr: 0x89C, symBinAddr: 0x4F28, symSize: 0x70 }
+  - { offset: 0x3ED2, size: 0x8, addend: 0x0, symName: '-[CBBOverlayWindow hitTest:withEvent:]', symObjAddr: 0x90C, symBinAddr: 0x4F98, symSize: 0xD8 }
+  - { offset: 0x3F61, size: 0x8, addend: 0x0, symName: '___33+[CBBController sharedController]_block_invoke', symObjAddr: 0xA60, symBinAddr: 0x50EC, symSize: 0x54 }
+  - { offset: 0x3FA6, size: 0x8, addend: 0x0, symName: '-[CBBController start]', symObjAddr: 0xAB4, symBinAddr: 0x5140, symSize: 0x1A58 }
+  - { offset: 0x402A, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x250C, symBinAddr: 0x6B98, symSize: 0x230 }
+  - { offset: 0x408C, size: 0x8, addend: 0x0, symName: _CBBNativeScreenSize, symObjAddr: 0x273C, symBinAddr: 0x6DC8, symSize: 0x1AC }
+  - { offset: 0x4136, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x28E8, symBinAddr: 0x6F74, symSize: 0x2C }
+  - { offset: 0x417E, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke', symObjAddr: 0x2914, symBinAddr: 0x6FA0, symSize: 0x54 }
+  - { offset: 0x41C9, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0x2968, symBinAddr: 0x6FF4, symSize: 0x34 }
+  - { offset: 0x41ED, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0x299C, symBinAddr: 0x7028, symSize: 0x28 }
+  - { offset: 0x4209, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke.78', symObjAddr: 0x29C4, symBinAddr: 0x7050, symSize: 0x54 }
+  - { offset: 0x4254, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke_2', symObjAddr: 0x2A18, symBinAddr: 0x70A4, symSize: 0x68 }
+  - { offset: 0x4290, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke.80', symObjAddr: 0x2A80, symBinAddr: 0x710C, symSize: 0x54 }
+  - { offset: 0x42DB, size: 0x8, addend: 0x0, symName: '___22-[CBBController start]_block_invoke_2.96', symObjAddr: 0x2AD4, symBinAddr: 0x7160, symSize: 0x33C }
+  - { offset: 0x4343, size: 0x8, addend: 0x0, symName: '-[CBBController dealloc]', symObjAddr: 0x2E10, symBinAddr: 0x749C, symSize: 0x7C }
+  - { offset: 0x4376, size: 0x8, addend: 0x0, symName: '-[CBBController orientationChanged:]', symObjAddr: 0x2E8C, symBinAddr: 0x7518, symSize: 0x250 }
+  - { offset: 0x43E5, size: 0x8, addend: 0x0, symName: '-[CBBController layoutOverlay]', symObjAddr: 0x30DC, symBinAddr: 0x7768, symSize: 0x4CC }
+  - { offset: 0x4427, size: 0x8, addend: 0x0, symName: '-[CBBController applyCaptureExclusion:]', symObjAddr: 0x35A8, symBinAddr: 0x7C34, symSize: 0xB0 }
+  - { offset: 0x4469, size: 0x8, addend: 0x0, symName: _CBBSetViewTreeCaptureHidden, symObjAddr: 0x3658, symBinAddr: 0x7CE4, symSize: 0x1FC }
+  - { offset: 0x44B6, size: 0x8, addend: 0x0, symName: '-[CBBController setSpringBoardWindowsInteractive:]', symObjAddr: 0x3854, symBinAddr: 0x7EE0, symSize: 0x294 }
+  - { offset: 0x4521, size: 0x8, addend: 0x0, symName: '-[CBBController beginInjectionWindow]', symObjAddr: 0x3AE8, symBinAddr: 0x8174, symSize: 0x12C }
+  - { offset: 0x4578, size: 0x8, addend: 0x0, symName: '___37-[CBBController beginInjectionWindow]_block_invoke', symObjAddr: 0x3C14, symBinAddr: 0x82A0, symSize: 0x1E0 }
+  - { offset: 0x45E0, size: 0x8, addend: 0x0, symName: '-[CBBController applyEnabledState]', symObjAddr: 0x3DF4, symBinAddr: 0x8480, symSize: 0x60C }
+  - { offset: 0x4638, size: 0x8, addend: 0x0, symName: '-[CBBController startOverlaySupervisor]', symObjAddr: 0x4590, symBinAddr: 0x8C1C, symSize: 0x224 }
+  - { offset: 0x467A, size: 0x8, addend: 0x0, symName: '___39-[CBBController startOverlaySupervisor]_block_invoke', symObjAddr: 0x47B4, symBinAddr: 0x8E40, symSize: 0x70 }
+  - { offset: 0x46C5, size: 0x8, addend: 0x0, symName: '-[CBBController superviseOverlay]', symObjAddr: 0x4824, symBinAddr: 0x8EB0, symSize: 0x748 }
+  - { offset: 0x4727, size: 0x8, addend: 0x0, symName: '-[CBBController armBootGuard]', symObjAddr: 0x4F6C, symBinAddr: 0x95F8, symSize: 0x200 }
+  - { offset: 0x477E, size: 0x8, addend: 0x0, symName: '___29-[CBBController armBootGuard]_block_invoke', symObjAddr: 0x516C, symBinAddr: 0x97F8, symSize: 0xB8 }
+  - { offset: 0x47D7, size: 0x8, addend: 0x0, symName: '-[CBBController disarmBootGuard]', symObjAddr: 0x5224, symBinAddr: 0x98B0, symSize: 0x194 }
+  - { offset: 0x4828, size: 0x8, addend: 0x0, symName: '-[CBBController checkBootGuard]', symObjAddr: 0x53B8, symBinAddr: 0x9A44, symSize: 0x3E0 }
+  - { offset: 0x4894, size: 0x8, addend: 0x0, symName: '___31-[CBBController checkBootGuard]_block_invoke', symObjAddr: 0x5798, symBinAddr: 0x9E24, symSize: 0x78 }
+  - { offset: 0x48ED, size: 0x8, addend: 0x0, symName: '-[CBBController applyHomeLandscape]', symObjAddr: 0x5810, symBinAddr: 0x9E9C, symSize: 0x8E0 }
+  - { offset: 0x49EC, size: 0x8, addend: 0x0, symName: '___35-[CBBController applyHomeLandscape]_block_invoke', symObjAddr: 0x60F0, symBinAddr: 0xA77C, symSize: 0xCC }
+  - { offset: 0x4A3D, size: 0x8, addend: 0x0, symName: '___35-[CBBController applyHomeLandscape]_block_invoke_2', symObjAddr: 0x61BC, symBinAddr: 0xA848, symSize: 0xA4 }
+  - { offset: 0x4AA5, size: 0x8, addend: 0x0, symName: '-[CBBController landscapeHeartbeat]', symObjAddr: 0x6260, symBinAddr: 0xA8EC, symSize: 0xBC }
+  - { offset: 0x4AD8, size: 0x8, addend: 0x0, symName: '-[CBBController checkLandscapeCrashGuard]', symObjAddr: 0x631C, symBinAddr: 0xA9A8, symSize: 0x170 }
+  - { offset: 0x4B0B, size: 0x8, addend: 0x0, symName: '-[CBBController setStereoEnabled:]', symObjAddr: 0x648C, symBinAddr: 0xAB18, symSize: 0x3E8 }
+  - { offset: 0x4B6B, size: 0x8, addend: 0x0, symName: '-[CBBController buttonPointInFixedSpace]', symObjAddr: 0x6874, symBinAddr: 0xAF00, symSize: 0x2D4 }
+  - { offset: 0x4D04, size: 0x8, addend: 0x0, symName: '-[CBBController touchBeganLearningAtPoint:]', symObjAddr: 0x6B48, symBinAddr: 0xB1D4, symSize: 0x320 }
+  - { offset: 0x4D55, size: 0x8, addend: 0x0, symName: '-[CBBController handleTouchEndedAtFixedPoint:]', symObjAddr: 0x70D4, symBinAddr: 0xB760, symSize: 0x8C }
+  - { offset: 0x4D97, size: 0x8, addend: 0x0, symName: '-[CBBController clickRecognizer:didRecognizeClicks:held:]', symObjAddr: 0x7160, symBinAddr: 0xB7EC, symSize: 0x334 }
+  - { offset: 0x4DF7, size: 0x8, addend: 0x0, symName: '-[CBBController setCursorPosition:]', symObjAddr: 0x7494, symBinAddr: 0xBB20, symSize: 0x2C8 }
+  - { offset: 0x4F7C, size: 0x8, addend: 0x0, symName: '-[CBBController updateCursorPoint]', symObjAddr: 0x775C, symBinAddr: 0xBDE8, symSize: 0x74 }
+  - { offset: 0x4FAF, size: 0x8, addend: 0x0, symName: '-[CBBController applyAim:]', symObjAddr: 0x77D0, symBinAddr: 0xBE5C, symSize: 0x884 }
+  - { offset: 0x539E, size: 0x8, addend: 0x0, symName: _CBBCardboardRotate, symObjAddr: 0x8054, symBinAddr: 0xC6E0, symSize: 0x90 }
+  - { offset: 0x542A, size: 0x8, addend: 0x0, symName: '-[CBBController resetCursor]', symObjAddr: 0x80E4, symBinAddr: 0xC770, symSize: 0xA4 }
+  - { offset: 0x546C, size: 0x8, addend: 0x0, symName: '-[CBBController resetDwellAnchor]', symObjAddr: 0x8188, symBinAddr: 0xC814, symSize: 0xA8 }
+  - { offset: 0x549F, size: 0x8, addend: 0x0, symName: '-[CBBController startDwellTimer]', symObjAddr: 0x8230, symBinAddr: 0xC8BC, symSize: 0x298 }
+  - { offset: 0x54E1, size: 0x8, addend: 0x0, symName: '___32-[CBBController startDwellTimer]_block_invoke', symObjAddr: 0x84C8, symBinAddr: 0xCB54, symSize: 0x70 }
+  - { offset: 0x552C, size: 0x8, addend: 0x0, symName: '-[CBBController stopDwellTimer]', symObjAddr: 0x8538, symBinAddr: 0xCBC4, symSize: 0x94 }
+  - { offset: 0x555F, size: 0x8, addend: 0x0, symName: '-[CBBController dwellTick]', symObjAddr: 0x85CC, symBinAddr: 0xCC58, symSize: 0x6B8 }
+  - { offset: 0x562E, size: 0x8, addend: 0x0, symName: '-[CBBController dwellClickAtPoint:]', symObjAddr: 0x8C84, symBinAddr: 0xD310, symSize: 0x238 }
+  - { offset: 0x5695, size: 0x8, addend: 0x0, symName: '-[CBBController injectionPointForPoint:]', symObjAddr: 0x8EBC, symBinAddr: 0xD548, symSize: 0x34C }
+  - { offset: 0x580F, size: 0x8, addend: 0x0, symName: _CBBApplyCalibratedTap, symObjAddr: 0x9208, symBinAddr: 0xD894, symSize: 0x144 }
+  - { offset: 0x58A2, size: 0x8, addend: 0x0, symName: '-[CBBController currentInterfaceOrientation]', symObjAddr: 0x934C, symBinAddr: 0xD9D8, symSize: 0x60 }
+  - { offset: 0x58D9, size: 0x8, addend: 0x0, symName: '-[CBBController scheduleTapCalibration]', symObjAddr: 0x93AC, symBinAddr: 0xDA38, symSize: 0x214 }
+  - { offset: 0x5930, size: 0x8, addend: 0x0, symName: '___39-[CBBController scheduleTapCalibration]_block_invoke', symObjAddr: 0x95C0, symBinAddr: 0xDC4C, symSize: 0x1E0 }
+  - { offset: 0x5998, size: 0x8, addend: 0x0, symName: '-[CBBController startTapCalibration]', symObjAddr: 0x97A0, symBinAddr: 0xDE2C, symSize: 0x250 }
+  - { offset: 0x59DA, size: 0x8, addend: 0x0, symName: '-[CBBController sendTapProbe]', symObjAddr: 0x99F0, symBinAddr: 0xE07C, symSize: 0x2CC }
+  - { offset: 0x5A1C, size: 0x8, addend: 0x0, symName: '___29-[CBBController sendTapProbe]_block_invoke', symObjAddr: 0x9CBC, symBinAddr: 0xE348, symSize: 0x120 }
+  - { offset: 0x5A7C, size: 0x8, addend: 0x0, symName: '-[CBBController recordTapProbeAtFixedPoint:]', symObjAddr: 0x9DDC, symBinAddr: 0xE468, symSize: 0x2D8 }
+  - { offset: 0x5AE2, size: 0x8, addend: 0x0, symName: '___44-[CBBController recordTapProbeAtFixedPoint:]_block_invoke', symObjAddr: 0xA0B4, symBinAddr: 0xE740, symSize: 0x44 }
+  - { offset: 0x5B1E, size: 0x8, addend: 0x0, symName: '-[CBBController finishTapCalibration]', symObjAddr: 0xA0F8, symBinAddr: 0xE784, symSize: 0x6F4 }
+  - { offset: 0x5E45, size: 0x8, addend: 0x0, symName: '-[CBBController activateCursor]', symObjAddr: 0xA7EC, symBinAddr: 0xEE78, symSize: 0x13C }
+  - { offset: 0x5E97, size: 0x8, addend: 0x0, symName: '-[CBBController scroll:]', symObjAddr: 0xA928, symBinAddr: 0xEFB4, symSize: 0x14C }
+  - { offset: 0x5F44, size: 0x8, addend: 0x0, symName: '-[CBBController setMenuOpen:]', symObjAddr: 0xAA74, symBinAddr: 0xF100, symSize: 0x314 }
+  - { offset: 0x5F86, size: 0x8, addend: 0x0, symName: '-[CBBController selectedRow]', symObjAddr: 0xAD88, symBinAddr: 0xF414, symSize: 0x188 }
+  - { offset: 0x6024, size: 0x8, addend: 0x0, symName: '-[CBBController handleHudClicks:held:]', symObjAddr: 0xAF10, symBinAddr: 0xF59C, symSize: 0x3C0 }
+  - { offset: 0x60A1, size: 0x8, addend: 0x0, symName: '-[CBBController beginLearning]', symObjAddr: 0xB2D0, symBinAddr: 0xF95C, symSize: 0x110 }
+  - { offset: 0x60D4, size: 0x8, addend: 0x0, symName: '-[CBBController adjustDouble:min:max:step:direction:]', symObjAddr: 0xB3E0, symBinAddr: 0xFA6C, symSize: 0x1F8 }
+  - { offset: 0x61BD, size: 0x8, addend: 0x0, symName: '-[CBBController rebuildRows]', symObjAddr: 0xB5D8, symBinAddr: 0xFC64, symSize: 0x22C4 }
+  - { offset: 0x627A, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke', symObjAddr: 0xD89C, symBinAddr: 0x11F28, symSize: 0x54 }
+  - { offset: 0x62BA, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0xD8F0, symBinAddr: 0x11F7C, symSize: 0x38 }
+  - { offset: 0x62DE, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0xD928, symBinAddr: 0x11FB4, symSize: 0x2C }
+  - { offset: 0x62FA, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.203', symObjAddr: 0xD954, symBinAddr: 0x11FE0, symSize: 0x80 }
+  - { offset: 0x6357, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40w, symObjAddr: 0xD9D4, symBinAddr: 0x12060, symSize: 0x54 }
+  - { offset: 0x637B, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40w, symObjAddr: 0xDA28, symBinAddr: 0x120B4, symSize: 0x3C }
+  - { offset: 0x6397, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.207', symObjAddr: 0xDA64, symBinAddr: 0x120F0, symSize: 0x54 }
+  - { offset: 0x63D7, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_2', symObjAddr: 0xDAB8, symBinAddr: 0x12144, symSize: 0xFC }
+  - { offset: 0x6451, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_3', symObjAddr: 0xDBB4, symBinAddr: 0x12240, symSize: 0x64 }
+  - { offset: 0x6491, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_4', symObjAddr: 0xDC18, symBinAddr: 0x122A4, symSize: 0x70 }
+  - { offset: 0x64DC, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.218', symObjAddr: 0xDC88, symBinAddr: 0x12314, symSize: 0x68 }
+  - { offset: 0x651C, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_2.221', symObjAddr: 0xDCF0, symBinAddr: 0x1237C, symSize: 0x108 }
+  - { offset: 0x6596, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_3.224', symObjAddr: 0xDDF8, symBinAddr: 0x12484, symSize: 0x64 }
+  - { offset: 0x65D6, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_4.227', symObjAddr: 0xDE5C, symBinAddr: 0x124E8, symSize: 0x70 }
+  - { offset: 0x6621, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_5', symObjAddr: 0xDECC, symBinAddr: 0x12558, symSize: 0x64 }
+  - { offset: 0x6661, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_6', symObjAddr: 0xDF30, symBinAddr: 0x125BC, symSize: 0x6C }
+  - { offset: 0x66AC, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_7', symObjAddr: 0xDF9C, symBinAddr: 0x12628, symSize: 0x64 }
+  - { offset: 0x66EC, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_8', symObjAddr: 0xE000, symBinAddr: 0x1268C, symSize: 0x68 }
+  - { offset: 0x6737, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_9', symObjAddr: 0xE068, symBinAddr: 0x126F4, symSize: 0x64 }
+  - { offset: 0x6777, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_10', symObjAddr: 0xE0CC, symBinAddr: 0x12758, symSize: 0x68 }
+  - { offset: 0x67C2, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_11', symObjAddr: 0xE134, symBinAddr: 0x127C0, symSize: 0x64 }
+  - { offset: 0x6802, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_12', symObjAddr: 0xE198, symBinAddr: 0x12824, symSize: 0x70 }
+  - { offset: 0x684D, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_13', symObjAddr: 0xE208, symBinAddr: 0x12894, symSize: 0x64 }
+  - { offset: 0x688D, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_14', symObjAddr: 0xE26C, symBinAddr: 0x128F8, symSize: 0x70 }
+  - { offset: 0x68D8, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_15', symObjAddr: 0xE2DC, symBinAddr: 0x12968, symSize: 0x64 }
+  - { offset: 0x6918, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_16', symObjAddr: 0xE340, symBinAddr: 0x129CC, symSize: 0x6C }
+  - { offset: 0x6963, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_17', symObjAddr: 0xE3AC, symBinAddr: 0x12A38, symSize: 0x54 }
+  - { offset: 0x69A3, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_18', symObjAddr: 0xE400, symBinAddr: 0x12A8C, symSize: 0xA8 }
+  - { offset: 0x6A00, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_19', symObjAddr: 0xE4A8, symBinAddr: 0x12B34, symSize: 0x64 }
+  - { offset: 0x6A40, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_20', symObjAddr: 0xE50C, symBinAddr: 0x12B98, symSize: 0x70 }
+  - { offset: 0x6A8B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_21', symObjAddr: 0xE57C, symBinAddr: 0x12C08, symSize: 0x54 }
+  - { offset: 0x6ACB, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_22', symObjAddr: 0xE5D0, symBinAddr: 0x12C5C, symSize: 0xF4 }
+  - { offset: 0x6B28, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_23', symObjAddr: 0xE6C4, symBinAddr: 0x12D50, symSize: 0x54 }
+  - { offset: 0x6B68, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_24', symObjAddr: 0xE718, symBinAddr: 0x12DA4, symSize: 0x44 }
+  - { offset: 0x6BA4, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_25', symObjAddr: 0xE75C, symBinAddr: 0x12DE8, symSize: 0xE4 }
+  - { offset: 0x6BE4, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_26', symObjAddr: 0xE840, symBinAddr: 0x12ECC, symSize: 0xE4 }
+  - { offset: 0x6C5E, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_27', symObjAddr: 0xE924, symBinAddr: 0x12FB0, symSize: 0xDC }
+  - { offset: 0x6C9E, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_28', symObjAddr: 0xEA00, symBinAddr: 0x1308C, symSize: 0x120 }
+  - { offset: 0x6D18, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_29', symObjAddr: 0xEB20, symBinAddr: 0x131AC, symSize: 0x68 }
+  - { offset: 0x6D58, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_30', symObjAddr: 0xEB88, symBinAddr: 0x13214, symSize: 0x1C4 }
+  - { offset: 0x6E0D, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_31', symObjAddr: 0xED4C, symBinAddr: 0x133D8, symSize: 0x20 }
+  - { offset: 0x6E3B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_32', symObjAddr: 0xED6C, symBinAddr: 0x133F8, symSize: 0x44 }
+  - { offset: 0x6E77, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_33', symObjAddr: 0xEDB0, symBinAddr: 0x1343C, symSize: 0x20 }
+  - { offset: 0x6EA5, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_34', symObjAddr: 0xEDD0, symBinAddr: 0x1345C, symSize: 0x44 }
+  - { offset: 0x6EE1, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_35', symObjAddr: 0xEE14, symBinAddr: 0x134A0, symSize: 0x20 }
+  - { offset: 0x6F0F, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_36', symObjAddr: 0xEE34, symBinAddr: 0x134C0, symSize: 0xAC }
+  - { offset: 0x6F5D, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke.285', symObjAddr: 0xEEE0, symBinAddr: 0x1356C, symSize: 0x20 }
+  - { offset: 0x6F8B, size: 0x8, addend: 0x0, symName: '___28-[CBBController rebuildRows]_block_invoke_2.287', symObjAddr: 0xEF00, symBinAddr: 0x1358C, symSize: 0x4C }
+  - { offset: 0x6FC7, size: 0x8, addend: 0x0, symName: '-[CBBController statusText]', symObjAddr: 0xEF4C, symBinAddr: 0x135D8, symSize: 0x330 }
+  - { offset: 0x702B, size: 0x8, addend: 0x0, symName: '-[CBBController window]', symObjAddr: 0xF27C, symBinAddr: 0x13908, symSize: 0x1C }
+  - { offset: 0x7061, size: 0x8, addend: 0x0, symName: '-[CBBController setWindow:]', symObjAddr: 0xF298, symBinAddr: 0x13924, symSize: 0x34 }
+  - { offset: 0x709F, size: 0x8, addend: 0x0, symName: '-[CBBController rootView]', symObjAddr: 0xF2CC, symBinAddr: 0x13958, symSize: 0x1C }
+  - { offset: 0x70D5, size: 0x8, addend: 0x0, symName: '-[CBBController setRootView:]', symObjAddr: 0xF2E8, symBinAddr: 0x13974, symSize: 0x34 }
+  - { offset: 0x7113, size: 0x8, addend: 0x0, symName: '-[CBBController renderer]', symObjAddr: 0xF31C, symBinAddr: 0x139A8, symSize: 0x1C }
+  - { offset: 0x7149, size: 0x8, addend: 0x0, symName: '-[CBBController setRenderer:]', symObjAddr: 0xF338, symBinAddr: 0x139C4, symSize: 0x34 }
+  - { offset: 0x7187, size: 0x8, addend: 0x0, symName: '-[CBBController hud]', symObjAddr: 0xF36C, symBinAddr: 0x139F8, symSize: 0x1C }
+  - { offset: 0x71BD, size: 0x8, addend: 0x0, symName: '-[CBBController setHud:]', symObjAddr: 0xF388, symBinAddr: 0x13A14, symSize: 0x34 }
+  - { offset: 0x71FB, size: 0x8, addend: 0x0, symName: '-[CBBController prefs]', symObjAddr: 0xF3BC, symBinAddr: 0x13A48, symSize: 0x1C }
+  - { offset: 0x7231, size: 0x8, addend: 0x0, symName: '-[CBBController setPrefs:]', symObjAddr: 0xF3D8, symBinAddr: 0x13A64, symSize: 0x34 }
+  - { offset: 0x726F, size: 0x8, addend: 0x0, symName: '-[CBBController recognizer]', symObjAddr: 0xF40C, symBinAddr: 0x13A98, symSize: 0x1C }
+  - { offset: 0x72A5, size: 0x8, addend: 0x0, symName: '-[CBBController setRecognizer:]', symObjAddr: 0xF428, symBinAddr: 0x13AB4, symSize: 0x34 }
+  - { offset: 0x72E3, size: 0x8, addend: 0x0, symName: '-[CBBController injector]', symObjAddr: 0xF45C, symBinAddr: 0x13AE8, symSize: 0x1C }
+  - { offset: 0x7319, size: 0x8, addend: 0x0, symName: '-[CBBController setInjector:]', symObjAddr: 0xF478, symBinAddr: 0x13B04, symSize: 0x34 }
+  - { offset: 0x7357, size: 0x8, addend: 0x0, symName: '-[CBBController rows]', symObjAddr: 0xF4AC, symBinAddr: 0x13B38, symSize: 0x1C }
+  - { offset: 0x738D, size: 0x8, addend: 0x0, symName: '-[CBBController setRows:]', symObjAddr: 0xF4C8, symBinAddr: 0x13B54, symSize: 0x38 }
+  - { offset: 0x73CB, size: 0x8, addend: 0x0, symName: '-[CBBController hudSelection]', symObjAddr: 0xF500, symBinAddr: 0x13B8C, symSize: 0x1C }
+  - { offset: 0x7401, size: 0x8, addend: 0x0, symName: '-[CBBController setHudSelection:]', symObjAddr: 0xF51C, symBinAddr: 0x13BA8, symSize: 0x24 }
+  - { offset: 0x743F, size: 0x8, addend: 0x0, symName: '-[CBBController cursorPosition]', symObjAddr: 0xF540, symBinAddr: 0x13BCC, symSize: 0x2C }
+  - { offset: 0x7475, size: 0x8, addend: 0x0, symName: '-[CBBController motionPointer]', symObjAddr: 0xF56C, symBinAddr: 0x13BF8, symSize: 0x1C }
+  - { offset: 0x74AB, size: 0x8, addend: 0x0, symName: '-[CBBController setMotionPointer:]', symObjAddr: 0xF588, symBinAddr: 0x13C14, symSize: 0x34 }
+  - { offset: 0x74E9, size: 0x8, addend: 0x0, symName: '-[CBBController hudOpen]', symObjAddr: 0xF5BC, symBinAddr: 0x13C48, symSize: 0x20 }
+  - { offset: 0x751F, size: 0x8, addend: 0x0, symName: '-[CBBController setHudOpen:]', symObjAddr: 0xF5DC, symBinAddr: 0x13C68, symSize: 0x28 }
+  - { offset: 0x755D, size: 0x8, addend: 0x0, symName: '-[CBBController learning]', symObjAddr: 0xF604, symBinAddr: 0x13C90, symSize: 0x20 }
+  - { offset: 0x7593, size: 0x8, addend: 0x0, symName: '-[CBBController setLearning:]', symObjAddr: 0xF624, symBinAddr: 0x13CB0, symSize: 0x28 }
+  - { offset: 0x75D1, size: 0x8, addend: 0x0, symName: '-[CBBController started]', symObjAddr: 0xF64C, symBinAddr: 0x13CD8, symSize: 0x20 }
+  - { offset: 0x7607, size: 0x8, addend: 0x0, symName: '-[CBBController setStarted:]', symObjAddr: 0xF66C, symBinAddr: 0x13CF8, symSize: 0x28 }
+  - { offset: 0x7645, size: 0x8, addend: 0x0, symName: '-[CBBController clickLatch]', symObjAddr: 0xF694, symBinAddr: 0x13D20, symSize: 0x2C }
+  - { offset: 0x767B, size: 0x8, addend: 0x0, symName: '-[CBBController setClickLatch:]', symObjAddr: 0xF6C0, symBinAddr: 0x13D4C, symSize: 0x2C }
+  - { offset: 0x76B9, size: 0x8, addend: 0x0, symName: '-[CBBController tapCalibrating]', symObjAddr: 0xF6EC, symBinAddr: 0x13D78, symSize: 0x20 }
+  - { offset: 0x76EF, size: 0x8, addend: 0x0, symName: '-[CBBController setTapCalibrating:]', symObjAddr: 0xF70C, symBinAddr: 0x13D98, symSize: 0x28 }
+  - { offset: 0x772D, size: 0x8, addend: 0x0, symName: '-[CBBController tapProbeIndex]', symObjAddr: 0xF734, symBinAddr: 0x13DC0, symSize: 0x1C }
+  - { offset: 0x7763, size: 0x8, addend: 0x0, symName: '-[CBBController setTapProbeIndex:]', symObjAddr: 0xF750, symBinAddr: 0x13DDC, symSize: 0x24 }
+  - { offset: 0x77A1, size: 0x8, addend: 0x0, symName: '-[CBBController tapCalibrationTimer]', symObjAddr: 0xF774, symBinAddr: 0x13E00, symSize: 0x1C }
+  - { offset: 0x77D7, size: 0x8, addend: 0x0, symName: '-[CBBController setTapCalibrationTimer:]', symObjAddr: 0xF790, symBinAddr: 0x13E1C, symSize: 0x34 }
+  - { offset: 0x7815, size: 0x8, addend: 0x0, symName: '-[CBBController tapProbeSentTime]', symObjAddr: 0xF7C4, symBinAddr: 0x13E50, symSize: 0x1C }
+  - { offset: 0x784B, size: 0x8, addend: 0x0, symName: '-[CBBController setTapProbeSentTime:]', symObjAddr: 0xF7E0, symBinAddr: 0x13E6C, symSize: 0x24 }
+  - { offset: 0x7889, size: 0x8, addend: 0x0, symName: '-[CBBController aimOutOfRangeSince]', symObjAddr: 0xF804, symBinAddr: 0x13E90, symSize: 0x1C }
+  - { offset: 0x78BF, size: 0x8, addend: 0x0, symName: '-[CBBController setAimOutOfRangeSince:]', symObjAddr: 0xF820, symBinAddr: 0x13EAC, symSize: 0x24 }
+  - { offset: 0x78FD, size: 0x8, addend: 0x0, symName: '-[CBBController landscapeTimer]', symObjAddr: 0xF844, symBinAddr: 0x13ED0, symSize: 0x1C }
+  - { offset: 0x7933, size: 0x8, addend: 0x0, symName: '-[CBBController setLandscapeTimer:]', symObjAddr: 0xF860, symBinAddr: 0x13EEC, symSize: 0x34 }
+  - { offset: 0x7971, size: 0x8, addend: 0x0, symName: '-[CBBController lastDeviceOrientation]', symObjAddr: 0xF894, symBinAddr: 0x13F20, symSize: 0x1C }
+  - { offset: 0x79A7, size: 0x8, addend: 0x0, symName: '-[CBBController setLastDeviceOrientation:]', symObjAddr: 0xF8B0, symBinAddr: 0x13F3C, symSize: 0x24 }
+  - { offset: 0x79E5, size: 0x8, addend: 0x0, symName: '-[CBBController dwellAnchor]', symObjAddr: 0xF8D4, symBinAddr: 0x13F60, symSize: 0x2C }
+  - { offset: 0x7A1B, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellAnchor:]', symObjAddr: 0xF900, symBinAddr: 0x13F8C, symSize: 0x2C }
+  - { offset: 0x7A59, size: 0x8, addend: 0x0, symName: '-[CBBController dwellAnchorTime]', symObjAddr: 0xF92C, symBinAddr: 0x13FB8, symSize: 0x1C }
+  - { offset: 0x7A8F, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellAnchorTime:]', symObjAddr: 0xF948, symBinAddr: 0x13FD4, symSize: 0x24 }
+  - { offset: 0x7ACD, size: 0x8, addend: 0x0, symName: '-[CBBController dwellFired]', symObjAddr: 0xF96C, symBinAddr: 0x13FF8, symSize: 0x20 }
+  - { offset: 0x7B03, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellFired:]', symObjAddr: 0xF98C, symBinAddr: 0x14018, symSize: 0x28 }
+  - { offset: 0x7B41, size: 0x8, addend: 0x0, symName: '-[CBBController dwellTimer]', symObjAddr: 0xF9B4, symBinAddr: 0x14040, symSize: 0x1C }
+  - { offset: 0x7B77, size: 0x8, addend: 0x0, symName: '-[CBBController setDwellTimer:]', symObjAddr: 0xF9D0, symBinAddr: 0x1405C, symSize: 0x34 }
+  - { offset: 0x7BB5, size: 0x8, addend: 0x0, symName: '-[CBBController supervisorTimer]', symObjAddr: 0xFA04, symBinAddr: 0x14090, symSize: 0x1C }
+  - { offset: 0x7BEB, size: 0x8, addend: 0x0, symName: '-[CBBController setSupervisorTimer:]', symObjAddr: 0xFA20, symBinAddr: 0x140AC, symSize: 0x34 }
+  - { offset: 0x7C29, size: 0x8, addend: 0x0, symName: '-[CBBController .cxx_destruct]', symObjAddr: 0xFA54, symBinAddr: 0x140E0, symSize: 0xF8 }
+  - { offset: 0x7C5B, size: 0x8, addend: 0x0, symName: _CGSizeMake, symObjAddr: 0xFB4C, symBinAddr: 0x141D8, symSize: 0x2C }
+  - { offset: 0x7CA3, size: 0x8, addend: 0x0, symName: ___CBBSetDisplaySleepBlocked_block_invoke, symObjAddr: 0xFCF0, symBinAddr: 0x1437C, symSize: 0x90 }
+  - { offset: 0x9A5D, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture initWithDevice:]', symObjAddr: 0x0, symBinAddr: 0x1440C, symSize: 0x424 }
+  - { offset: 0x9E0E, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture initWithDevice:]', symObjAddr: 0x0, symBinAddr: 0x1440C, symSize: 0x424 }
+  - { offset: 0x9F1F, size: 0x8, addend: 0x0, symName: _CGSizeMake, symObjAddr: 0x424, symBinAddr: 0x14830, symSize: 0x2C }
+  - { offset: 0x9F67, size: 0x8, addend: 0x0, symName: _CBBNativeScreenSize, symObjAddr: 0x450, symBinAddr: 0x1485C, symSize: 0x1AC }
+  - { offset: 0xA011, size: 0x8, addend: 0x0, symName: _CBBCreateSurface, symObjAddr: 0x5FC, symBinAddr: 0x14A08, symSize: 0x2BC }
+  - { offset: 0xA076, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture valid]', symObjAddr: 0x8B8, symBinAddr: 0x14CC4, symSize: 0x20 }
+  - { offset: 0xA0AC, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture hasFrame]', symObjAddr: 0x8D8, symBinAddr: 0x14CE4, symSize: 0x20 }
+  - { offset: 0xA0E2, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture frameCount]', symObjAddr: 0x8F8, symBinAddr: 0x14D04, symSize: 0x1C }
+  - { offset: 0xA118, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture texture]', symObjAddr: 0x914, symBinAddr: 0x14D20, symSize: 0x78 }
+  - { offset: 0xA14E, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture captureFrame]', symObjAddr: 0x98C, symBinAddr: 0x14D98, symSize: 0x2CC }
+  - { offset: 0xA1E6, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture latestFrameHasContent]', symObjAddr: 0xC58, symBinAddr: 0x15064, symSize: 0x2F0 }
+  - { offset: 0xA365, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture invalidate]', symObjAddr: 0xF48, symBinAddr: 0x15354, symSize: 0x134 }
+  - { offset: 0xA3B3, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture dealloc]', symObjAddr: 0x107C, symBinAddr: 0x15488, symSize: 0x50 }
+  - { offset: 0xA3E5, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture pixelSize]', symObjAddr: 0x10CC, symBinAddr: 0x154D8, symSize: 0x28 }
+  - { offset: 0xA41B, size: 0x8, addend: 0x0, symName: '-[CBBDisplayCapture .cxx_destruct]', symObjAddr: 0x10F4, symBinAddr: 0x15500, symSize: 0x74 }
+  - { offset: 0xAE4C, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x15574, symSize: 0x6DC }
+  - { offset: 0xAE65, size: 0x8, addend: 0x0, symName: _kCBBStereoShaderSource, symObjAddr: 0x4898, symBinAddr: 0x30500, symSize: 0x0 }
+  - { offset: 0xAEDD, size: 0x8, addend: 0x0, symName: _kCBBSimpleShaderSource, symObjAddr: 0x48A0, symBinAddr: 0x30508, symSize: 0x0 }
+  - { offset: 0xAEE6, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer drawInMTKView:]', symObjAddr: 0x848, symBinAddr: 0x15DBC, symSize: 0x1364 }
+  - { offset: 0xAF0B, size: 0x8, addend: 0x0, symName: '_drawInMTKView:.geometryReported', symObjAddr: 0xDAE5, symBinAddr: 0x36FF4, symSize: 0x0 }
+  - { offset: 0xCA45, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer initWithFrame:]', symObjAddr: 0x0, symBinAddr: 0x15574, symSize: 0x6DC }
+  - { offset: 0xCACC, size: 0x8, addend: 0x0, symName: _MTLClearColorMake, symObjAddr: 0x6DC, symBinAddr: 0x15C50, symSize: 0x4C }
+  - { offset: 0xCB32, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer capture]', symObjAddr: 0x728, symBinAddr: 0x15C9C, symSize: 0x1C }
+  - { offset: 0xCB68, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer usingSimpleShader]', symObjAddr: 0x744, symBinAddr: 0x15CB8, symSize: 0x20 }
+  - { offset: 0xCB9E, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer rendering]', symObjAddr: 0x764, symBinAddr: 0x15CD8, symSize: 0x20 }
+  - { offset: 0xCBD4, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setRendering:]', symObjAddr: 0x784, symBinAddr: 0x15CF8, symSize: 0x70 }
+  - { offset: 0xCC14, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer mtkView:drawableSizeWillChange:]', symObjAddr: 0x7F4, symBinAddr: 0x15D68, symSize: 0x54 }
+  - { offset: 0xCC62, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x1BAC, symBinAddr: 0x17120, symSize: 0x230 }
+  - { offset: 0xCCC4, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x1DDC, symBinAddr: 0x17350, symSize: 0x2C }
+  - { offset: 0xCD0C, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer clearView:]', symObjAddr: 0x1E08, symBinAddr: 0x1737C, symSize: 0x240 }
+  - { offset: 0xCD8A, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer view]', symObjAddr: 0x2048, symBinAddr: 0x175BC, symSize: 0x1C }
+  - { offset: 0xCDC0, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer prefs]', symObjAddr: 0x2064, symBinAddr: 0x175D8, symSize: 0x1C }
+  - { offset: 0xCDF6, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setPrefs:]', symObjAddr: 0x2080, symBinAddr: 0x175F4, symSize: 0x34 }
+  - { offset: 0xCE34, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer cursor]', symObjAddr: 0x20B4, symBinAddr: 0x17628, symSize: 0x28 }
+  - { offset: 0xCE6A, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setCursor:]', symObjAddr: 0x20DC, symBinAddr: 0x17650, symSize: 0x28 }
+  - { offset: 0xCEA8, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer dwellProgress]', symObjAddr: 0x2104, symBinAddr: 0x17678, symSize: 0x1C }
+  - { offset: 0xCEDE, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setDwellProgress:]', symObjAddr: 0x2120, symBinAddr: 0x17694, symSize: 0x24 }
+  - { offset: 0xCF1C, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer screenSize]', symObjAddr: 0x2144, symBinAddr: 0x176B8, symSize: 0x28 }
+  - { offset: 0xCF52, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setScreenSize:]', symObjAddr: 0x216C, symBinAddr: 0x176E0, symSize: 0x28 }
+  - { offset: 0xCF90, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer reticleVisible]', symObjAddr: 0x2194, symBinAddr: 0x17708, symSize: 0x20 }
+  - { offset: 0xCFC6, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer setReticleVisible:]', symObjAddr: 0x21B4, symBinAddr: 0x17728, symSize: 0x28 }
+  - { offset: 0xD004, size: 0x8, addend: 0x0, symName: '-[CBBStereoRenderer .cxx_destruct]', symObjAddr: 0x21DC, symBinAddr: 0x17750, symSize: 0x98 }
+  - { offset: 0xD6B3, size: 0x8, addend: 0x0, symName: '+[CBBHudRow rowWithTitle:valueText:step:]', symObjAddr: 0x0, symBinAddr: 0x177E8, symSize: 0x10C }
+  - { offset: 0xE45C, size: 0x8, addend: 0x0, symName: '+[CBBHudRow rowWithTitle:valueText:step:]', symObjAddr: 0x0, symBinAddr: 0x177E8, symSize: 0x10C }
+  - { offset: 0xE4CA, size: 0x8, addend: 0x0, symName: '+[CBBHudRow rowWithTitle:valueText:activate:]', symObjAddr: 0x10C, symBinAddr: 0x178F4, symSize: 0x10C }
+  - { offset: 0xE538, size: 0x8, addend: 0x0, symName: '-[CBBHudRow title]', symObjAddr: 0x218, symBinAddr: 0x17A00, symSize: 0x1C }
+  - { offset: 0xE56E, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setTitle:]', symObjAddr: 0x234, symBinAddr: 0x17A1C, symSize: 0x38 }
+  - { offset: 0xE5AC, size: 0x8, addend: 0x0, symName: '-[CBBHudRow valueText]', symObjAddr: 0x26C, symBinAddr: 0x17A54, symSize: 0x1C }
+  - { offset: 0xE5E2, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setValueText:]', symObjAddr: 0x288, symBinAddr: 0x17A70, symSize: 0x38 }
+  - { offset: 0xE620, size: 0x8, addend: 0x0, symName: '-[CBBHudRow step]', symObjAddr: 0x2C0, symBinAddr: 0x17AA8, symSize: 0x1C }
+  - { offset: 0xE656, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setStep:]', symObjAddr: 0x2DC, symBinAddr: 0x17AC4, symSize: 0x38 }
+  - { offset: 0xE694, size: 0x8, addend: 0x0, symName: '-[CBBHudRow activate]', symObjAddr: 0x314, symBinAddr: 0x17AFC, symSize: 0x1C }
+  - { offset: 0xE6CA, size: 0x8, addend: 0x0, symName: '-[CBBHudRow setActivate:]', symObjAddr: 0x330, symBinAddr: 0x17B18, symSize: 0x38 }
+  - { offset: 0xE708, size: 0x8, addend: 0x0, symName: '-[CBBHudRow .cxx_destruct]', symObjAddr: 0x368, symBinAddr: 0x17B50, symSize: 0x68 }
+  - { offset: 0xE73A, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD initWithFrame:]', symObjAddr: 0x3D0, symBinAddr: 0x17BB8, symSize: 0x164 }
+  - { offset: 0xE77E, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setRows:]', symObjAddr: 0x534, symBinAddr: 0x17D1C, symSize: 0x8C }
+  - { offset: 0xE7BE, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setSelectedIndex:]', symObjAddr: 0x5C0, symBinAddr: 0x17DA8, symSize: 0x44 }
+  - { offset: 0xE7FE, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setStatusText:]', symObjAddr: 0x604, symBinAddr: 0x17DEC, symSize: 0x8C }
+  - { offset: 0xE83E, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setPromptText:]', symObjAddr: 0x690, symBinAddr: 0x17E78, symSize: 0x8C }
+  - { offset: 0xE87E, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setButtonPoint:]', symObjAddr: 0x71C, symBinAddr: 0x17F04, symSize: 0x48 }
+  - { offset: 0xE8BE, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setShowButtonMarker:]', symObjAddr: 0x764, symBinAddr: 0x17F4C, symSize: 0x48 }
+  - { offset: 0xE8FE, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setLandscape:]', symObjAddr: 0x7AC, symBinAddr: 0x17F94, symSize: 0x7C }
+  - { offset: 0xE93E, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD setRotationDegrees:]', symObjAddr: 0x828, symBinAddr: 0x18010, symSize: 0x6C }
+  - { offset: 0xE9B8, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD drawRect:]', symObjAddr: 0x894, symBinAddr: 0x1807C, symSize: 0x53C }
+  - { offset: 0xEB78, size: 0x8, addend: 0x0, symName: _CGRectMake, symObjAddr: 0xDD0, symBinAddr: 0x185B8, symSize: 0x4C }
+  - { offset: 0xEBDE, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0xE1C, symBinAddr: 0x18604, symSize: 0x2C }
+  - { offset: 0xEC26, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD drawPanelInRect:marker:hasMarker:]', symObjAddr: 0xE48, symBinAddr: 0x18630, symSize: 0x15B4 }
+  - { offset: 0xF0C9, size: 0x8, addend: 0x0, symName: _CBBFont, symObjAddr: 0x23FC, symBinAddr: 0x19BE4, symSize: 0x1B4 }
+  - { offset: 0xF11B, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD rows]', symObjAddr: 0x25B0, symBinAddr: 0x19D98, symSize: 0x24 }
+  - { offset: 0xF151, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD selectedIndex]', symObjAddr: 0x25D4, symBinAddr: 0x19DBC, symSize: 0x24 }
+  - { offset: 0xF187, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD statusText]', symObjAddr: 0x25F8, symBinAddr: 0x19DE0, symSize: 0x24 }
+  - { offset: 0xF1BD, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD promptText]', symObjAddr: 0x261C, symBinAddr: 0x19E04, symSize: 0x24 }
+  - { offset: 0xF1F3, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD buttonPoint]', symObjAddr: 0x2640, symBinAddr: 0x19E28, symSize: 0x30 }
+  - { offset: 0xF229, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD showButtonMarker]', symObjAddr: 0x2670, symBinAddr: 0x19E58, symSize: 0x2C }
+  - { offset: 0xF25F, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD landscape]', symObjAddr: 0x269C, symBinAddr: 0x19E84, symSize: 0x2C }
+  - { offset: 0xF295, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD rotationDegrees]', symObjAddr: 0x26C8, symBinAddr: 0x19EB0, symSize: 0x24 }
+  - { offset: 0xF2CB, size: 0x8, addend: 0x0, symName: '-[CBBStereoHUD .cxx_destruct]', symObjAddr: 0x26EC, symBinAddr: 0x19ED4, symSize: 0x70 }
+  - { offset: 0xF7DD, size: 0x8, addend: 0x0, symName: '-[UIApplication(CBBTouchDeliveryProbe) cbb_deliveryProbeSendEvent:]', symObjAddr: 0x0, symBinAddr: 0x19F44, symSize: 0x118 }
+  - { offset: 0xF7EA, size: 0x8, addend: 0x0, symName: '+[CBBTouchInjector sharedInjector]', symObjAddr: 0x118, symBinAddr: 0x1A05C, symSize: 0x7C }
+  - { offset: 0xF813, size: 0x8, addend: 0x0, symName: _sharedInjector.shared, symObjAddr: 0xF770, symBinAddr: 0x37000, symSize: 0x0 }
+  - { offset: 0xF828, size: 0x8, addend: 0x0, symName: _sharedInjector.onceToken, symObjAddr: 0xF778, symBinAddr: 0x37008, symSize: 0x0 }
+  - { offset: 0xFA2D, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector installDeliveryProbe]', symObjAddr: 0x690, symBinAddr: 0x1A5D4, symSize: 0x74 }
+  - { offset: 0xFA52, size: 0x8, addend: 0x0, symName: _installDeliveryProbe.once, symObjAddr: 0xF790, symBinAddr: 0x37020, symSize: 0x0 }
+  - { offset: 0xFA99, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector enqueueInProcess:atPoint:]', symObjAddr: 0xFBC, symBinAddr: 0x1AF00, symSize: 0x1C0 }
+  - { offset: 0xFABF, size: 0x8, addend: 0x0, symName: '_enqueueInProcess:atPoint:.funnelNamed', symObjAddr: 0xF798, symBinAddr: 0x37028, symSize: 0x0 }
+  - { offset: 0xFB35, size: 0x8, addend: 0x0, symName: _CBBRelayQueuePath, symObjAddr: 0x40A8, symBinAddr: 0x30550, symSize: 0x0 }
+  - { offset: 0xFB66, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector swipeFromPoint:toPoint:duration:]', symObjAddr: 0x26A8, symBinAddr: 0x1C590, symSize: 0x1A4 }
+  - { offset: 0xFC9C, size: 0x8, addend: 0x0, symName: _CBBDeliveryCount, symObjAddr: 0xF768, symBinAddr: 0x36FF8, symSize: 0x0 }
+  - { offset: 0xFCC1, size: 0x8, addend: 0x0, symName: _CBBSetIntegerWithOptions, symObjAddr: 0xF780, symBinAddr: 0x37010, symSize: 0x0 }
+  - { offset: 0xFD11, size: 0x8, addend: 0x0, symName: _CBBSetDigitizerInfo, symObjAddr: 0xF788, symBinAddr: 0x37018, symSize: 0x0 }
+  - { offset: 0xFD8E, size: 0x8, addend: 0x0, symName: _CBBRelayWake, symObjAddr: 0x1A70, symBinAddr: 0x1B9B4, symSize: 0xD4 }
+  - { offset: 0xFDB1, size: 0x8, addend: 0x0, symName: _CBBRelayWake.post, symObjAddr: 0xF7A0, symBinAddr: 0x37030, symSize: 0x0 }
+  - { offset: 0xFDC7, size: 0x8, addend: 0x0, symName: _CBBRelayWake.resolved, symObjAddr: 0xF7A8, symBinAddr: 0x37038, symSize: 0x0 }
+  - { offset: 0x10503, size: 0x8, addend: 0x0, symName: '-[UIApplication(CBBTouchDeliveryProbe) cbb_deliveryProbeSendEvent:]', symObjAddr: 0x0, symBinAddr: 0x19F44, symSize: 0x118 }
+  - { offset: 0x105EF, size: 0x8, addend: 0x0, symName: '___34+[CBBTouchInjector sharedInjector]_block_invoke', symObjAddr: 0x194, symBinAddr: 0x1A0D8, symSize: 0x54 }
+  - { offset: 0x10617, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector init]', symObjAddr: 0x1E8, symBinAddr: 0x1A12C, symSize: 0x278 }
+  - { offset: 0x1064D, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x460, symBinAddr: 0x1A3A4, symSize: 0x230 }
+  - { offset: 0x106AF, size: 0x8, addend: 0x0, symName: '___40-[CBBTouchInjector installDeliveryProbe]_block_invoke', symObjAddr: 0x704, symBinAddr: 0x1A648, symSize: 0x1C8 }
+  - { offset: 0x1070D, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector screenSize]', symObjAddr: 0x8CC, symBinAddr: 0x1A810, symSize: 0x34 }
+  - { offset: 0x10743, size: 0x8, addend: 0x0, symName: _CBBNativeScreenSize, symObjAddr: 0x900, symBinAddr: 0x1A844, symSize: 0x1AC }
+  - { offset: 0x107ED, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector available]', symObjAddr: 0xAAC, symBinAddr: 0x1A9F0, symSize: 0x20 }
+  - { offset: 0x10823, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector targetWindowForPoint:]', symObjAddr: 0xACC, symBinAddr: 0x1AA10, symSize: 0x3B8 }
+  - { offset: 0x108AB, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector contextIdForPoint:]', symObjAddr: 0xE84, symBinAddr: 0x1ADC8, symSize: 0x138 }
+  - { offset: 0x10927, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector currentFunnel]', symObjAddr: 0x117C, symBinAddr: 0x1B0C0, symSize: 0x114 }
+  - { offset: 0x1096D, size: 0x8, addend: 0x0, symName: _CBBForegroundAppBundleIdentifier, symObjAddr: 0x1290, symBinAddr: 0x1B1D4, symSize: 0x2B0 }
+  - { offset: 0x109FF, size: 0x8, addend: 0x0, symName: _CBBForegroundAppPID, symObjAddr: 0x1540, symBinAddr: 0x1B484, symSize: 0x1D8 }
+  - { offset: 0x10A81, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector beginAppGesture]', symObjAddr: 0x1718, symBinAddr: 0x1B65C, symSize: 0x64 }
+  - { offset: 0x10AB4, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector postAppEventAtPoint:phase:bundle:]', symObjAddr: 0x177C, symBinAddr: 0x1B6C0, symSize: 0x2F4 }
+  - { offset: 0x10B4E, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector deliverTouchAtPoint:phase:funnel:]', symObjAddr: 0x1B44, symBinAddr: 0x1BA88, symSize: 0x1F0 }
+  - { offset: 0x10BD9, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector evaluateAfterTapFrom:]', symObjAddr: 0x1D34, symBinAddr: 0x1BC78, symSize: 0xC4 }
+  - { offset: 0x10C2A, size: 0x8, addend: 0x0, symName: '___41-[CBBTouchInjector evaluateAfterTapFrom:]_block_invoke', symObjAddr: 0x1DF8, symBinAddr: 0x1BD3C, symSize: 0x100 }
+  - { offset: 0x10CA4, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector newTouchEventAtPoint:phase:]', symObjAddr: 0x1F54, symBinAddr: 0x1BE3C, symSize: 0x1D4 }
+  - { offset: 0x10D44, size: 0x8, addend: 0x0, symName: _CBBSetDigitizerField, symObjAddr: 0x2128, symBinAddr: 0x1C010, symSize: 0x64 }
+  - { offset: 0x10DA6, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector tapAtPoint:]', symObjAddr: 0x218C, symBinAddr: 0x1C074, symSize: 0xF4 }
+  - { offset: 0x10E53, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x2280, symBinAddr: 0x1C168, symSize: 0x2C }
+  - { offset: 0x10E9B, size: 0x8, addend: 0x0, symName: '___31-[CBBTouchInjector tapAtPoint:]_block_invoke', symObjAddr: 0x22AC, symBinAddr: 0x1C194, symSize: 0x3FC }
+  - { offset: 0x10F5E, size: 0x8, addend: 0x0, symName: '___52-[CBBTouchInjector swipeFromPoint:toPoint:duration:]_block_invoke', symObjAddr: 0x284C, symBinAddr: 0x1C734, symSize: 0x330 }
+  - { offset: 0x11067, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector pressMenu]', symObjAddr: 0x2B7C, symBinAddr: 0x1CA64, symSize: 0x2E4 }
+  - { offset: 0x110F5, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector pressHome]', symObjAddr: 0x2E60, symBinAddr: 0x1CD48, symSize: 0x9C }
+  - { offset: 0x11128, size: 0x8, addend: 0x0, symName: '___29-[CBBTouchInjector pressHome]_block_invoke', symObjAddr: 0x2EFC, symBinAddr: 0x1CDE4, symSize: 0x30 }
+  - { offset: 0x11168, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector pressHomeTwice]', symObjAddr: 0x2F90, symBinAddr: 0x1CE14, symSize: 0x9C }
+  - { offset: 0x1119B, size: 0x8, addend: 0x0, symName: '___34-[CBBTouchInjector pressHomeTwice]_block_invoke', symObjAddr: 0x302C, symBinAddr: 0x1CEB0, symSize: 0x50 }
+  - { offset: 0x111DB, size: 0x8, addend: 0x0, symName: '-[CBBTouchInjector .cxx_destruct]', symObjAddr: 0x307C, symBinAddr: 0x1CF00, symSize: 0x48 }
+  - { offset: 0x1120D, size: 0x8, addend: 0x0, symName: _CGSizeMake, symObjAddr: 0x30C4, symBinAddr: 0x1CF48, symSize: 0x2C }
+  - { offset: 0x1311E, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer init]', symObjAddr: 0x0, symBinAddr: 0x1CF74, symSize: 0xD8 }
+  - { offset: 0x132D1, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer init]', symObjAddr: 0x0, symBinAddr: 0x1CF74, symSize: 0xD8 }
+  - { offset: 0x13307, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer dealloc]', symObjAddr: 0xD8, symBinAddr: 0x1D04C, symSize: 0x54 }
+  - { offset: 0x13339, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer touchDown]', symObjAddr: 0x12C, symBinAddr: 0x1D0A0, symSize: 0xC4 }
+  - { offset: 0x13379, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer touchUp]', symObjAddr: 0x1F0, symBinAddr: 0x1D164, symSize: 0x16C }
+  - { offset: 0x133C7, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer flushPending]', symObjAddr: 0x35C, symBinAddr: 0x1D2D0, symSize: 0x4C }
+  - { offset: 0x133F9, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer deliverClicks:held:]', symObjAddr: 0x3A8, symBinAddr: 0x1D31C, symSize: 0x108 }
+  - { offset: 0x1348D, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer cancel]', symObjAddr: 0x4B0, symBinAddr: 0x1D424, symSize: 0x50 }
+  - { offset: 0x134BF, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer delegate]', symObjAddr: 0x500, symBinAddr: 0x1D474, symSize: 0x2C }
+  - { offset: 0x134F5, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer setDelegate:]', symObjAddr: 0x52C, symBinAddr: 0x1D4A0, symSize: 0x34 }
+  - { offset: 0x13533, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer multiTapInterval]', symObjAddr: 0x560, symBinAddr: 0x1D4D4, symSize: 0x1C }
+  - { offset: 0x13569, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer setMultiTapInterval:]', symObjAddr: 0x57C, symBinAddr: 0x1D4F0, symSize: 0x24 }
+  - { offset: 0x135A7, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer longPressInterval]', symObjAddr: 0x5A0, symBinAddr: 0x1D514, symSize: 0x1C }
+  - { offset: 0x135DD, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer setLongPressInterval:]', symObjAddr: 0x5BC, symBinAddr: 0x1D530, symSize: 0x24 }
+  - { offset: 0x1361B, size: 0x8, addend: 0x0, symName: '-[CBBClickRecognizer .cxx_destruct]', symObjAddr: 0x5E0, symBinAddr: 0x1D554, symSize: 0x40 }
+  - { offset: 0x13688, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer init]', symObjAddr: 0x0, symBinAddr: 0x1D594, symSize: 0xF0 }
+  - { offset: 0x13DE6, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer init]', symObjAddr: 0x0, symBinAddr: 0x1D594, symSize: 0xF0 }
+  - { offset: 0x13E1C, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer available]', symObjAddr: 0xF0, symBinAddr: 0x1D684, symSize: 0x30 }
+  - { offset: 0x13E52, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer running]', symObjAddr: 0x120, symBinAddr: 0x1D6B4, symSize: 0x20 }
+  - { offset: 0x13E88, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer start]', symObjAddr: 0x140, symBinAddr: 0x1D6D4, symSize: 0x168 }
+  - { offset: 0x13EC8, size: 0x8, addend: 0x0, symName: '___25-[CBBMotionPointer start]_block_invoke', symObjAddr: 0x2A8, symBinAddr: 0x1D83C, symSize: 0xDC }
+  - { offset: 0x13F39, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer stop]', symObjAddr: 0x3E0, symBinAddr: 0x1D918, symSize: 0x58 }
+  - { offset: 0x13F6B, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer recenter]', symObjAddr: 0x438, symBinAddr: 0x1D970, symSize: 0xD4 }
+  - { offset: 0x13FAB, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer captureReference:]', symObjAddr: 0x50C, symBinAddr: 0x1DA44, symSize: 0x142C }
+  - { offset: 0x14038, size: 0x8, addend: 0x0, symName: _CBBGazeFromAttitude, symObjAddr: 0x1938, symBinAddr: 0x1EE70, symSize: 0x5B8 }
+  - { offset: 0x14070, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer handleMotion:]', symObjAddr: 0x1EF0, symBinAddr: 0x1F428, symSize: 0x958 }
+  - { offset: 0x14164, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0x2848, symBinAddr: 0x1FD80, symSize: 0x2C }
+  - { offset: 0x141AC, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer onAim]', symObjAddr: 0x2874, symBinAddr: 0x1FDAC, symSize: 0x1C }
+  - { offset: 0x141E2, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer setOnAim:]', symObjAddr: 0x2890, symBinAddr: 0x1FDC8, symSize: 0x38 }
+  - { offset: 0x14220, size: 0x8, addend: 0x0, symName: '-[CBBMotionPointer .cxx_destruct]', symObjAddr: 0x28C8, symBinAddr: 0x1FE00, symSize: 0x48 }
+  - { offset: 0x14443, size: 0x8, addend: 0x0, symName: '+[CBBHomeLandscape sharedHelper]', symObjAddr: 0x0, symBinAddr: 0x1FE48, symSize: 0x7C }
+  - { offset: 0x14450, size: 0x8, addend: 0x0, symName: '+[CBBHomeLandscape sharedHelper]', symObjAddr: 0x0, symBinAddr: 0x1FE48, symSize: 0x7C }
+  - { offset: 0x14479, size: 0x8, addend: 0x0, symName: _sharedHelper.shared, symObjAddr: 0xAAC8, symBinAddr: 0x37040, symSize: 0x0 }
+  - { offset: 0x1448E, size: 0x8, addend: 0x0, symName: _sharedHelper.onceToken, symObjAddr: 0xAAD0, symBinAddr: 0x37048, symSize: 0x0 }
+  - { offset: 0x1455B, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape installHooksOnce]', symObjAddr: 0xD0, symBinAddr: 0x1FF18, symSize: 0xD0 }
+  - { offset: 0x14580, size: 0x8, addend: 0x0, symName: _installHooksOnce.once, symObjAddr: 0xAAD8, symBinAddr: 0x37050, symSize: 0x0 }
+  - { offset: 0x145FD, size: 0x8, addend: 0x0, symName: _gOriginalAppOrientations, symObjAddr: 0xAAE0, symBinAddr: 0x37058, symSize: 0x0 }
+  - { offset: 0x14623, size: 0x8, addend: 0x0, symName: _gOriginalHomeScreenOrientations, symObjAddr: 0xAAE8, symBinAddr: 0x37060, symSize: 0x0 }
+  - { offset: 0x14638, size: 0x8, addend: 0x0, symName: _gOriginalHomeScreenAutorotate, symObjAddr: 0xAAF0, symBinAddr: 0x37068, symSize: 0x0 }
+  - { offset: 0x1464D, size: 0x8, addend: 0x0, symName: _gHookedDelegateClass, symObjAddr: 0xAAF8, symBinAddr: 0x37070, symSize: 0x0 }
+  - { offset: 0x14662, size: 0x8, addend: 0x0, symName: _gOriginalDelegateOrientations, symObjAddr: 0xAB00, symBinAddr: 0x37078, symSize: 0x0 }
+  - { offset: 0x14677, size: 0x8, addend: 0x0, symName: _gTriedUnlockingRotationLock, symObjAddr: 0xAB08, symBinAddr: 0x37080, symSize: 0x0 }
+  - { offset: 0x146B3, size: 0x8, addend: 0x0, symName: _gNudgeAttempts, symObjAddr: 0xAB10, symBinAddr: 0x37088, symSize: 0x0 }
+  - { offset: 0x146C8, size: 0x8, addend: 0x0, symName: _gLandscapeActive, symObjAddr: 0xAB18, symBinAddr: 0x37090, symSize: 0x0 }
+  - { offset: 0x146DD, size: 0x8, addend: 0x0, symName: _gLandscapeOrientation, symObjAddr: 0x1F60, symBinAddr: 0x36EE0, symSize: 0x0 }
+  - { offset: 0x1663F, size: 0x8, addend: 0x0, symName: '___32+[CBBHomeLandscape sharedHelper]_block_invoke', symObjAddr: 0x7C, symBinAddr: 0x1FEC4, symSize: 0x54 }
+  - { offset: 0x16667, size: 0x8, addend: 0x0, symName: '___36-[CBBHomeLandscape installHooksOnce]_block_invoke', symObjAddr: 0x1A0, symBinAddr: 0x1FFE8, symSize: 0x288 }
+  - { offset: 0x166CC, size: 0x8, addend: 0x0, symName: _CBBHookMethod, symObjAddr: 0x428, symBinAddr: 0x20270, symSize: 0x164 }
+  - { offset: 0x1678E, size: 0x8, addend: 0x0, symName: _CBBAppSupportedOrientations, symObjAddr: 0x58C, symBinAddr: 0x203D4, symSize: 0xE4 }
+  - { offset: 0x167D2, size: 0x8, addend: 0x0, symName: _CBBHomeScreenSupportedOrientations, symObjAddr: 0x670, symBinAddr: 0x204B8, symSize: 0xBC }
+  - { offset: 0x16808, size: 0x8, addend: 0x0, symName: _CBBHomeScreenShouldAutorotate, symObjAddr: 0x72C, symBinAddr: 0x20574, symSize: 0xD0 }
+  - { offset: 0x1683E, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape hookDelegateIfNeeded]', symObjAddr: 0x860, symBinAddr: 0x20644, symSize: 0x1F0 }
+  - { offset: 0x168A6, size: 0x8, addend: 0x0, symName: _CBBDelegateSupportedOrientations, symObjAddr: 0xA50, symBinAddr: 0x20834, symSize: 0x108 }
+  - { offset: 0x168F8, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape releaseRotationLockIfPossible]', symObjAddr: 0xB58, symBinAddr: 0x2093C, symSize: 0x1C8 }
+  - { offset: 0x1697D, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape homeScreenWindow]', symObjAddr: 0xD20, symBinAddr: 0x20B04, symSize: 0x20C }
+  - { offset: 0x169D9, size: 0x8, addend: 0x0, symName: _CBBLooksLikeHomeScreenObject, symObjAddr: 0xF2C, symBinAddr: 0x20D10, symSize: 0x104 }
+  - { offset: 0x16A0F, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape nudgeOrientation:]', symObjAddr: 0x1030, symBinAddr: 0x20E14, symSize: 0x268 }
+  - { offset: 0x16A8E, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape applyMode:]', symObjAddr: 0x1298, symBinAddr: 0x2107C, symSize: 0x14C }
+  - { offset: 0x16ADF, size: 0x8, addend: 0x0, symName: _CBBMarkStage, symObjAddr: 0x13E4, symBinAddr: 0x211C8, symSize: 0x230 }
+  - { offset: 0x16B41, size: 0x8, addend: 0x0, symName: _CBBDeviceLandscapeOrientation, symObjAddr: 0x1614, symBinAddr: 0x213F8, symSize: 0x98 }
+  - { offset: 0x16B5A, size: 0x8, addend: 0x0, symName: '-[CBBHomeLandscape wantsMoreAttempts]', symObjAddr: 0x16AC, symBinAddr: 0x21490, symSize: 0x4C }
+  - { offset: 0x16F24, size: 0x8, addend: 0x0, symName: '+[CBBPrefs sharedPrefs]', symObjAddr: 0x0, symBinAddr: 0x214DC, symSize: 0x7C }
+  - { offset: 0x16F3D, size: 0x8, addend: 0x0, symName: _CBBKeyEnabled, symObjAddr: 0x16B8, symBinAddr: 0x30668, symSize: 0x0 }
+  - { offset: 0x16FB5, size: 0x8, addend: 0x0, symName: _CBBKeyZoom, symObjAddr: 0x16C0, symBinAddr: 0x30670, symSize: 0x0 }
+  - { offset: 0x16FCA, size: 0x8, addend: 0x0, symName: _CBBKeyMode, symObjAddr: 0x16C8, symBinAddr: 0x30678, symSize: 0x0 }
+  - { offset: 0x16FDF, size: 0x8, addend: 0x0, symName: _CBBKeyRotation, symObjAddr: 0x16D0, symBinAddr: 0x30680, symSize: 0x0 }
+  - { offset: 0x16FF4, size: 0x8, addend: 0x0, symName: _CBBKeyK1, symObjAddr: 0x16D8, symBinAddr: 0x30688, symSize: 0x0 }
+  - { offset: 0x17009, size: 0x8, addend: 0x0, symName: _CBBKeyK2, symObjAddr: 0x16E0, symBinAddr: 0x30690, symSize: 0x0 }
+  - { offset: 0x1701E, size: 0x8, addend: 0x0, symName: _CBBKeyChroma, symObjAddr: 0x16E8, symBinAddr: 0x30698, symSize: 0x0 }
+  - { offset: 0x17033, size: 0x8, addend: 0x0, symName: _CBBKeyCurvature, symObjAddr: 0x16F0, symBinAddr: 0x306A0, symSize: 0x0 }
+  - { offset: 0x17048, size: 0x8, addend: 0x0, symName: _CBBKeyParallax, symObjAddr: 0x16F8, symBinAddr: 0x306A8, symSize: 0x0 }
+  - { offset: 0x1705D, size: 0x8, addend: 0x0, symName: _CBBKeyBrightness, symObjAddr: 0x1700, symBinAddr: 0x306B0, symSize: 0x0 }
+  - { offset: 0x17072, size: 0x8, addend: 0x0, symName: _CBBKeyVignette, symObjAddr: 0x1708, symBinAddr: 0x306B8, symSize: 0x0 }
+  - { offset: 0x17087, size: 0x8, addend: 0x0, symName: _CBBKeyCursorStep, symObjAddr: 0x1710, symBinAddr: 0x306C0, symSize: 0x0 }
+  - { offset: 0x1709C, size: 0x8, addend: 0x0, symName: _CBBKeyGridColumns, symObjAddr: 0x1718, symBinAddr: 0x306C8, symSize: 0x0 }
+  - { offset: 0x170B1, size: 0x8, addend: 0x0, symName: _CBBKeyAimSensitivity, symObjAddr: 0x1720, symBinAddr: 0x306D0, symSize: 0x0 }
+  - { offset: 0x170C6, size: 0x8, addend: 0x0, symName: _CBBKeyHomeLandscape, symObjAddr: 0x1728, symBinAddr: 0x306D8, symSize: 0x0 }
+  - { offset: 0x170DB, size: 0x8, addend: 0x0, symName: _CBBKeyMirror, symObjAddr: 0x1730, symBinAddr: 0x306E0, symSize: 0x0 }
+  - { offset: 0x170F0, size: 0x8, addend: 0x0, symName: _CBBKeyTapRotation, symObjAddr: 0x1738, symBinAddr: 0x306E8, symSize: 0x0 }
+  - { offset: 0x17105, size: 0x8, addend: 0x0, symName: _CBBKeyTapA, symObjAddr: 0x1740, symBinAddr: 0x306F0, symSize: 0x0 }
+  - { offset: 0x1711A, size: 0x8, addend: 0x0, symName: _CBBKeyTapB, symObjAddr: 0x1748, symBinAddr: 0x306F8, symSize: 0x0 }
+  - { offset: 0x1712F, size: 0x8, addend: 0x0, symName: _CBBKeyTapC, symObjAddr: 0x1750, symBinAddr: 0x30700, symSize: 0x0 }
+  - { offset: 0x17144, size: 0x8, addend: 0x0, symName: _CBBKeyTapD, symObjAddr: 0x1758, symBinAddr: 0x30708, symSize: 0x0 }
+  - { offset: 0x17159, size: 0x8, addend: 0x0, symName: _CBBKeyTapTX, symObjAddr: 0x1760, symBinAddr: 0x30710, symSize: 0x0 }
+  - { offset: 0x1716E, size: 0x8, addend: 0x0, symName: _CBBKeyTapTY, symObjAddr: 0x1768, symBinAddr: 0x30718, symSize: 0x0 }
+  - { offset: 0x17183, size: 0x8, addend: 0x0, symName: _CBBKeyTapCalibrated, symObjAddr: 0x1770, symBinAddr: 0x30720, symSize: 0x0 }
+  - { offset: 0x17198, size: 0x8, addend: 0x0, symName: _CBBKeyTapCalibrationOrientation, symObjAddr: 0x1778, symBinAddr: 0x30728, symSize: 0x0 }
+  - { offset: 0x171AD, size: 0x8, addend: 0x0, symName: _CBBKeyLandscapeArmed, symObjAddr: 0x1780, symBinAddr: 0x30730, symSize: 0x0 }
+  - { offset: 0x171C2, size: 0x8, addend: 0x0, symName: _CBBKeyBootArmed, symObjAddr: 0x1788, symBinAddr: 0x30738, symSize: 0x0 }
+  - { offset: 0x171D7, size: 0x8, addend: 0x0, symName: _CBBKeyBootFailures, symObjAddr: 0x1790, symBinAddr: 0x30740, symSize: 0x0 }
+  - { offset: 0x171EC, size: 0x8, addend: 0x0, symName: _CBBKeyButtonX, symObjAddr: 0x1798, symBinAddr: 0x30748, symSize: 0x0 }
+  - { offset: 0x17201, size: 0x8, addend: 0x0, symName: _CBBKeyButtonY, symObjAddr: 0x17A0, symBinAddr: 0x30750, symSize: 0x0 }
+  - { offset: 0x17216, size: 0x8, addend: 0x0, symName: _CBBKeyCaptureFPS, symObjAddr: 0x17A8, symBinAddr: 0x30758, symSize: 0x0 }
+  - { offset: 0x1722B, size: 0x8, addend: 0x0, symName: _CBBKeyHideFromCapture, symObjAddr: 0x17B0, symBinAddr: 0x30760, symSize: 0x0 }
+  - { offset: 0x17240, size: 0x8, addend: 0x0, symName: _CBBKeyDwellClick, symObjAddr: 0x17B8, symBinAddr: 0x30768, symSize: 0x0 }
+  - { offset: 0x17255, size: 0x8, addend: 0x0, symName: _CBBModeFill, symObjAddr: 0x17C0, symBinAddr: 0x30770, symSize: 0x0 }
+  - { offset: 0x1726A, size: 0x8, addend: 0x0, symName: _CBBModeNative, symObjAddr: 0x17C8, symBinAddr: 0x30778, symSize: 0x0 }
+  - { offset: 0x1727F, size: 0x8, addend: 0x0, symName: _kCBBDomain, symObjAddr: 0x17D0, symBinAddr: 0x30780, symSize: 0x0 }
+  - { offset: 0x17288, size: 0x8, addend: 0x0, symName: '+[CBBPrefs sharedPrefs]', symObjAddr: 0x0, symBinAddr: 0x214DC, symSize: 0x7C }
+  - { offset: 0x172B1, size: 0x8, addend: 0x0, symName: _sharedPrefs.shared, symObjAddr: 0x3788, symBinAddr: 0x37098, symSize: 0x0 }
+  - { offset: 0x172C6, size: 0x8, addend: 0x0, symName: _sharedPrefs.onceToken, symObjAddr: 0x3790, symBinAddr: 0x370A0, symSize: 0x0 }
+  - { offset: 0x174D1, size: 0x8, addend: 0x0, symName: '___23+[CBBPrefs sharedPrefs]_block_invoke', symObjAddr: 0x7C, symBinAddr: 0x21558, symSize: 0x54 }
+  - { offset: 0x174F9, size: 0x8, addend: 0x0, symName: '-[CBBPrefs init]', symObjAddr: 0xD0, symBinAddr: 0x215AC, symSize: 0x9E8 }
+  - { offset: 0x17531, size: 0x8, addend: 0x0, symName: '-[CBBPrefs rawValueForKey:]', symObjAddr: 0xAB8, symBinAddr: 0x21F94, symSize: 0x110 }
+  - { offset: 0x17583, size: 0x8, addend: 0x0, symName: '-[CBBPrefs doubleForKey:]', symObjAddr: 0xBC8, symBinAddr: 0x220A4, symSize: 0x88 }
+  - { offset: 0x175C7, size: 0x8, addend: 0x0, symName: '-[CBBPrefs integerForKey:]', symObjAddr: 0xC50, symBinAddr: 0x2212C, symSize: 0x8C }
+  - { offset: 0x1760B, size: 0x8, addend: 0x0, symName: '-[CBBPrefs boolForKey:]', symObjAddr: 0xCDC, symBinAddr: 0x221B8, symSize: 0x8C }
+  - { offset: 0x1764F, size: 0x8, addend: 0x0, symName: '-[CBBPrefs setDouble:forKey:]', symObjAddr: 0xD68, symBinAddr: 0x22244, symSize: 0x68 }
+  - { offset: 0x1769D, size: 0x8, addend: 0x0, symName: '-[CBBPrefs setInteger:forKey:]', symObjAddr: 0xDD0, symBinAddr: 0x222AC, symSize: 0x68 }
+  - { offset: 0x176EB, size: 0x8, addend: 0x0, symName: '-[CBBPrefs setBool:forKey:]', symObjAddr: 0xE38, symBinAddr: 0x22314, symSize: 0x6C }
+  - { offset: 0x17739, size: 0x8, addend: 0x0, symName: '-[CBBPrefs resetAll]', symObjAddr: 0xEA4, symBinAddr: 0x22380, symSize: 0x194 }
+  - { offset: 0x17782, size: 0x8, addend: 0x0, symName: '-[CBBPrefs synchronize]', symObjAddr: 0x1038, symBinAddr: 0x22514, symSize: 0x30 }
+  - { offset: 0x177B4, size: 0x8, addend: 0x0, symName: '-[CBBPrefs .cxx_destruct]', symObjAddr: 0x1068, symBinAddr: 0x22544, symSize: 0x48 }
 ...

@@ -1,0 +1,24 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/shashwath/Desktop/CardboardOS/.theos/obj/debug/arm64/CBBTouchRelay.dylib'
+relocations:
+  - { offset: 0x1E, size: 0x8, addend: 0x0, symName: _CBBTouchRelayLoad, symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x2A8 }
+  - { offset: 0x39, size: 0x8, addend: 0x0, symName: _CBBTouchRelayLoad, symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x2A8 }
+  - { offset: 0x5C, size: 0x8, addend: 0x0, symName: _CBBTouchRelayLoad.token, symObjAddr: 0x9D78, symBinAddr: 0x85A0, symSize: 0x0 }
+  - { offset: 0xC3, size: 0x8, addend: 0x0, symName: _CBBRelayBundleId, symObjAddr: 0x9CE8, symBinAddr: 0x8510, symSize: 0x0 }
+  - { offset: 0xD8, size: 0x8, addend: 0x0, symName: _CBBRelayStage, symObjAddr: 0x2A8, symBinAddr: 0x42A8, symSize: 0x24C }
+  - { offset: 0xF9, size: 0x8, addend: 0x0, symName: _CBBRelayStage.path, symObjAddr: 0x1840, symBinAddr: 0x8190, symSize: 0x0 }
+  - { offset: 0x1C4, size: 0x8, addend: 0x0, symName: _CBBRelaySetIntegerOptions, symObjAddr: 0x9D68, symBinAddr: 0x8590, symSize: 0x0 }
+  - { offset: 0x226, size: 0x8, addend: 0x0, symName: _CBBRelaySetDigitizerInfo, symObjAddr: 0x9D70, symBinAddr: 0x8598, symSize: 0x0 }
+  - { offset: 0x2AA, size: 0x8, addend: 0x0, symName: _CBBRelayDrain, symObjAddr: 0x520, symBinAddr: 0x4520, symSize: 0x3B0 }
+  - { offset: 0x2CB, size: 0x8, addend: 0x0, symName: _CBBRelayDrain.buffer, symObjAddr: 0x9D7C, symBinAddr: 0x85A4, symSize: 0x0 }
+  - { offset: 0x3B5, size: 0x8, addend: 0x0, symName: _CBBRelayOffset, symObjAddr: 0xAD80, symBinAddr: 0x95A8, symSize: 0x0 }
+  - { offset: 0x3F2, size: 0x8, addend: 0x0, symName: _CBBRelayInode, symObjAddr: 0xAD88, symBinAddr: 0x95B0, symSize: 0x0 }
+  - { offset: 0x42E, size: 0x8, addend: 0x0, symName: _CBBRelayInject, symObjAddr: 0xA44, symBinAddr: 0x4A44, symSize: 0x430 }
+  - { offset: 0x44F, size: 0x8, addend: 0x0, symName: _CBBRelayInject.reported, symObjAddr: 0xAD94, symBinAddr: 0x95BC, symSize: 0x0 }
+  - { offset: 0x552, size: 0x8, addend: 0x0, symName: _CBBRelayInjected, symObjAddr: 0xAD90, symBinAddr: 0x95B8, symSize: 0x0 }
+  - { offset: 0xBD6, size: 0x8, addend: 0x0, symName: ___CBBTouchRelayLoad_block_invoke, symObjAddr: 0x4F4, symBinAddr: 0x44F4, symSize: 0x2C }
+  - { offset: 0xC27, size: 0x8, addend: 0x0, symName: ___CBBRelayDrain_block_invoke, symObjAddr: 0x8D0, symBinAddr: 0x48D0, symSize: 0x174 }
+  - { offset: 0xC96, size: 0x8, addend: 0x0, symName: _CGPointMake, symObjAddr: 0xE74, symBinAddr: 0x4E74, symSize: 0x2C }
+  - { offset: 0xCDE, size: 0x8, addend: 0x0, symName: _CBBRelayWindowAtPoint, symObjAddr: 0xEA0, symBinAddr: 0x4EA0, symSize: 0x474 }
+...

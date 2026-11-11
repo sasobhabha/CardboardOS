@@ -1,0 +1,34 @@
+[0;36m==> [1;39mCleaning…[m
+[0;36m==> [1;36mNotice:[m Build may be slow as Theos isn’t using all available CPU cores on this computer. Consider upgrading GNU Make: https://theos.dev/docs/parallel-building
+[1;31m> [1;3;39mMaking all for tweak CardboardOS…[m
+[0;31m==> [1;39mPreprocessing Tweak.x…[m
+[0;32m==> [1;39mCompiling Tweak.x (arm64)…[m
+[0;32m==> [1;39mCompiling CBBController.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBDisplayCapture.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBStereoRenderer.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBStereoHUD.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBTouchInjector.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBClickRecognizer.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBMotionPointer.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBHomeLandscape.m (arm64)…[m
+[0;32m==> [1;39mCompiling CBBPrefs.m (arm64)…[m
+[0;33m==> [1;39mLinking tweak CardboardOS (arm64)…[m
+ld: warning: -multiply_defined is obsolete
+[0;34m==> [1;39mGenerating debug symbols for CardboardOS…[m
+[0;34m==> [1;39mSigning CardboardOS…[m
+[1;31m> [1;3;39mMaking all for tweak CBBHIDDriver…[m
+[0;32m==> [1;39mCompiling CBBHIDDriver.m (arm64)…[m
+[0;33m==> [1;39mLinking tweak CBBHIDDriver (arm64)…[m
+ld: warning: -multiply_defined is obsolete
+[0;34m==> [1;39mGenerating debug symbols for CBBHIDDriver…[m
+[0;34m==> [1;39mSigning CBBHIDDriver…[m
+[1;31m> [1;3;39mMaking all for tweak CBBTouchRelay…[m
+[0;32m==> [1;39mCompiling CBBTouchRelay.m (arm64)…[m
+[0;33m==> [1;39mLinking tweak CBBTouchRelay (arm64)…[m
+ld: warning: -multiply_defined is obsolete
+[0;34m==> [1;39mGenerating debug symbols for CBBTouchRelay…[m
+[0;34m==> [1;39mSigning CBBTouchRelay…[m
+[1;31m> [1;3;39mMaking stage for tweak CardboardOS…[m
+[1;31m> [1;3;39mMaking stage for tweak CBBHIDDriver…[m
+[1;31m> [1;3;39mMaking stage for tweak CBBTouchRelay…[m
+dm.pl: building package `com.buffy.cardboardos:iphoneos-arm' in `./packages/com.buffy.cardboardos_1.1.0-48+debug_iphoneos-arm.deb'

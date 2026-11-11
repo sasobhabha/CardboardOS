@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+    Filter for the app-side relay.
+
+    Classes rather than a list of bundle IDs: the relay has to be in *every* app
+    that might be on screen, and a Bundles list would only ever cover the ones
+    someone remembered to write down. Every app, and SpringBoard, has
+    UIApplication in its process.
+
+    The relay writes a breadcrumb on load and then bows out in SpringBoard, so
+    "is this filter being honoured at all" is answerable from the stage file even
+    before an app is opened.
+-->
+<plist version="1.0">
+<dict>
+	<key>Filter</key>
+	<dict>
+		<key>Classes</key>
+		<array>
+			<string>UIApplication</string>
+		</array>
+	</dict>
+</dict>
+</plist>

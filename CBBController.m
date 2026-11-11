@@ -767,6 +767,19 @@ static CGPoint CBBCardboardRotate(CGPoint vector, CGFloat radians) {
 #pragma mark - Raw touches
 
 - (void)handleTouchBeganAtFixedPoint:(CGPoint)point {
+    // Written down, not just logged: whether a touch that was injected inside
+    // backboardd lands here or on the app underneath is the whole question when
+    // an in-app tap does nothing, and UIKit's answer is invisible from a shell
+    // otherwise. Five is enough to see a pattern without filling the file.
+    static NSInteger touchLogs = 0;
+    if (touchLogs < 5) {
+        touchLogs++;
+        CBBMarkStage([NSString stringWithFormat:
+                      @"overlay received a touch at (%.0f,%.0f)%@",
+                      point.x, point.y,
+                      self.rootView.injectionPassthrough ? @" while injecting" : @""]);
+    }
+
     if (self.tapCalibrating) {
         [self recordTapProbeAtFixedPoint:point];
         return;

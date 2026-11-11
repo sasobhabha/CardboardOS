@@ -1,0 +1,47 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/shashwath/Desktop/CardboardOS/.theos/obj/debug/arm64/CBBHIDDriver.dylib'
+relocations:
+  - { offset: 0x1E, size: 0x8, addend: 0x0, symName: _CBBDriverLoad, symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x348 }
+  - { offset: 0x37, size: 0x8, addend: 0x0, symName: _CBBDriverStageLock, symObjAddr: 0x5D80, symBinAddr: 0x8460, symSize: 0x0 }
+  - { offset: 0xCE, size: 0x8, addend: 0x0, symName: _CBBDriverStage, symObjAddr: 0x348, symBinAddr: 0x4348, symSize: 0x2E0 }
+  - { offset: 0xEF, size: 0x8, addend: 0x0, symName: _CBBDriverStage.path, symObjAddr: 0x1F48, symBinAddr: 0x8140, symSize: 0x0 }
+  - { offset: 0x165, size: 0x8, addend: 0x0, symName: _CBBDriverCreateDigitizer, symObjAddr: 0x5D88, symBinAddr: 0x8468, symSize: 0x0 }
+  - { offset: 0x249, size: 0x8, addend: 0x0, symName: _CBBDriverCreateFinger, symObjAddr: 0x5D90, symBinAddr: 0x8470, symSize: 0x0 }
+  - { offset: 0x2B5, size: 0x8, addend: 0x0, symName: _CBBDriverAppend, symObjAddr: 0x5D98, symBinAddr: 0x8478, symSize: 0x0 }
+  - { offset: 0x2EB, size: 0x8, addend: 0x0, symName: _CBBDriverSetInteger, symObjAddr: 0x5DA0, symBinAddr: 0x8480, symSize: 0x0 }
+  - { offset: 0x333, size: 0x8, addend: 0x0, symName: _CBBDriverSetIntegerOptions, symObjAddr: 0x5DA8, symBinAddr: 0x8488, symSize: 0x0 }
+  - { offset: 0x375, size: 0x8, addend: 0x0, symName: _CBBDriverSetFloat, symObjAddr: 0x5DB0, symBinAddr: 0x8490, symSize: 0x0 }
+  - { offset: 0x3AB, size: 0x8, addend: 0x0, symName: _CBBDriverSetSender, symObjAddr: 0x5DB8, symBinAddr: 0x8498, symSize: 0x0 }
+  - { offset: 0x3DC, size: 0x8, addend: 0x0, symName: _CBBDriverCreateClient, symObjAddr: 0x5DC0, symBinAddr: 0x84A0, symSize: 0x0 }
+  - { offset: 0x421, size: 0x8, addend: 0x0, symName: _CBBDriverCreateClientWithType, symObjAddr: 0x5DC8, symBinAddr: 0x84A8, symSize: 0x0 }
+  - { offset: 0x475, size: 0x8, addend: 0x0, symName: _CBBDriverCreateSimpleClient, symObjAddr: 0x5DD0, symBinAddr: 0x84B0, symSize: 0x0 }
+  - { offset: 0x495, size: 0x8, addend: 0x0, symName: _CBBDriverDispatch, symObjAddr: 0x5DD8, symBinAddr: 0x84B8, symSize: 0x0 }
+  - { offset: 0x4C6, size: 0x8, addend: 0x0, symName: _CBBDriverCopyServices, symObjAddr: 0x5DE0, symBinAddr: 0x84C0, symSize: 0x0 }
+  - { offset: 0x510, size: 0x8, addend: 0x0, symName: _CBBDriverRegistryID, symObjAddr: 0x5DE8, symBinAddr: 0x84C8, symSize: 0x0 }
+  - { offset: 0x555, size: 0x8, addend: 0x0, symName: _CBBDriverCopyProperty, symObjAddr: 0x5DF0, symBinAddr: 0x84D0, symSize: 0x0 }
+  - { offset: 0x5B7, size: 0x8, addend: 0x0, symName: _CBBDriverRegisterCallback, symObjAddr: 0x5DF8, symBinAddr: 0x84D8, symSize: 0x0 }
+  - { offset: 0x5F3, size: 0x8, addend: 0x0, symName: _CBBDriverSchedule, symObjAddr: 0x5E00, symBinAddr: 0x84E0, symSize: 0x0 }
+  - { offset: 0x63E, size: 0x8, addend: 0x0, symName: _CBBDriverEventGetType, symObjAddr: 0x5E08, symBinAddr: 0x84E8, symSize: 0x0 }
+  - { offset: 0x66E, size: 0x8, addend: 0x0, symName: _CBBDriverClients, symObjAddr: 0x5E30, symBinAddr: 0x8510, symSize: 0x0 }
+  - { offset: 0x68F, size: 0x8, addend: 0x0, symName: _CBBDriverMonitorCounts, symObjAddr: 0x5E50, symBinAddr: 0x8530, symSize: 0x0 }
+  - { offset: 0x6C0, size: 0x8, addend: 0x0, symName: _CBBDriverLoopback, symObjAddr: 0x5E60, symBinAddr: 0x8540, symSize: 0x0 }
+  - { offset: 0x6D5, size: 0x8, addend: 0x0, symName: _CBBDriverMonitors, symObjAddr: 0x5E10, symBinAddr: 0x84F0, symSize: 0x0 }
+  - { offset: 0x6DE, size: 0x8, addend: 0x0, symName: _CBBDriverDrain, symObjAddr: 0xB94, symBinAddr: 0x4B94, symSize: 0x41C }
+  - { offset: 0x701, size: 0x8, addend: 0x0, symName: _CBBDriverDrain.buffer, symObjAddr: 0x5E64, symBinAddr: 0x8544, symSize: 0x0 }
+  - { offset: 0x80F, size: 0x8, addend: 0x0, symName: _CBBDriverOffset, symObjAddr: 0x7E68, symBinAddr: 0xA548, symSize: 0x0 }
+  - { offset: 0x845, size: 0x8, addend: 0x0, symName: _CBBDriverQueueInode, symObjAddr: 0x7E70, symBinAddr: 0xA550, symSize: 0x0 }
+  - { offset: 0x886, size: 0x8, addend: 0x0, symName: _CBBDriverSenderID, symObjAddr: 0x7E80, symBinAddr: 0xA560, symSize: 0x0 }
+  - { offset: 0x89B, size: 0x8, addend: 0x0, symName: _CBBDriverInjected, symObjAddr: 0x7E7C, symBinAddr: 0xA55C, symSize: 0x0 }
+  - { offset: 0x8B0, size: 0x8, addend: 0x0, symName: _CBBDriverReported, symObjAddr: 0x7E78, symBinAddr: 0xA558, symSize: 0x0 }
+  - { offset: 0x904, size: 0x8, addend: 0x0, symName: _CBBDriverLoad, symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x348 }
+  - { offset: 0x938, size: 0x8, addend: 0x0, symName: _CBBDriverSymbol, symObjAddr: 0x628, symBinAddr: 0x4628, symSize: 0x28 }
+  - { offset: 0x962, size: 0x8, addend: 0x0, symName: ___CBBDriverLoad_block_invoke, symObjAddr: 0x650, symBinAddr: 0x4650, symSize: 0x28 }
+  - { offset: 0x98C, size: 0x8, addend: 0x0, symName: _CBBDriverServe, symObjAddr: 0x678, symBinAddr: 0x4678, symSize: 0x1D0 }
+  - { offset: 0x9FA, size: 0x8, addend: 0x0, symName: _CBBDriverClientForType, symObjAddr: 0x848, symBinAddr: 0x4848, symSize: 0x1F4 }
+  - { offset: 0xA30, size: 0x8, addend: 0x0, symName: _CBBDriverLoopbackCallback, symObjAddr: 0xA3C, symBinAddr: 0x4A3C, symSize: 0x134 }
+  - { offset: 0xA8C, size: 0x8, addend: 0x0, symName: _CBBDriverTimerCallback, symObjAddr: 0xB70, symBinAddr: 0x4B70, symSize: 0x24 }
+  - { offset: 0xAC1, size: 0x8, addend: 0x0, symName: _CBBDriverInject, symObjAddr: 0xFB0, symBinAddr: 0x4FB0, symSize: 0x420 }
+  - { offset: 0xB8E, size: 0x8, addend: 0x0, symName: _CBBDriverSenderForStrategy, symObjAddr: 0x13D0, symBinAddr: 0x53D0, symSize: 0x70 }
+  - { offset: 0xBB6, size: 0x8, addend: 0x0, symName: _CBBDriverResolveSender, symObjAddr: 0x1440, symBinAddr: 0x5440, symSize: 0x364 }
+...

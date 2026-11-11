@@ -6,6 +6,12 @@
 # directory a loader might read", and the failure mode of getting that wrong is
 # an installed package that injects nothing.
 #
+# The package now carries three dylibs - CardboardOS (SpringBoard), CBBHIDDriver
+# (backboardd) and CBBTouchRelay (every app) - and a loader installs a dylib only
+# when its filter plist sits next to it under the same name, so all of them are
+# handled per name here. A missing relay plist is the failure that looks like
+# "in-app taps still do nothing", so the script copies both files every time.
+#
 # Usage: sh cbb_check.sh [--no-respring]
 #
 set -u
@@ -16,9 +22,10 @@ if [ "${1:-}" = "--no-respring" ]; then
 fi
 
 PACKAGE=com.buffy.cardboardos
-NAME=CardboardOS
+NAMES="CardboardOS CBBHIDDriver CBBTouchRelay"
 DYN=/Library/MobileSubstrate/DynamicLibraries
 TINJ=/usr/lib/TweakInject
+STAGES=/var/mobile/Library/Preferences/com.buffy.cardboardos.stages
 
 say() {
     echo "--- $*"
@@ -35,60 +42,63 @@ else
     echo "  dpkg knows no dylib/plist for $PACKAGE"
 fi
 
-# Where is the binary really? Ask the package first, then the filesystem. The
+# Where is a given binary really? Ask the package first, then the filesystem. The
 # deb built on this machine has installed itself into /usr/lib/TweakInject, then
 # into neither directory, so nothing may be assumed.
-say "locate $NAME.dylib"
-FOUND=""
-for CANDIDATE in $PAYLOAD; do
-    case "$CANDIDATE" in
-        *.dylib) FOUND="$CANDIDATE" ;;
-    esac
-done
-if [ -z "$FOUND" ]; then
-    for ROOT in /Library /usr/lib /usr/local/lib /var/jb /usr/share; do
-        [ -d "$ROOT" ] || continue
-        HIT=$(find "$ROOT" -name "$NAME.dylib" 2>/dev/null | head -1)
-        if [ -n "$HIT" ]; then
-            FOUND="$HIT"
-            break
-        fi
+install_one() {
+    NAME=$1
+    say "locate $NAME.dylib"
+    FOUND=""
+    for CANDIDATE in $PAYLOAD; do
+        case "$CANDIDATE" in
+            */"$NAME.dylib") FOUND="$CANDIDATE" ;;
+        esac
     done
-fi
-echo "  ${FOUND:-none}"
-
-if [ -n "$FOUND" ] && [ -f "$FOUND" ]; then
-    SRC_DIR=$(dirname "$FOUND")
-
-    # The filter has to sit next to the dylib under the same name. Take whatever
-    # plist the package shipped rather than assuming Theos kept our file name.
-    SRC_PLIST="$SRC_DIR/$NAME.plist"
-    if [ ! -f "$SRC_PLIST" ]; then
-        SRC_PLIST=$(ls "$SRC_DIR"/*.plist 2>/dev/null | head -1)
+    if [ -z "$FOUND" ]; then
+        for ROOT in /Library /usr/lib /usr/local/lib /var/jb /usr/share; do
+            [ -d "$ROOT" ] || continue
+            HIT=$(find "$ROOT" -name "$NAME.dylib" 2>/dev/null | head -1)
+            if [ -n "$HIT" ]; then
+                FOUND="$HIT"
+                break
+            fi
+        done
     fi
-    echo "  plist: ${SRC_PLIST:-none}"
+    echo "  ${FOUND:-none}"
 
-    say "install into both injection directories"
+    if [ -z "$FOUND" ] || [ ! -f "$FOUND" ]; then
+        echo "  NO $NAME.dylib FOUND - the package did not put a binary on disk."
+        echo "  Check the dpkg output above for 'INSTALL FAILED' or a file conflict."
+        return
+    fi
+
+    SRC_DIR=$(dirname "$FOUND")
+    # The filter has to sit next to the dylib under the same name.
+    SRC_PLIST="$SRC_DIR/$NAME.plist"
+    echo "  plist: $SRC_PLIST"
+
+    say "install $NAME into both injection directories"
     for DST in "$DYN" "$TINJ"; do
         mkdir -p "$DST"
-        # /usr/lib/TweakInject is a symlink to the substrate directory on many
-        # setups, so this is usually a no-op rather than a copy.
         if [ "$DST" -ef "$SRC_DIR" ]; then
             echo "  $DST is the same directory as $SRC_DIR, nothing to copy"
             ls -l "$DST/$NAME.dylib" 2>/dev/null
             continue
         fi
         cp -f "$FOUND" "$DST/$NAME.dylib"
-        if [ -n "${SRC_PLIST:-}" ] && [ -f "$SRC_PLIST" ]; then
+        if [ -f "$SRC_PLIST" ]; then
             cp -f "$SRC_PLIST" "$DST/$NAME.plist"
+        else
+            echo "  WARNING: no $NAME.plist in $SRC_DIR - the loader will ignore the dylib"
         fi
         ls -l "$DST/$NAME.dylib" 2>/dev/null
         ls -l "$DST/$NAME.plist" 2>/dev/null
     done
-else
-    echo "  NO $NAME.dylib FOUND - the package did not put a binary on disk."
-    echo "  Check the dpkg output above for 'INSTALL FAILED' or a file conflict."
-fi
+}
+
+for NAME in $NAMES; do
+    install_one "$NAME"
+done
 
 say frameworks
 dpkg -l | grep -i -E 'sonar|substitute|substrate|libhooker|ellekit' || echo "  none declared"
@@ -97,7 +107,7 @@ dpkg -l | grep -i -E 'sonar|substitute|substrate|libhooker|ellekit' || echo "  n
 # database of tweaks, it shows up here and explains why a dylib sitting in the
 # conventional directory is ignored.
 say "sonar files"
-dpkg -L com.staturnz.sonar 2>/dev/null | head -40 || echo "  com.staturnz.sonar not installed under that name"
+dpkg -L com.staturnz.sonar 2>/dev/null | head -20 || echo "  com.staturnz.sonar not installed under that name"
 
 say "contents of $DYN"
 ls -1 "$DYN" 2>/dev/null | head -20 || echo "  missing"
@@ -106,28 +116,37 @@ say "contents of $TINJ"
 ls -1 "$TINJ" 2>/dev/null | head -20 || echo "  missing"
 
 # The binary on disk is not proof the loader ran it. The build tag is compiled
-# into the dylib, so grep it out of the file that is actually on the phone: a
+# into each dylib, so grep it out of the file that is actually on the phone: a
 # missing or old tag here means the device is running a stale build no matter
 # what the working tree says.
-say "build fingerprint of the dylib on disk"
-if [ -n "$FOUND" ] && [ -f "$FOUND" ]; then
+say "build fingerprint of the dylibs on disk"
+for NAME in $NAMES; do
+    FOUND=""
+    for DST in "$TINJ" "$DYN"; do
+        if [ -f "$DST/$NAME.dylib" ]; then
+            FOUND="$DST/$NAME.dylib"
+            break
+        fi
+    done
+    if [ -z "$FOUND" ]; then
+        echo "  $NAME: no dylib on disk"
+        continue
+    fi
     ls -l "$FOUND"
     md5 "$FOUND" 2>/dev/null || echo "  no md5 tool on device"
-    TAG=$(grep -a -o '2026-[0-9-]*[a-z][^"]*' "$FOUND" 2>/dev/null | head -3)
-    echo "  tag in binary: ${TAG:-NOT FOUND - this is not the current build}"
-else
-    echo "  no dylib to fingerprint"
-fi
+    TAG=$(grep -a -o '2026-[0-9-]*[a-z][^"]*' "$FOUND" 2>/dev/null | head -1)
+    echo "  $NAME tag in binary: ${TAG:-NOT FOUND - this is not the current build}"
+done
 
 # Sonar keeps loader logs here. They say outright whether it injected the
-# dylib into SpringBoard, skipped it, or watched SpringBoard die on it.
+# dylib, skipped it, or watched the process die on it.
 say "sonar loader logs"
 if [ -d /Library/Sonar/Logs ]; then
     ls -lt /Library/Sonar/Logs 2>/dev/null | head -8
     NEWEST=$(ls -t /Library/Sonar/Logs/* 2>/dev/null | head -1)
     if [ -n "$NEWEST" ] && [ -f "$NEWEST" ]; then
         echo "  tail of $NEWEST:"
-        tail -20 "$NEWEST" 2>/dev/null
+        tail -30 "$NEWEST" 2>/dev/null
     else
         echo "  log directory is empty"
     fi
@@ -137,35 +156,32 @@ fi
 
 # Breadcrumbs written by the tweak itself. iOS 12 on this device has no syslogd,
 # so /var/log/syslog does not exist and NSLog output is lost: this file is the
-# only evidence that the dylib was loaded into SpringBoard and how far setup got.
-STAGES=/var/mobile/Library/Preferences/com.buffy.cardboardos.stages
+# only evidence that the dylibs were loaded and how far setup got.
 say "stages from the PREVIOUS run (deploy clears them below, then resprings)"
 if [ -f "$STAGES" ]; then
     ls -l "$STAGES"
     cat "$STAGES"
 else
-    echo "  no breadcrumbs: the dylib was never loaded into SpringBoard"
+    echo "  no breadcrumbs: the dylib was never loaded"
 fi
 
 say preferences
 plutil -p /var/mobile/Library/Preferences/com.buffy.cardboardos.plist 2>/dev/null || echo "  no preferences written"
 
-# The crash report is what ends "something crashed" debates: it names the
-# faulting thread and the exact frame (an IOHID symbol means the injector did
-# it, a CBBHomeLandscape frame means the orientation nudge did it, another
-# tweak's dylib in the crashed thread means it was never us). Safe mode keeps
-# these files around, so they are readable even when the tweak never loads.
-say "newest SpringBoard crash report"
+# A crash report is what ends "something crashed" debates: it names the faulting
+# thread and the exact frame. Safe mode keeps these files around, so they are
+# readable even when the tweak never loads.
+say "newest crash report"
 CRDIR=/var/mobile/Library/Logs/CrashReporter
 if [ -d "$CRDIR" ]; then
-    NEWEST_CRASH=$(ls -t "$CRDIR"/SpringBoard* 2>/dev/null | head -1)
+    NEWEST_CRASH=$(ls -t "$CRDIR"/SpringBoard* "$CRDIR"/backboardd* 2>/dev/null | head -1)
     if [ -n "$NEWEST_CRASH" ] && [ -f "$NEWEST_CRASH" ]; then
         echo "  $NEWEST_CRASH"
         grep -a -E 'Exception Type|Exception Codes|Triggered by Thread|Crashed' "$NEWEST_CRASH" 2>/dev/null | head -8
         echo "  --- tail:"
         tail -40 "$NEWEST_CRASH" 2>/dev/null
     else
-        echo "  no SpringBoard crash files in $CRDIR"
+        echo "  no SpringBoard/backboardd crash files in $CRDIR"
         ls -lt "$CRDIR" 2>/dev/null | head -6
     fi
 else
@@ -198,5 +214,13 @@ if [ "$RESPRING" -eq 1 ]; then
     echo "  NOTE: the stages printed above are from BEFORE this respring."
     echo "  Run 'make doctor' after the phone is back to see this build's stages."
     sleep 1
-    killall -9 SpringBoard
+    # Both halves have to be restarted: a plain respring only restarts
+    # SpringBoard, and backboardd would keep running the previous driver dylib
+    # (or none at all) while the SpringBoard half talks to a port nobody owns.
+    # Killing backboardd takes the window server down with it, so SpringBoard
+    # comes back as part of the same respring.
+    killall -9 SpringBoard 2>/dev/null
+    sleep 1
+    killall -9 backboardd 2>/dev/null
+    echo "  restarted SpringBoard and backboardd"
 fi

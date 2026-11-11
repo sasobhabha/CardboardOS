@@ -269,7 +269,7 @@ static inline CGSize CBBCurrentScreenSize(void) {
 
 // Stamped into the stages file at startup. "Did my build actually reach the
 // phone" has cost several rounds already; the stages file now answers it.
-#define CBB_BUILD_TAG "2026-11-10g sender stamping and Cardboard v2 lens centres"
+#define CBB_BUILD_TAG "2026-11-11b backboardd injection with overlay touch detector"
 
 // Radius, in fixed-space points, of the disc the overlay claims as the viewer's
 // button while stereo is *off*. With stereo on the overlay claims the whole
