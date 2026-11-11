@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+    Bundle filter for the tweak loader.
+
+    Written as XML rather than the shorter OpenStep syntax Theos also accepts:
+    CoreFoundation reads both, but a loader that parses filters itself (rather
+    than through CFPropertyList) may only handle XML, and a filter that fails to
+    parse means the dylib is installed and never injected.
+
+    Bundles is the key every loader understands - Substrate, Substitute,
+    libhooker and Sonar. SpringBoard is the only process this tweak targets.
+-->
+<plist version="1.0">
+<dict>
+	<key>Filter</key>
+	<dict>
+		<key>Bundles</key>
+		<array>
+			<string>com.apple.springboard</string>
+		</array>
+	</dict>
+</dict>
+</plist>

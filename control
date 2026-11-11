@@ -1,0 +1,9 @@
+Package: com.buffy.cardboardos
+Name: CardboardOS
+Version: 1.1.0
+Architecture: iphoneos-arm
+Description: Turns the whole iOS 12 UI into a lens-corrected stereoscopic image for Google Cardboard, fully navigable with the viewer button alone.
+Maintainer: Buffy
+Author: Buffy
+Section: Tweaks
+Depends: firmware (>= 12.0)
