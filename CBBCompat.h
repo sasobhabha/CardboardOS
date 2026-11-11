@@ -268,7 +268,7 @@ static inline CGSize CBBCurrentScreenSize(void) {
 
 // Stamped into the stages file at startup. "Did my build actually reach the
 // phone" has cost several rounds already; the stages file now answers it.
-#define CBB_BUILD_TAG "2026-11-10e context-ID touch injection and idle-timer hold"
+#define CBB_BUILD_TAG "2026-11-10f one-second dwell and taps inside apps"
 
 // Radius, in fixed-space points, of the disc the overlay claims as the viewer's
 // button while stereo is *off*. With stereo on the overlay claims the whole

@@ -14,6 +14,35 @@ static const uint32_t kCBBFingerIdentifier = 2;
 // dropped or read as an external device's coordinates.
 static const uint32_t kCBBFieldOptions = 0xF0000000u;
 
+#pragma mark - Which process owns the screen
+
+// SpringBoard knows which app is on screen; nothing else in this process does.
+// It matters because an app's windows belong to the app's own process: an event
+// tagged with a SpringBoard window's context ID is delivered to SpringBoard and
+// stops there. On the home screen that route is exactly right; inside an app it
+// can never reach the thing you are looking at, which is why taps registered on
+// the home screen and nowhere else. Returns nil whenever SpringBoard itself
+// owns the screen (home screen, lock screen, app switcher).
+static NSString *CBBForegroundAppBundleIdentifier(void) {
+    Class springBoardClass = NSClassFromString(@"SpringBoard");
+    if (!springBoardClass) return nil;
+    SEL frontmostSelector = NSSelectorFromString(@"_accessibilityFrontMostApplication");
+    SEL bundleSelector = NSSelectorFromString(@"bundleIdentifier");
+    @try {
+        id springBoard = ((id (*)(id, SEL))objc_msgSend)(springBoardClass, @selector(sharedApplication));
+        if (!springBoard || ![springBoard respondsToSelector:frontmostSelector]) return nil;
+        id app = ((id (*)(id, SEL))objc_msgSend)(springBoard, frontmostSelector);
+        if (!app || ![app respondsToSelector:bundleSelector]) return nil;
+        id bundle = ((id (*)(id, SEL))objc_msgSend)(app, bundleSelector);
+        if (![bundle isKindOfClass:[NSString class]] || [bundle length] == 0) return nil;
+        // The lock screen answers with SpringBoard itself.
+        if ([bundle isEqualToString:@"com.apple.springboard"]) return nil;
+        return bundle;
+    } @catch (NSException *exception) {
+        return nil;
+    }
+}
+
 typedef void (*CBBSetIntegerWithOptionsFn)(IOHIDEventRef event, uint32_t field, int value, uint32_t options);
 typedef void (*CBBSetDigitizerInfoFn)(IOHIDEventRef event,
                                       uint32_t contextID,
@@ -111,6 +140,8 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     BOOL _funnelReported;
     BOOL _funnelSwitched;
     BOOL _contextIdWarned;
+    BOOL _appFunnelReported;
+    BOOL _dispatchReported;
 }
 @end
 
@@ -293,9 +324,25 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     ((void (*)(id, SEL, id))objc_msgSend)(app, selector, (__bridge id)event);
 }
 
-- (void)deliverEvent:(IOHIDEventRef)event atPoint:(CGPoint)point {
+// Chosen per tap, not once: the phone alternates between the home screen and
+// apps, and the right answer is different in each.
+- (CBBInjectionFunnel)currentFunnel {
+    NSString *bundle = CBBForegroundAppBundleIdentifier();
+    if (bundle) {
+        if (!_appFunnelReported) {
+            _appFunnelReported = YES;
+            CBBMarkStage([NSString stringWithFormat:
+                          @"injection: %@ is on screen, taps go through the HID system (an app's windows are in another process)",
+                          bundle]);
+        }
+        return CBBInjectionFunnelDispatch;
+    }
+    return _funnel;
+}
+
+- (void)deliverEvent:(IOHIDEventRef)event atPoint:(CGPoint)point funnel:(CBBInjectionFunnel)funnel {
     @try {
-        if (_funnel == CBBInjectionFunnelDispatch) {
+        if (funnel == CBBInjectionFunnelDispatch) {
             IOHIDEventSystemClientRef client = [self dispatchClient];
             if (client) IOHIDEventSystemClientDispatchEvent(client, event);
         } else {
@@ -307,17 +354,30 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     }
 }
 
-// One tap of evidence chooses the funnel, judged from the receiving end: did a
-// touch actually reach SpringBoard's event pipeline. Nothing there after two
-// taps means the in-process route is not wired up on this build, and the
-// backboardd route is tried instead.
-- (void)evaluateAfterTapFrom:(int32_t)loopBefore delivered:(int32_t)deliveryBefore {
+// A tap through the in-process funnel is judged from the receiving end: did a
+// touch actually reach SpringBoard's event pipeline. Nothing there means the
+// in-process route is not wired up on this build, and the backboardd route is
+// tried instead for SpringBoard-owned screens from then on.
+- (void)evaluateAfterTapFrom:(int32_t)loopBefore delivered:(int32_t)deliveryBefore funnel:(CBBInjectionFunnel)funnel {
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.45 * NSEC_PER_SEC)), _queue, ^{
         CBBTouchInjector *strongSelf = weakSelf;
         if (!strongSelf) return;
         int32_t loopSeen = CBBLoopbackCount - loopBefore;
         int32_t delivered = CBBDeliveryCount - deliveryBefore;
+
+        if (funnel == CBBInjectionFunnelDispatch) {
+            // Dispatched into the HID system, which routes by the window server
+            // rather than by a context ID: an app's touches never pass
+            // SpringBoard's -sendEvent:, so a zero delivery count here is normal
+            // and is not evidence that the tap was lost.
+            if (strongSelf->_dispatchReported) return;
+            strongSelf->_dispatchReported = YES;
+            CBBMarkStage([NSString stringWithFormat:
+                          @"injection: system funnel used (%d digitizer echo(es), %d SpringBoard touch event(s)) — backboardd picks the target",
+                          (int)loopSeen, (int)delivered]);
+            return;
+        }
 
         if (strongSelf->_funnel == CBBInjectionFunnelInProcess) {
             if (delivered > 0) {
@@ -337,22 +397,6 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
                 strongSelf->_funnelReported = YES;
                 CBBMarkStage(@"injection: neither funnel delivered a touch — SpringBoard saw nothing at all");
             }
-            return;
-        }
-
-        if (loopSeen > 0 || delivered > 0) {
-            if (!strongSelf->_funnelReported) {
-                strongSelf->_funnelReported = YES;
-                CBBMarkStage([NSString stringWithFormat:
-                              @"injection: system funnel delivers (%d digitizer event(s) came back, %d touch event(s) reached SpringBoard)",
-                              (int)loopSeen, (int)delivered]);
-            }
-            return;
-        }
-        // Created too early is the one failure that fixes itself on a retry.
-        if (!strongSelf->_client) {
-            strongSelf->_funnelReported = YES;
-            CBBMarkStage(@"injection: system funnel delivered nothing either — no touch reached SpringBoard");
         }
     });
 }
@@ -429,18 +473,21 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
 
 - (void)tapAtPoint:(CGPoint)point {
     CGPoint target = CGPointMake(round(point.x), round(point.y));
+    // Resolved before the gesture starts, on the caller's thread: the funnel must
+    // not change halfway through a tap.
+    CBBInjectionFunnel funnel = [self currentFunnel];
     dispatch_async(_queue, ^{
         @try {
             int32_t loopBefore = CBBLoopbackCount;
             int32_t deliveryBefore = CBBDeliveryCount;
-            [self deliverEvent:[self newTouchEventAtPoint:target phase:CBBTouchPhaseDown] atPoint:target];
+            [self deliverEvent:[self newTouchEventAtPoint:target phase:CBBTouchPhaseDown] atPoint:target funnel:funnel];
             usleep(25 * 1000);
             // One position update between down and up: pipelines that classify a
             // tap by movement ignore a touch that never moved.
-            [self deliverEvent:[self newTouchEventAtPoint:target phase:CBBTouchPhaseMove] atPoint:target];
+            [self deliverEvent:[self newTouchEventAtPoint:target phase:CBBTouchPhaseMove] atPoint:target funnel:funnel];
             usleep(25 * 1000);
-            [self deliverEvent:[self newTouchEventAtPoint:target phase:CBBTouchPhaseUp] atPoint:target];
-            [self evaluateAfterTapFrom:loopBefore delivered:deliveryBefore];
+            [self deliverEvent:[self newTouchEventAtPoint:target phase:CBBTouchPhaseUp] atPoint:target funnel:funnel];
+            [self evaluateAfterTapFrom:loopBefore delivered:deliveryBefore funnel:funnel];
         } @catch (NSException *exception) {
             CBBMarkStage([NSString stringWithFormat:@"tap threw %@: %@",
                           exception.name, exception.reason]);
@@ -452,20 +499,21 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     NSTimeInterval clamped = MIN(MAX(duration, 0.08), 1.0);
     const NSInteger steps = 14;
     NSTimeInterval stepDelay = clamped / (NSTimeInterval)steps;
+    CBBInjectionFunnel funnel = [self currentFunnel];
 
     dispatch_async(_queue, ^{
         @try {
-            [self deliverEvent:[self newTouchEventAtPoint:from phase:CBBTouchPhaseDown] atPoint:from];
+            [self deliverEvent:[self newTouchEventAtPoint:from phase:CBBTouchPhaseDown] atPoint:from funnel:funnel];
             usleep((useconds_t)(stepDelay * 0.6 * 1e6));
             for (NSInteger i = 1; i <= steps; i++) {
                 CGFloat t = (CGFloat)i / (CGFloat)steps;
                 CGPoint p = CGPointMake(from.x + (to.x - from.x) * t,
                                         from.y + (to.y - from.y) * t);
-                [self deliverEvent:[self newTouchEventAtPoint:p phase:CBBTouchPhaseMove] atPoint:p];
+                [self deliverEvent:[self newTouchEventAtPoint:p phase:CBBTouchPhaseMove] atPoint:p funnel:funnel];
                 usleep((useconds_t)(stepDelay * 1e6));
             }
             usleep(20 * 1000);
-            [self deliverEvent:[self newTouchEventAtPoint:to phase:CBBTouchPhaseUp] atPoint:to];
+            [self deliverEvent:[self newTouchEventAtPoint:to phase:CBBTouchPhaseUp] atPoint:to funnel:funnel];
         } @catch (NSException *exception) {
             CBBMarkStage([NSString stringWithFormat:@"swipe threw %@: %@",
                           exception.name, exception.reason]);
@@ -473,19 +521,21 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     });
 }
 
-- (void)pressMenu {
+- (void)pressMenuWithFunnel:(CBBInjectionFunnel)funnel {
     @try {
         uint64_t timestamp = mach_absolute_time();
         // kHIDPage_Consumer / kHIDUsage_Csmr_Menu is the Home button.
         IOHIDEventRef down = IOHIDEventCreateKeyboardEvent(kCFAllocatorDefault, timestamp, 12, 0x40, YES, 0);
         [self deliverEvent:down atPoint:CGPointMake(self.screenSize.width * 0.5,
-                                                    self.screenSize.height * 0.5)];
+                                                    self.screenSize.height * 0.5)
+                   funnel:funnel];
         if (down) CFRelease(down);
         usleep(35 * 1000);
         timestamp = mach_absolute_time();
         IOHIDEventRef up = IOHIDEventCreateKeyboardEvent(kCFAllocatorDefault, timestamp, 12, 0x40, NO, 0);
         [self deliverEvent:up atPoint:CGPointMake(self.screenSize.width * 0.5,
-                                                  self.screenSize.height * 0.5)];
+                                                  self.screenSize.height * 0.5)
+                   funnel:funnel];
         if (up) CFRelease(up);
     } @catch (NSException *exception) {
         CBBMarkStage([NSString stringWithFormat:@"home press threw %@: %@",
@@ -494,16 +544,18 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
 }
 
 - (void)pressHome {
+    CBBInjectionFunnel funnel = [self currentFunnel];
     dispatch_async(_queue, ^{
-        [self pressMenu];
+        [self pressMenuWithFunnel:funnel];
     });
 }
 
 - (void)pressHomeTwice {
+    CBBInjectionFunnel funnel = [self currentFunnel];
     dispatch_async(_queue, ^{
-        [self pressMenu];
+        [self pressMenuWithFunnel:funnel];
         usleep(90 * 1000);
-        [self pressMenu];
+        [self pressMenuWithFunnel:funnel];
     });
 }
 

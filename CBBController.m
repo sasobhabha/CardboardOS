@@ -8,15 +8,59 @@
 #import "CBBStereoHUD.h"
 #import "CBBMotionPointer.h"
 #import "CBBHomeLandscape.h"
+#import <dlfcn.h>
 
 // How far the dot may wander, in fixed-space points, before a hold-to-click
 // restarts. This used to be 14 pt, which sounds generous until it is converted:
 // the aim maps 0.30 rad onto half the panel, so 14 pt of a 568 pt panel is
 // about 0.85 degrees of head rotation. A head in a viewer moves more than that
-// in three seconds just from breathing and pulse, so the hold was being reset
+// in a second just from breathing and pulse, so the hold was being reset
 // before it could ever finish and the dot appeared simply not to click.
 static const CGFloat CBBDwellRadius = 36.0;
-static const NSTimeInterval CBBDwellHoldSeconds = 3.0;
+static const NSTimeInterval CBBDwellHoldSeconds = 1.0;
+
+// Holding still in a viewer is idle to iOS, and while an app is on screen its own
+// idle timer wins over SpringBoard's, so the backlight would time out in exactly
+// the case the stereo view is for. A power assertion is device-wide and outlives
+// the app swap, so the display stays up on the home screen and inside apps alike.
+typedef int32_t (*CBBPMAssertionCreateWithNameFn)(CFStringRef assertionType,
+                                                  uint32_t level,
+                                                  CFStringRef assertionName,
+                                                  uint32_t *assertionID);
+typedef int32_t (*CBBPMAssertionReleaseFn)(uint32_t assertionID);
+static uint32_t CBBDisplaySleepAssertion = 0;
+
+static void CBBSetDisplaySleepBlocked(BOOL blocked) {
+    static CBBPMAssertionCreateWithNameFn createFn = NULL;
+    static CBBPMAssertionReleaseFn releaseFn = NULL;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        createFn = (CBBPMAssertionCreateWithNameFn)dlsym(RTLD_DEFAULT, "IOPMAssertionCreateWithName");
+        releaseFn = (CBBPMAssertionReleaseFn)dlsym(RTLD_DEFAULT, "IOPMAssertionRelease");
+        if (!createFn || !releaseFn) {
+            CBBMarkStage(@"display sleep assertion unavailable on this build");
+        }
+    });
+    if (blocked) {
+        if (CBBDisplaySleepAssertion || !createFn) return;
+        uint32_t assertion = 0;
+        // Level 255 is kIOPMAssertionLevelOn; 0 is kIOReturnSuccess.
+        int32_t result = createFn(CFSTR("com.buffy.cardboardos.stereo"), 255,
+                                  CFSTR("CardboardOS stereo display"), &assertion);
+        if (result == 0) {
+            CBBDisplaySleepAssertion = assertion;
+            CBBMarkStage(@"display sleep blocked (home screen and apps)");
+        } else {
+            CBBMarkStage([NSString stringWithFormat:@"display sleep assertion refused (%d)", (int)result]);
+        }
+        return;
+    }
+    if (CBBDisplaySleepAssertion && releaseFn) {
+        releaseFn(CBBDisplaySleepAssertion);
+        CBBDisplaySleepAssertion = 0;
+        CBBMarkStage(@"display sleep assertion released");
+    }
+}
 
 static CGPoint CBBCardboardRotate(CGPoint vector, CGFloat radians) {
     CGFloat cosine = cos(radians);
@@ -436,6 +480,7 @@ static CGPoint CBBCardboardRotate(CGPoint vector, CGFloat radians) {
     } @catch (NSException *exception) {
         CBBMarkStage([NSString stringWithFormat:@"idle timer unavailable: %@", exception.reason]);
     }
+    CBBSetDisplaySleepBlocked(enabled);
 
     [self applyHomeLandscape];
 }
@@ -914,7 +959,7 @@ static CGPoint CBBCardboardRotate(CGPoint vector, CGFloat radians) {
 
 #pragma mark - Dwell to click
 
-// Hold-to-click: if the dot rests inside a small disc for 3 s, it clicks
+// Hold-to-click: if the dot rests inside a small disc for 1 s, it clicks
 // there with no button press. The dot lives in VR space (the lens-warped
 // stereo picture), which is not where SpringBoard thinks things are, so the
 // click goes through the same dot -> injector map as the button clicks
