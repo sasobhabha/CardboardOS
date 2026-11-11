@@ -118,6 +118,7 @@ extern void CARenderServerRenderDisplay(mach_port_t server,
 
 typedef struct __IOHIDEvent *IOHIDEventRef;
 typedef struct __IOHIDEventSystemClient *IOHIDEventSystemClientRef;
+typedef struct __IOHIDServiceClient *IOHIDServiceClientRef;
 
 // Signatures match the private IOHIDEvent.h used by SimulateTouch / Veency.
 // `options` is IOOptionBits (a UInt32 alias); spelled uint32_t here so the
@@ -268,7 +269,7 @@ static inline CGSize CBBCurrentScreenSize(void) {
 
 // Stamped into the stages file at startup. "Did my build actually reach the
 // phone" has cost several rounds already; the stages file now answers it.
-#define CBB_BUILD_TAG "2026-11-10f one-second dwell and taps inside apps"
+#define CBB_BUILD_TAG "2026-11-10g sender stamping and Cardboard v2 lens centres"
 
 // Radius, in fixed-space points, of the disc the overlay claims as the viewer's
 // button while stereo is *off*. With stereo on the overlay claims the whole

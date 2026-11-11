@@ -59,6 +59,9 @@ typedef void (*CBBScheduleWithRunLoopFn)(IOHIDEventSystemClientRef client,
                                          CFRunLoopRef runloop, CFStringRef mode);
 typedef void (*CBBSetDispatchQueueFn)(IOHIDEventSystemClientRef client, dispatch_queue_t queue);
 typedef uint32_t (*CBBEventGetTypeFn)(IOHIDEventRef event);
+typedef CFArrayRef (*CBBCopyServicesFn)(IOHIDEventSystemClientRef client);
+typedef uint64_t (*CBBServiceRegistryIDFn)(IOHIDServiceClientRef service);
+typedef CFTypeRef (*CBBServiceCopyPropertyFn)(IOHIDServiceClientRef service, CFStringRef key);
 
 // Resolved at runtime so this dylib still loads if a symbol is ever absent: an
 // unresolved import fails the whole dylib at load time, which is
@@ -86,6 +89,66 @@ static void CBBLoopbackCallback(void *target, void *refcon,
     if (CBBEventGetType(event) == CBBHIDEventTypeDigitizer) {
         __sync_fetch_and_add(&CBBLoopbackCount, 1);
     }
+}
+
+// backboardd stamps every event it forwards with the registry ID of the HID
+// service that produced it, and an event without one is dropped on arrival
+// (its log reads "BKSHID: event with no senderID"). That is why a dispatched
+// synthetic touch never reached an app while the in-process funnel worked: the
+// in-process route never has to satisfy that check. The panel digitizer's
+// registry ID is allocated per boot, so it cannot be a constant; it is read
+// once from the HID system's own service list.
+static uint64_t CBBDigitizerSenderID(void) {
+    static uint64_t senderID = 0;
+    static BOOL resolved = NO;
+    if (resolved) return senderID;
+    resolved = YES;
+
+    CBBCopyServicesFn copyServices = (CBBCopyServicesFn)dlsym(RTLD_DEFAULT, "IOHIDEventSystemClientCopyServices");
+    CBBServiceRegistryIDFn registryID = (CBBServiceRegistryIDFn)dlsym(RTLD_DEFAULT, "IOHIDServiceClientGetRegistryID");
+    CBBServiceCopyPropertyFn copyProperty = (CBBServiceCopyPropertyFn)dlsym(RTLD_DEFAULT, "IOHIDServiceClientCopyProperty");
+    IOHIDEventSystemClientRef client = IOHIDEventSystemClientCreate(kCFAllocatorDefault);
+    if (!client || !copyServices || !registryID) {
+        CBBMarkStage(@"injection: HID service list unavailable — dispatched touches cannot be stamped with a sender");
+        return 0;
+    }
+
+    uint64_t firstID = 0;
+    uint64_t panelID = 0;
+    NSMutableString *seen = [NSMutableString string];
+    CFArrayRef services = copyServices(client);
+    if (services) {
+        for (CFIndex i = 0; i < CFArrayGetCount(services); i++) {
+            IOHIDServiceClientRef service = (IOHIDServiceClientRef)CFArrayGetValueAtIndex(services, i);
+            uint64_t serviceID = registryID(service);
+            if (!serviceID) continue;
+            if (!firstID) firstID = serviceID;
+
+            int page = -1, usage = -1;
+            if (copyProperty) {
+                CFTypeRef pageRef = copyProperty(service, CFSTR("PrimaryUsagePage"));
+                CFTypeRef usageRef = copyProperty(service, CFSTR("PrimaryUsage"));
+                if (pageRef && CFGetTypeID(pageRef) == CFNumberGetTypeID()) {
+                    CFNumberGetValue((CFNumberRef)pageRef, kCFNumberIntType, &page);
+                }
+                if (usageRef && CFGetTypeID(usageRef) == CFNumberGetTypeID()) {
+                    CFNumberGetValue((CFNumberRef)usageRef, kCFNumberIntType, &usage);
+                }
+                if (pageRef) CFRelease(pageRef);
+                if (usageRef) CFRelease(usageRef);
+            }
+            [seen appendFormat:@"0x%llx/%d.%d ", serviceID, page, usage];
+
+            // kHIDPage_Digitizer / kHIDUsage_Dig_TouchScreen: the panel itself.
+            if (page == 13 && usage == 4 && !panelID) panelID = serviceID;
+        }
+        CFRelease(services);
+    }
+
+    senderID = panelID ? panelID : firstID;
+    CBBMarkStage([NSString stringWithFormat:@"injection: HID services %@→ dispatched touches use sender 0x%llx",
+                  seen.length ? seen : @"(none) ", senderID]);
+    return senderID;
 }
 
 static void CBBSetDigitizerField(IOHIDEventRef event, uint32_t field, int value) {
@@ -344,6 +407,13 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     @try {
         if (funnel == CBBInjectionFunnelDispatch) {
             IOHIDEventSystemClientRef client = [self dispatchClient];
+            // Only touches carry the panel's sender: the Home button is
+            // SpringBoard's own business and uses the in-process funnel, where
+            // no sender is involved.
+            if (client && CBBEventGetType && CBBEventGetType(event) == CBBHIDEventTypeDigitizer) {
+                uint64_t sender = CBBDigitizerSenderID();
+                if (sender) IOHIDEventSetSenderID(event, sender);
+            }
             if (client) IOHIDEventSystemClientDispatchEvent(client, event);
         } else {
             [self enqueueInProcess:event atPoint:point];
@@ -543,19 +613,21 @@ typedef NS_ENUM(NSInteger, CBBTouchPhase) {
     }
 }
 
+// The Home button is never the app's: SpringBoard consumes it and switches
+// away, so it always takes the in-process funnel even while an app is on
+// screen. Dispatching it into the HID system would only introduce the sender-ID
+// check the keyboard event does not satisfy.
 - (void)pressHome {
-    CBBInjectionFunnel funnel = [self currentFunnel];
     dispatch_async(_queue, ^{
-        [self pressMenuWithFunnel:funnel];
+        [self pressMenuWithFunnel:CBBInjectionFunnelInProcess];
     });
 }
 
 - (void)pressHomeTwice {
-    CBBInjectionFunnel funnel = [self currentFunnel];
     dispatch_async(_queue, ^{
-        [self pressMenuWithFunnel:funnel];
+        [self pressMenuWithFunnel:CBBInjectionFunnelInProcess];
         usleep(90 * 1000);
-        [self pressMenuWithFunnel:funnel];
+        [self pressMenuWithFunnel:CBBInjectionFunnelInProcess];
     });
 }
 

@@ -151,8 +151,9 @@ typedef struct {
     if (bufferPixels.width < 1 || bufferPixels.height < 1) return;
 
     // Eyes sit along the long axis of the drawable, half of it each, so a
-    // landscape 1136x640 panel gives two 568x640 eye windows. The shader
-    // assumes exactly that split: lens centres at 0.25 and 0.75 of that axis.
+    // landscape 1136x640 panel gives two 568x640 eye windows. The shader centres
+    // each image on its lens, at 0.144 and 0.856 of that axis for Cardboard v2,
+    // rather than on the middle of each half.
     BOOL stacked = drawable.height >= drawable.width;
     CGFloat eyeExtentX = stacked ? drawable.height * 0.5 : drawable.width * 0.5;
     CGFloat eyeExtentY = stacked ? drawable.width : drawable.height;
